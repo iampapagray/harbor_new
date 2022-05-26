@@ -11,10 +11,25 @@ import TwistBottom from '../assets/leena/Visuals/TT_store_03.jpg';
 import TwistLeft from '../assets/leena/Characters/Taylor_highpoly_v01.png';
 import DreamTown from '../assets/leena/Visuals/Memory_S1E2_updated.PNG';
 
+import ConstructionSite from '../assets/leena/MapObjects/Buildings/ConstructionSite.png';
+import Library from '../assets/leena/MapObjects/Buildings/library.png';
+import CoffeeShop from '../assets/leena/MapObjects/Buildings/coffee_house.png';
+import Grill from '../assets/leena/MapObjects/Buildings/Grill.png';
+import Jaccuzi from '../assets/leena/MapObjects/Diorama/TT_NFT_Zen_garden_small.png';
+import Couple from '../assets/leena/Characters/Lars+Women_Chibi_Study_ForPhotoObject.png';
+import CoastalVilla from '../assets/leena/MapObjects/Buildings/CoastalVilla.png';
+import FurnitureFactory from '../assets/leena/MapObjects/Buildings/furniture_factory.png';
+
+import Farmer from '../assets/leena/Characters/TT_3D_Taylor_chibi.png';
+import Carrots from '../assets/leena/MapObjects/Fields/MDL_Crop_Carrot_C_4x4.png';
+
+import Hammock from '../assets/leena/MapObjects/Decorations/hammock_a.png';
+import JaccuziItem from '../assets/leena/MapObjects/Decorations/whirlpool_a.png';
+
 import ReactPlayer from 'react-player'
 import { Button } from 'react-bootstrap';
 
-function Leena() {
+const Leena = () => {
     return (
         <div className="leena-container">
             <NavBar style="light"/>
@@ -57,12 +72,36 @@ function Leena() {
                 <img src={DreamTown} />
             </div>
             <div className="box box-5">
-                <p>Create a flourishing family town</p>
-                <p>Help your citizens build lovely businesses</p>
-                <p>Live into the breath-taking story with many characters</p>
-                <p>Build a modern family town to live in!</p>
-                <p>Craft and trade useful goods with other characters</p>
-                <p>Customize your town with beautiful decorations</p>
+                <div className="leena-line-item">
+                    <img className="leena-line-item-img" src={ConstructionSite} />
+                    <p className="leena-line-item-text">Create a flourishing family town</p>
+                    <img className="leena-line-item-img" src={Library}/>
+                </div>
+                <div className="leena-line-item">
+                    <img className="leena-line-item-img" src={CoffeeShop} />
+                    <p className="leena-line-item-text">Help your citizens build lovely businesses</p>
+                    <img className="leena-line-item-img" src={Grill}/>
+                </div>
+                <div className="leena-line-item">
+                    <img className="leena-line-item-img" src={Jaccuzi} />
+                    <p className="leena-line-item-text">Live into the breath-taking story with many characters</p>
+                    <img className="leena-line-item-img" src={Couple}/>
+                </div>
+                <div className="leena-line-item">
+                    <img className="leena-line-item-img" src={CoastalVilla} />
+                    <p className="leena-line-item-text">Build a modern family town to live in!</p>
+                    <img className="leena-line-item-img" src={FurnitureFactory}/>
+                </div>
+                <div className="leena-line-item">
+                    <img className="leena-line-item-img" src={Farmer} />
+                    <p className="leena-line-item-text">Craft and trade useful goods with other characters</p>
+                    <img className="leena-line-item-img" src={Carrots}/>
+                </div>
+                <div className="leena-line-item">
+                    <img className="leena-line-item-img" src={Hammock} />
+                    <p className="leena-line-item-text">Customize your town with beautiful decorations</p>
+                    <img className="leena-line-item-img" src={JaccuziItem}/>
+                </div>
             </div>
             <Footer />
         </div>

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/NavBar.css';
 import { Navbar, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
+import Logo from "../assets/general/HarborLogo.png";
 
 function NavBar(props) {
     return (
@@ -9,7 +10,7 @@ function NavBar(props) {
                 <Navbar.Brand href="/">
                     <img
                         alt=""
-                        src="/logo.svg"
+                        src={Logo}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"

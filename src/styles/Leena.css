@@ -15,14 +15,14 @@
 }
 
 .logo-row {
-    width: 100%;
+    min-width: 110%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
 .logo-row img {
-    height: 100px;
+    height: 150px;
 }
 
 .play-button {
@@ -102,4 +102,29 @@
 .box-4 img {
     width: 100%;
     border-radius: 30px;
+}
+
+.leena-line-item {
+    /* background-color: #78b0b5; */
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, #78b0b5 20%, #78b0b5 80%, rgba(255,255,255,1) 100%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.leena-line-item-img {
+    height: 200px;
+}
+
+.leena-line-item-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    width: 30%;
 }
