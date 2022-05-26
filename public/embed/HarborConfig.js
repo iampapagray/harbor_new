@@ -8,67 +8,67 @@ function configureUnity() {
 
     var loyaltyConfig = {
         Name: "Loyalty",
-        Description: "Description for Loyalty",
-        URL: "http://www.google.com",
+        Description: "",
+        URL: "/loyalty",
         ButtonLabel: "Play Now",
         IsButtonActive : true
     };
 
     var wthConfig = {
-        Name: "Whay The Hen!",
-        Description: "Description for Whay The Hen!",
-        URL: "http://www.google.com",
-        ButtonLabel: "Play Now",
+        Name: "What The Hen!",
+        Description: "",
+        URL: "/",
+        ButtonLabel: "Coming Soon",
         IsButtonActive: false
     };
 
     var leenasplaceConfig = {
         Name: "Leena's Place",
-        Description: "Description for Leena's Place",
-        URL: "http://www.google.com",
+        Description: "",
+        URL: "/leena",
         ButtonLabel: "Play Now",
         IsButtonActive: true
     };
 
 
     var deckConfig = {
-        Name: "Deck",
-        Description: "Description for Deck",
-        URL: "http://www.google.com",
-        ButtonLabel: "Open",
+        Name: "Roadmap",
+        Description: "Welcome to Harbor! Hop onboard a ship to a magical metaverse of games, characters, and stories.\n\n Explore our plan to build an ecosystem of free-to-play games for all ages and styles. Meet the team that has been building games for over three decades for companies like Disney, Meta, and Pixel Federation.",
+        URL: "/roadmap",
+        ButtonLabel: "View Roadmap",
         IsButtonActive: true
     };
 
     var stakingConfig = {
         Name: "Staking",
-        Description: "Description for Staking",
-        URL: "http://www.google.com",
-        ButtonLabel: "Open",
-        IsButtonActive: true
+        Description: "Stake your NFTs and HARBOR token to earn rewards, tokens, rare items, and level up your characters.",
+        URL: "/",
+        ButtonLabel: "Coming Soon",
+        IsButtonActive: false
     };
 
     var governanceConfig = {
         Name: "Governance",
-        Description: "Description for Governance",
-        URL: "http://www.google.com",
-        ButtonLabel: "Open",
-        IsButtonActive: true
+        Description: "The governance of Harbor is done via our HARBOR token. Users can stake HARBOR to earn rewards, upgrade their NFTs, and make decisions to guide the community.",
+        URL: "/",
+        ButtonLabel: "Coming Soon",
+        IsButtonActive: false
     };
 
     var marketplaceConfig = {
         Name: "Marketplace",
-        Description: "Description for Marketplace",
-        URL: "http://www.google.com",
-        ButtonLabel: "Open",
-        IsButtonActive: true
+        Description: "The Harbor Marketplace is a decentralized marketplace to buy, sell, and trade your items with other players. Power up your progress and share your treasures with the community!",
+        URL: "/",
+        ButtonLabel: "Coming Soon",
+        IsButtonActive: false
     };
 
     var faqConfig = {
         Name: "FAQ",
-        Description: "Description for FAQ",
-        URL: "http://www.google.com",
-        ButtonLabel: "Open",
-        IsButtonActive: true
+        Description: "Check out our commonly asked questions! If you have any more, please contact us.",
+        URL: "/",
+        ButtonLabel: "Coming Soon",
+        IsButtonActive: false
     };
 
 

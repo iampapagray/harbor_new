@@ -60,9 +60,9 @@ function Leena() {
                 <p>Create a flourishing family town</p>
                 <p>Help your citizens build lovely businesses</p>
                 <p>Live into the breath-taking story with many characters</p>
-                <p>Build a modern family  town to live in!</p>
-                <p>Craft and trade useful goods  with other characters</p>
-                <p>Customize your town with beautiful decorations</p>
+                <p>Build a modern family town to live in!</p>
+                <p>Craft and trade useful goods with other characters</p>
+                <p>Customize your town with beautiful decorations</p>
             </div>
             <Footer />
         </div>
