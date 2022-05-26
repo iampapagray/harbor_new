@@ -1,0 +1,14 @@
+.nav-container-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-container-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+button {
+    margin-left: 5px;
+    margin-right: 5px;
+}

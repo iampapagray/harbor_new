@@ -4,6 +4,8 @@
 
 function configureUnity() {
 
+    console.log("configure unity");
+
     var loyaltyConfig = {
         Name: "Loyalty",
         Description: "Description for Loyalty",

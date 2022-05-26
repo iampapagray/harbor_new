@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | HarbourWebGL</title>
-  </head>
-  <body style="text-align: center; margin:0">
-      <!-- testing enter button -->
-      <!--<button onclick="send_enter()" style="position:absolute; left:50%;top:50%">Enter</button>-->
-    <canvas id="unity-canvas" width=2750 height=1250 style="width: 100%; height: 100%; background: #000000"></canvas>
-    <script src="Build/Harbour.loader.js"></script>
-    <script>
-        var myGameInstance = null;
-        var canvas = document.querySelector("canvas");
-        var config = null;
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/Harbour.data.unityweb",
-            frameworkUrl: "Build/Harbour.framework.js.unityweb",
-            codeUrl: "Build/Harbour.wasm.unityweb",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "HarbourWebGL",
-            productVersion: "0.1",
-            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-        }).then((unityInstance) => {
-            myGameInstance = unityInstance;
-            configureUnity();
-        });
+    <title>Unity WebGL Player | Harbor WebGL</title>
+</head>
+<body style="text-align: center; margin:0">
+    <!--Manual enter button-->
+    <!-- <button onclick="send_enter()" style="position:absolute; left:50%;top:50%">Enter</button> -->
+    <!--Shows special debug UI in unity -->
+    <!--<button onclick="toggle_debug_layer()" style="position:absolute; left:50%;top:80%">Debug</button>-->
 
+    <canvas id="unity-canvas" width=2750 height=1250 style="width: 100%; height: 100%; background: #231F20"></canvas>
+    <script src="Build/Harbor_NoCompression_0.2.1.loader.js"></script>
+    <script>
+
+        <!-- Unity instance-->
+        var myGameInstance = null;
+        <!-- Config send to Unity-->
+        var config = null;
+        <!--Setting this value to true causes every message coming from unity to be displayed as alert - for debugging purpose-->
+        var showAllCallbacksFromUnityAsAlerts = false;
+
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/Harbor_NoCompression_0.2.1.data",
+            frameworkUrl: "Build/Harbor_NoCompression_0.2.1.framework.js",
+            codeUrl: "Build/Harbor_NoCompression_0.2.1.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Charged Monkey",
+            productName: "Harbor WebGL",
+            productVersion: "0.2.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((unityInstance) => {
+          myGameInstance = unityInstance;
+          
+          <!--Configure Unity now-->
+          configureUnity();
+      });
     </script>
     <!-- all callbacks from Unity -->
-      <script src="HarborHandler.js"></script>
-      <!-- all events send to Unity -->
-      <script src="HarborSender.js"></script>
-      <!-- configuration for Unity -->
-      <script src="HarborConfig.js"></script>
-  </body>
+    <script src="HarborHandler.js"></script>
+    <!-- all events send to Unity -->
+    <script src="HarborSender.js"></script>
+    <!-- configuration for Unity -->
+    <script src="HarborConfig.js"></script>
+
+</body>
 </html>

@@ -1,19 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
-import Unity, { UnityContext } from "react-unity-webgl";
-
-const unityContext = new UnityContext({
-  loaderUrl: "embed/Build/Harbour.loader.js",
-  dataUrl: "embed/Build/Harbour.data.unityweb",
-  frameworkUrl: "embed/Build/Harbour.framework.js.unityweb",
-  codeUrl: "embed/Build/Harbour.wasm.unityweb",
-});
+import './styles/App.css';
+import Leena from './components/Leena.js';
+import Loyalty from './components/Loyalty.js';
+import MiniGame from './components/MiniGame.js';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Unity className="game-embed" unityContext={unityContext} />
-      {/* <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={ <MiniGame /> } />
+          <Route path="/leena" element={ <Leena /> } />
+          <Route path="/loyalty" element={ <Loyalty /> } />
+        </Routes>
+      </BrowserRouter>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

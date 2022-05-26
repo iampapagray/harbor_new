@@ -8,3 +8,7 @@ function send_enter() {
 	// Enter - name of method to invoke
 	myGameInstance.SendMessage('BrowserInvoker', 'Enter');
 }
+
+function toggle_debug_layer() {
+	myGameInstance.SendMessage('BrowserInvoker', 'ToggleDebugLayer');
+}
