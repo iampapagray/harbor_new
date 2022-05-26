@@ -4,17 +4,16 @@ import Unity, { UnityContext } from "react-unity-webgl";
 
 const unityContext = new UnityContext({
   loaderUrl: "embed/Build/Harbour.loader.js",
-  dataUrl: "embed/Build/Harbour.data",
-  frameworkUrl: "embed/Build/Harbour.framework.js",
-  codeUrl: "embed/Build/Harbour.wasm",
+  dataUrl: "embed/Build/Harbour.data.unityweb",
+  frameworkUrl: "embed/Build/Harbour.framework.js.unityweb",
+  codeUrl: "embed/Build/Harbour.wasm.unityweb",
 });
 
 function App() {
   return (
     <div className="App">
-      <Unity unityContext={unityContext} />
-      {/* https://cmgeneral.blob.core.windows.net/$web/index.html */}
-      {/* <iframe className="game-embed" src="./embed/index.html"></iframe> */}
+      <Unity className="game-embed" unityContext={unityContext} />
+      {/* <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
