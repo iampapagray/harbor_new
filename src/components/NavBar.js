@@ -18,9 +18,10 @@ function NavBar(props) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/leena">Leena</Nav.Link>
-                        <Nav.Link href="/loyalty">Loyalty</Nav.Link>
-                        <Nav.Link href="/games">Games</Nav.Link>
+                        <NavDropdown title="Games" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/leena">Leena</NavDropdown.Item>
+                            <NavDropdown.Item href="/loyalty">Loyalty</NavDropdown.Item>
+                        </NavDropdown>
                         <Nav.Link href="/nft-marketplace">NFT Marketplace</Nav.Link>
                         <Nav.Link href="/governance">Governance</Nav.Link>
                         <Nav.Link href="/docs">Docs</Nav.Link>

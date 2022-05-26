@@ -1,11 +1,16 @@
+.navbar {
+    width: 100%;
+    padding: 15px 5px 15px 5px;
+}
+
 .nav-container-right {
-    display: flex;
-    justify-content: flex-end;
+    display: flex!important;
+    justify-content: flex-end!important;
 }
 
 .nav-container-left {
-    display: flex;
-    justify-content: flex-start;
+    display: flex!important;
+    justify-content: flex-start!important;
 }
 
 button {

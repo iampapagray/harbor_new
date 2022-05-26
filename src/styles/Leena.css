@@ -1,0 +1,105 @@
+.leena-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leena-bg {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.logo-row img {
+    height: 100px;
+}
+
+.play-button {
+    margin-top: 20px;
+    padding: 10px 30px 10px 30px;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: bold;
+    color: black;
+    line-height: normal;
+}
+
+.desc {
+    font-size: 15px;
+    /* font-weight: bold; */
+    color: #6a7280;
+}
+
+.box {
+    margin-bottom: 7%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-box {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leena-video {
+    width: 100%!important;
+    height: auto!important;
+}
+
+.leena-video video {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.box-1 {
+    margin-top: 1%;
+}
+
+.box-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box-3-left {
+    width: 40%;
+}
+
+.box-3-left img {
+    width: 100%;
+}
+
+.box-3-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-3-right img {
+    border-radius: 20px;
+}
+
+.box-4 img {
+    width: 100%;
+    border-radius: 30px;
+}
