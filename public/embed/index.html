@@ -23,13 +23,13 @@
         var showAllCallbacksFromUnityAsAlerts = false;
 
         createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/Harbor_NoCompression_0.2.1.data",
-            frameworkUrl: "Build/Harbor_NoCompression_0.2.1.framework.js",
-            codeUrl: "Build/Harbor_NoCompression_0.2.1.wasm",
+            dataUrl: "Build/Harbor.data",
+            frameworkUrl: "Build/Harbor.framework.js",
+            codeUrl: "Build/Harbor.wasm",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "Charged Monkey",
             productName: "Harbor WebGL",
-            productVersion: "0.2.1",
+            productVersion: "0.2.2",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
