@@ -14,7 +14,7 @@ const MiniGame = () => {
 
     useEffect(() => {
         console.log("run scripts");
-        loadScript("embed/Build/Harbor_NoCompression_0.2.1.loader.js");
+        loadScript("embed/Build/Harbor.loader.js");
         loadScript("embed/HarborHandler.js");
         loadScript("embed/HarborSender.js");
         loadScript("embed/HarborConfig.js");
