@@ -23,11 +23,19 @@ const MiniGame = () => {
     }, []);
 
     return (
-        // <Unity className="game-embed" unityContext={unityContext} />
-        // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>
+	
+		// <Unity className="game-embed" unityContext={unityContext} />
+        // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>	
+		<div>
+		<div id="unity-loading-bar">
+			<div id="unity-progress-bar-empty">
+				<div id="unity-progress-bar-full"></div>
+			</div>
+		</div>
         <div className="unity-canvas-container">
             <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
         </div>
+		</div>
     );
 }
     
