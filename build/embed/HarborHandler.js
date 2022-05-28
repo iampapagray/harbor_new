@@ -43,7 +43,7 @@ function onButtonClicked(id) {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onButtonClicked:" + id);
 	}
-	//window.open(config.buildings[id].URL);
+	window.open(config.buildings[id].URL, "_self");
 }
 
 // called after camera zoom in animation is finished after clicking on icon
