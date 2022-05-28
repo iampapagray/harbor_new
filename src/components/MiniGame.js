@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../styles/MiniGame.css';
-import SplashScreen from '../assets/general/splashscreen.jpeg';
+import SplashScreen from '../assets/general/Splash.png';
 
 var loadScript = function(srcInput) {
     const script = document.createElement("script");
