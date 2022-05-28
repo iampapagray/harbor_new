@@ -28,56 +28,56 @@ const Loyalty = () => {
     return (
         <div className="loyalty-container">
             <div className="loyalty-bg" style={{ backgroundImage: `url(${backgroundImg})` }}>
-                <div className="logo-row">
+                <div className="logo-row-loyalty">
                     <img src={Logo} />
                 </div>
             </div>
-            <div className="box box-1">
-                <div className="inner-box">
+            <div className="loyalty-box loyalty-box-1">
+                <div className="inner-loyalty-box">
                     <p className="title">Do you have what it takes?</p>
                     <p className="desc">Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
                     <Button className="play-button" variant="secondary">Play Game</Button>{' '}
                     <p className="desc">Coming Soon</p>
                 </div>
             </div>
-            <div className="box box-2">
-                <div className="inner-box">
+            <div className="loyalty-box loyalty-box-2">
+                <div className="inner-loyalty-box">
                     <p className="title">Lead your gang of mobsters!</p>
                     <p className="desc">Help her to transform the sleepy countryside village into flourishing modern family town!</p>
                 </div>
                 <img className="loyalty-video" src={TurfWars} />
             </div>
-            <div className="box box-3">
-                <div className="inner-box">
+            <div className="loyalty-box loyalty-box-3">
+                <div className="inner-loyalty-box">
                     <p className="title">Claim control over Mafia Town</p>
                     <p className="desc">Get ready to fight in hundreds of missions in Mafia Town districts against hideous criminals, bosses and forces of law. Take over the control and become the capo di tutti capi.</p>
                 </div>
                 <img src={LoyaltyMap} />
             </div>
-            <div className="box box-4">
-                <div className="inner-box">
+            <div className="loyalty-box loyalty-box-4">
+                <div className="inner-loyalty-box">
                     <p className="title">Claim control over Mafia Town</p>
                 </div>
                 <img src={controlHeader} />
-                <div className="box-4-sub-images">
-                    <img src={controlOne} className="box-4-sub-image" />
-                    <img src={controlTwo} className="box-4-sub-image" />
-                    <img src={controlThree} className="box-4-sub-image" />
+                <div className="loyalty-box-4-sub-images">
+                    <img src={controlOne} className="loyalty-box-4-sub-image" />
+                    <img src={controlTwo} className="loyalty-box-4-sub-image" />
+                    <img src={controlThree} className="loyalty-box-4-sub-image" />
                 </div>
             </div>
-            <div className="box box-5">
-                <div className="inner-box">
+            <div className="loyalty-box loyalty-box-5">
+                <div className="inner-loyalty-box">
                     <p className="title">Collect Underlings</p>
                     <p className="desc">Over 100 of the wackiest Mobsters you’ve ever seen, ready to fight for their Capo. </p>
                 </div>
-                <div className="box-5-sub-images">
-                    <img src={underlingSwat} className="box-5-sub-image box-5-sub-image-1" />
-                    <img src={underlingFather} className="box-5-sub-image box-5-sub-image-2" />
-                    <img src={underlingJunior} className="box-5-sub-image box-5-sub-image-3" />
-                    <img src={underlingSwatBoss} className="box-5-sub-image box-5-sub-image-4" />
+                <div className="loyalty-box-5-sub-images">
+                    <img src={underlingSwat} className="loyalty-box-5-sub-image loyalty-box-5-sub-image-1" />
+                    <img src={underlingFather} className="loyalty-box-5-sub-image loyalty-box-5-sub-image-2" />
+                    <img src={underlingJunior} className="loyalty-box-5-sub-image loyalty-box-5-sub-image-3" />
+                    <img src={underlingSwatBoss} className="loyalty-box-5-sub-image loyalty-box-5-sub-image-4" />
                 </div>
             </div>
-            <div className="box box-6">
+            <div className="loyalty-box loyalty-box-6">
                 <div className="loyalty-line-item">
                     <img className="loyalty-line-item-img" src={mobBoss} />
                     <div className="loyalty-line-item-content">

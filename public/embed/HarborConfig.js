@@ -10,7 +10,7 @@ function configureUnity() {
         Name: "Loyalty",
         Description: "",
         URL: "/loyalty",
-        ButtonLabel: "Play Now",
+        ButtonLabel: "About",
         IsButtonActive : true
     };
 
@@ -26,7 +26,7 @@ function configureUnity() {
         Name: "Leena's Place",
         Description: "",
         URL: "/leena",
-        ButtonLabel: "Play Now",
+        ButtonLabel: "About",
         IsButtonActive: true
     };
 

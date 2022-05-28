@@ -1,7 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/NavBar.css';
-import { Navbar, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
+import { Navbar, OverlayTrigger, Tooltip, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
 import Logo from "../assets/general/HarborLogo.png";
+
+const renderComingSoonTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Coming Soon!
+    </Tooltip>
+  );
 
 function NavBar(props) {
     return (
@@ -23,22 +29,46 @@ function NavBar(props) {
                             <NavDropdown.Item href="/leena">Leena</NavDropdown.Item>
                             <NavDropdown.Item href="/loyalty">Loyalty</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="/nft-marketplace">NFT Marketplace</Nav.Link>
-                        <Nav.Link href="/governance">Governance</Nav.Link>
-                        <Nav.Link href="/docs">Docs</Nav.Link>
+                        <OverlayTrigger
+                            placement="bottom"
+                            delay={{ show: 250, hide: 250 }}
+                            overlay={renderComingSoonTooltip}
+                        >
+                            <Nav.Link>NFT Marketplace</Nav.Link>
+                        </OverlayTrigger>
+                        {/* <OverlayTrigger
+                            placement="bottom"
+                            delay={{ show: 250, hide: 250 }}
+                            overlay={renderComingSoonTooltip}
+                        >
+                            <Nav.Link>Governance</Nav.Link>
+                        </OverlayTrigger>
+                        <OverlayTrigger
+                            placement="bottom"
+                            delay={{ show: 250, hide: 250 }}
+                            overlay={renderComingSoonTooltip}
+                        >
+                            <Nav.Link>Docs</Nav.Link>
+                        </OverlayTrigger> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
             <Container className="nav-container-right">
-                <Button variant="outline-dark">Buy Harbor</Button>
-                <Button variant="outline-dark">Login</Button>
-                <Button variant="success">Register</Button>{' '}
+                <OverlayTrigger
+                    placement="bottom"
+                    delay={{ show: 250, hide: 250 }}
+                    overlay={renderComingSoonTooltip}
+                >
+                    <Button variant="outline-dark">Buy Harbor</Button>
+                </OverlayTrigger>
+                {/* <Button variant="outline-dark">Login</Button> */}
+                {/* <Button variant="success">Register</Button>{' '} */}
                 <NavDropdown title="Download" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Test</NavDropdown.Item>
+                    <NavDropdown.Item>Coming Soon</NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="EN" id="basic-nav-dropdown">
+                {/* <NavDropdown title="EN" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Test</NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
             </Container>
         </Navbar>
     );

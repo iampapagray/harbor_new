@@ -14,14 +14,14 @@
     align-items: flex-end;
 }
 
-.logo-row {
+.logo-row-leena {
     min-width: 110%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.logo-row img {
+.logo-row-leena img {
     height: 150px;
 }
 
@@ -43,7 +43,7 @@
     color: #6a7280;
 }
 
-.box {
+.leena-box {
     margin-bottom: 7%;
     width: 80%;
     display: flex;
@@ -52,7 +52,7 @@
     align-items: center;
 }
 
-.inner-box {
+.inner-leena-box {
     width: 70%;
     display: flex;
     justify-content: center;
@@ -70,36 +70,36 @@
     border-radius: 30px;
 }
 
-.box-1 {
+.leena-box-1 {
     margin-top: 1%;
 }
 
-.box-3 {
+.leena-box-3 {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
 }
 
-.box-3-left {
+.leena-box-3-left {
     width: 40%;
 }
 
-.box-3-left img {
+.leena-box-3-left img {
     width: 100%;
 }
 
-.box-3-right {
+.leena-box-3-right {
     width: 60%;
     display: flex;
     flex-direction: column;
 }
 
-.box-3-right img {
+.leena-box-3-right img {
     border-radius: 20px;
 }
 
-.box-4 img {
+.leena-box-4 img {
     width: 100%;
     border-radius: 30px;
 }
@@ -117,7 +117,9 @@
 }
 
 .leena-line-item-img {
-    height: 200px;
+    max-height: 200px;
+    width: 200px;
+    object-fit: contain;
 }
 
 .leena-line-item-text {

@@ -14,14 +14,14 @@
     align-items: flex-end;
 }
 
-.logo-row {
+.logo-row-loyalty {
     min-width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
-.logo-row img {
+.logo-row-loyalty img {
     height: 200px;
 }
 
@@ -43,7 +43,7 @@
     color: #6a7280;
 }
 
-.box {
+.loyalty-box {
     margin-bottom: 7%;
     width: 80%;
     display: flex;
@@ -52,7 +52,7 @@
     align-items: center;
 }
 
-.inner-box {
+.inner-loyalty-box {
     width: 70%;
     display: flex;
     justify-content: center;
@@ -67,25 +67,25 @@
     width: 100%;
 }
 
-.box-1 {
+.loyalty-box-1 {
     margin-top: 1%;
 }
 
-.box-3 img {
+.loyalty-box-3 img {
     width: 100%;
     border-radius: 20px;
 }
 
-.box-4 {
+.loyalty-box-4 {
     width: 100%;
 }
 
-.box-4 img {
+.loyalty-box-4 img {
     width: 100%;
     border-radius: 0px;
 }
 
-.box-4-sub-images {
+.loyalty-box-4-sub-images {
     width: 100%;
     margin-top: 20px;
     display: flex;
@@ -93,42 +93,42 @@
     justify-content: space-evenly;
 }
 
-.box-4 img.box-4-sub-image {
+.loyalty-box-4 img.loyalty-box-4-sub-image {
     width: 30%;
     border-radius: 20px;
     height: auto;
     object-fit: cover;
 }
 
-.box-5 {
+.loyalty-box-5 {
     width: 100%;
 }
 
-.box-5-sub-images {
+.loyalty-box-5-sub-images {
     width: 100%;
 }
 
-.box-5-sub-image {
+.loyalty-box-5-sub-image {
     width: 22%;
 }
 
-.box-5-sub-image-1 {
+.loyalty-box-5-sub-image-1 {
     transform: scaleX(-1);
     width: 28%;
     margin-top: 10%;
 }
 
-.box-5-sub-image-2 {
+.loyalty-box-5-sub-image-2 {
     transform: scaleX(-1);
     width: 21%;
 }
 
-.box-5-sub-image-3 {
+.loyalty-box-5-sub-image-3 {
     width: 21%;
     margin-top: 10%;
 }
 
-.box-5-sub-image-4 {
+.loyalty-box-5-sub-image-4 {
     width: 21%;
 }
 

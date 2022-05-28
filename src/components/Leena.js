@@ -31,44 +31,44 @@ const Leena = () => {
     return (
         <div className="leena-container">
             <div className="leena-bg" style={{ backgroundImage: `url(${backgroundImg})` }}>
-                <div className="logo-row">
+                <div className="logo-row-leena">
                     <img src={cloudLeft} />
                     <img src={Logo} />
                     <img src={cloudRight} />
                 </div>
             </div>
-            <div className="box box-1">
-                <div className="inner-box">
+            <div className="leena-box leena-box-1">
+                <div className="inner-leena-box">
                     <p className="title">Become the mayor and build your town</p>
                     <p className="desc">Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
                     <Button className="play-button" variant="secondary">Play Game</Button>{' '}
                     <p className="desc">Coming Soon</p>
                 </div>
             </div>
-            <div className="box box-2">
-                <div className="inner-box">
+            <div className="leena-box leena-box-2">
+                <div className="inner-leena-box">
                     <p className="title">Leena returns home and becomes mayor</p>
                     <p className="desc">Help her to transform the sleepy countryside village into flourishing modern family town!</p>
                 </div>
                 <ReactPlayer className="leena-video" url={Teaser} autoPlay muted playing={true} loop={true}/>
             </div>
-            <div className="box box-3">
-                <div className="box-3-left">
+            <div className="leena-box leena-box-3">
+                <div className="leena-box-3-left">
                     <img src={TwistLeft} />
                 </div>
-                <div className="box-3-right">
+                <div className="leena-box-3-right">
                     <p className="title">Uncover the twists of her family story</p>
                     <p className="desc">Help them to rebuild and modernize their homes and businesses. Clean up the mess, grow and decorate the Town.</p>
                     <img src={TwistBottom} />
                 </div>
             </div>
-            <div className="box box-4">
-                <div className="inner-box">
+            <div className="leena-box leena-box-4">
+                <div className="inner-leena-box">
                     <p className="title">Make Leena's Place the dream town</p>
                 </div>
                 <img src={DreamTown} />
             </div>
-            <div className="box box-5">
+            <div className="leena-box leena-box-5">
                 <div className="leena-line-item">
                     <img className="leena-line-item-img" src={ConstructionSite} />
                     <p className="leena-line-item-text">Create a flourishing family town</p>
