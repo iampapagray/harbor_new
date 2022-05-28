@@ -1,5 +1,3 @@
-import NavBar from './NavBar';
-import Footer from './Footer';
 import '../styles/Loyalty.css';
 
 import Logo from '../assets/loyalty/Logo/loyalty_logo.png';
@@ -29,7 +27,6 @@ import { Button } from 'react-bootstrap';
 const Loyalty = () => {
     return (
         <div className="loyalty-container">
-            <NavBar style="light"/>
             <div className="loyalty-bg" style={{ backgroundImage: `url(${backgroundImg})` }}>
                 <div className="logo-row">
                     <img src={Logo} />
@@ -117,7 +114,6 @@ const Loyalty = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

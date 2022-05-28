@@ -1,5 +1,3 @@
-import NavBar from './NavBar';
-import Footer from './Footer';
 import '../styles/Leena.css';
 
 import backgroundImg from '../assets/leena/SplashScreen/TT_splash_v02_chibi_20220207.png';
@@ -32,7 +30,6 @@ import { Button } from 'react-bootstrap';
 const Leena = () => {
     return (
         <div className="leena-container">
-            <NavBar style="light"/>
             <div className="leena-bg" style={{ backgroundImage: `url(${backgroundImg})` }}>
                 <div className="logo-row">
                     <img src={cloudLeft} />
@@ -103,7 +100,6 @@ const Leena = () => {
                     <img className="leena-line-item-img" src={JaccuziItem}/>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

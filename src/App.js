@@ -1,4 +1,6 @@
 import logo from './logo.svg';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import './styles/App.css';
 import Leena from './components/Leena.js';
 import Loyalty from './components/Loyalty.js';
@@ -13,10 +15,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <NavBar style="light"/>
         <Routes>
           <Route path="/" element={ <MiniGame /> } />
-          <Route path="/leena" element={ <Leena /> } />
-          <Route path="/loyalty" element={ <Loyalty /> } />
+          <Route path="/leena" element={ <div><Leena /><Footer /></div> } />
+          <Route path="/loyalty" element={ <div><Loyalty /><Footer /></div> } />
         </Routes>
       </BrowserRouter>
       {/* <header className="App-header">
