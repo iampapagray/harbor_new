@@ -3,6 +3,10 @@
     height: 100%;
     /* width: 100%; */
     /* width: auto; */
+    background-color: #45a5f3;
+    color: #45a5f3;
+    background-size: auto 100%;
+    background-position: center center;
 }
 
 .unity-canvas-container {
