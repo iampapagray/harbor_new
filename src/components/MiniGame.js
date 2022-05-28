@@ -5,7 +5,7 @@ var loadScript = function(srcInput) {
     const script = document.createElement("script");
     console.log(srcInput);
     script.src = srcInput;
-    script.async = true;
+    script.async = false;
     document.body.appendChild(script);
     return script;
 }
