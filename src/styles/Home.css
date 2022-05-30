@@ -1,0 +1,222 @@
+.roadmap-title {
+    font-size: 55px;
+    font-weight: bold;
+    color: black;
+    line-height: normal;
+}
+
+.desc {
+    font-size: 40px;
+    color: black;
+    line-height: normal;
+    text-align: left;
+}
+
+.roadmap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.roadmap-box {
+    margin-bottom: 7%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap-box-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.roadmap-box-1-top {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.roadmap-box-1-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.roadmap-box-1-bottom-left {
+    width: 50%;
+    /* padding: 30px 0 30px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(151.25deg, #2DACC9 0%, #CCBC91 100%);
+    border-radius: 30px;
+}
+
+.roadmap-box-1-bottom-left img {
+    width: 70%;
+    margin-bottom: 10%;
+}
+
+.roadmap-box-1-bottom-right {
+    width: 50%;
+    /* padding: 30px 0 30px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.roadmap-box-1-bottom-right img {
+    width: 70%;
+    margin-top: 10%;
+}
+
+.roadmap-box-1-bottom-left-text {
+    color: white;
+    width: 80%;
+}
+
+.roadmap-box-1-bottom-right-text {
+    color: black;
+    width: 80%;
+}
+
+.roadmap-box-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.roadmap-title-box-2 {
+    text-align: left;
+}
+
+.roadmap-box-2-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.roadmap-box-2-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-2-play-button {
+    margin-top: 30px;
+}
+
+.roadmap-box-2-timeline-line-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.roadmap-box-2-timeline-line-item-left {
+    width: 10%;
+}
+
+.roadmap-box-2-timeline-line-item-right {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.roadmap-box-2-timeline-line-item-right-top {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.roadmap-box-2-timeline-line-item-right-bottom {
+    font-size: 14px;
+    text-align: left;
+}
+
+.roadmap-box-2-timeline-line-item-left img {
+    width: 20px;
+}
+
+/* --------------- */
+
+.roadmap-box-upcoming-games {
+
+}
+
+.roadmap-box-upcoming-games-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.roadmap-icon-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.roadmap-icon-menu img {
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.roadmap-box-upcoming-games-bottom {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.roadmap-box-upcoming-games-bottom-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 45%;
+}
+
+.roadmap-box-upcoming-games-bottom-item img {
+    height: 300px;
+    object-fit: contain;
+}
+
+.roadmap-box-upcoming-games-bottom-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.roadmap-box-upcoming-games-bottom-item-desc {
+    font-size: 14px;
+    text-align: left;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.roadmap-box-team {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roadmap-box-team img {
+    width: 100%;
+}
