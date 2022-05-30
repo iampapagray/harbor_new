@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import '../styles/MiniGame.css';
 import SplashScreen from '../assets/general/Splash.png';
+import Sound from '../assets/general/harbor-soundtrack.mp3';
+import ReactAudioPlayer from 'react-audio-player';
+
 
 var loadScript = function(srcInput) {
     const script = document.createElement("script");
@@ -32,6 +35,11 @@ const MiniGame = () => {
                     <div id="unity-progress-bar-full"></div>
                 </div>
             </div>
+            <ReactAudioPlayer
+                src={`url(${Sound})`}
+                autoPlay={true}
+                loop={true}
+            />
             <div className="unity-canvas-container">
                 <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
             </div>
