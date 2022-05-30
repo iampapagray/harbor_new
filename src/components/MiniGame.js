@@ -25,6 +25,8 @@ const MiniGame = () => {
         loadScript("embed/RunScript.js");
     }, []);
 
+    var playing = false;
+
     return (
 	
 		// <Unity className="game-embed" unityContext={unityContext} />
@@ -36,9 +38,10 @@ const MiniGame = () => {
                 </div>
             </div>
             <ReactAudioPlayer
-                src={`url(${Sound})`}
-                autoPlay={true}
-                loop={true}
+                src={Sound}
+                muted={false}
+                id="minigame-audio-player"
+                volume={0.25}
             />
             <div className="unity-canvas-container">
                 <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>

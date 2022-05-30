@@ -12,6 +12,8 @@ function receiveMessageFromUnity(message) {
 
 // called when ENTER button (inside canvas) clicked
 function onEnterClicked() {
+	var audio = document.getElementById("minigame-audio-player");
+	audio.play();
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onEnterClicked");
 	}
