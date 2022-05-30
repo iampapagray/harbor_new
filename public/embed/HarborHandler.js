@@ -46,6 +46,15 @@ function onButtonClicked(id) {
 	window.open(config.buildings[id].URL, "_self");
 }
 
+// called when button inside popup was clicked
+function onVideoButtonClicked(id) {
+	if (showAllCallbacksFromUnityAsAlerts) {
+		alert("onVideoButtonClicked:" + id);
+	}
+	window.open(config.buildings[id].VideoURL, "_self");
+}
+
+
 // called after camera zoom in animation is finished after clicking on icon
 function onIconClickedAnimationFinished(id) {
 	if (showAllCallbacksFromUnityAsAlerts) {
