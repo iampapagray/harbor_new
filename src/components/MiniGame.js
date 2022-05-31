@@ -95,9 +95,9 @@ const MiniGame = () => {
             <div className="unity-canvas-container">
                 <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
             </div>
-            <div className="scroll-arrow-container">
+            {/* <div className="scroll-arrow-container">
                 <img className="scroll-arrow" src={ArrowRight} onClick={executeScroll}/>
-            </div>
+            </div> */}
 		</div>
     );
 }

@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar style="light"/>
+        {/* <NavBar style="light"/> */}
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/leena" element={ <div><Leena /><Footer /></div> } />
