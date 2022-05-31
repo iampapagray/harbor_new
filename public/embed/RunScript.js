@@ -4,10 +4,16 @@ var showAllCallbacksFromUnityAsAlerts = false;
 
 var progressBarFull = document.querySelector("#unity-progress-bar-full");
 var loadingBar = document.querySelector("#unity-loading-bar");
-loadingBar.style.display = "block";
+var enterButton = document.querySelector("#enter_button");
+var exploreButton = document.querySelector("#explore_button");
+var unityCanvas = document.querySelector("#unity-canvas");
+
+
+// turn off touches on canvas
+unityCanvas.style.pointerEvents = "none";
 
 console.log("RUN SCRIPT");
-createUnityInstance(document.querySelector("#unity-canvas"), {
+createUnityInstance(unityCanvas, {
     dataUrl: "embed/Build/Harbor.data",
     frameworkUrl: "embed/Build/Harbor.framework.js",
     codeUrl: "embed/Build/Harbor.wasm",
@@ -21,4 +27,7 @@ createUnityInstance(document.querySelector("#unity-canvas"), {
     myGameInstance = unityInstance;
 	loadingBar.style.display = "none";
     configureUnity();
+	
+	// show enter button
+	setTimeout(function(){enterButton.style.display = "block"; }, 2200);
 });
