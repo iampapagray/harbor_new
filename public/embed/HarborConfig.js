@@ -73,8 +73,6 @@ function configureUnity() {
         IsButtonActive: false
     };
 
-
-
     config = {
         buildings: {
             loyalty: loyaltyConfig,

@@ -1,4 +1,5 @@
 import MiniGame from './MiniGame.js';
+import Footer from './Footer.js';
 import { Button } from 'react-bootstrap';
 import '../styles/Home.css';
 
@@ -15,7 +16,7 @@ import Team from '../assets/home/team.png';
 const Home = () => {
 
     return (
-        <div>
+        <div className="home-container">
             <MiniGame />
             <div className="roadmap-container">
                 <div className="roadmap-box roadmap-box-1">
@@ -76,10 +77,10 @@ const Home = () => {
                 <div className="roadmap-box roadmap-box-upcoming-games">
                     <div className="roadmap-box-upcoming-games-top">
                         <p className="roadmap-title">Upcoming Games</p>
-                        <div className="roadmap-icon-menu">
+                        {/* <div className="roadmap-icon-menu">
                             <img src={ArrowLeft} />
                             <img src={ArrowRight} />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="roadmap-box-upcoming-games-bottom">
                         <div className="roadmap-box-upcoming-games-bottom-item">
@@ -100,6 +101,7 @@ const Home = () => {
                     <img src={Team} />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
