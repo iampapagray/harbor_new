@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <div className="home-container">
             <MiniGame />
-            <div className="roadmap-container">
+            <div className="roadmap-container" id="roadmap-container-id">
                 <div className="roadmap-box roadmap-box-1">
                     <div className="roadmap-box-1-top">
                         <p className="roadmap-title">Overview</p>

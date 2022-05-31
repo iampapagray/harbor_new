@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../styles/MiniGame.css';
 import SplashScreen from '../assets/general/Splash.png';
 import Sound from '../assets/general/harbor-soundtrack.mp3';
+import ArrowRight from '../assets/home/arrow-right.svg';
 import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -25,7 +26,17 @@ const MiniGame = () => {
         loadScript("embed/RunScript.js");
     }, []);
 
-    var playing = false;
+    // const inputEl = useRef(null);
+    const executeScroll = () => {
+        console.log("scroll");
+        // const inputEl = useRef(null);
+        // inputEl.current.scrollIntoView()
+        const roadmap = document.getElementById("roadmap-container-id"); 
+        window.scrollTo({
+            top: roadmap.offsetTop,
+            behavior: "smooth"
+        });
+    };
 
     return (
 	
@@ -45,6 +56,9 @@ const MiniGame = () => {
             />
             <div className="unity-canvas-container">
                 <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
+            </div>
+            <div className="scroll-arrow-container">
+                <img className="scroll-arrow" src={ArrowRight} onClick={executeScroll} />
             </div>
 		</div>
     );
