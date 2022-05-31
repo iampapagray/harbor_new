@@ -30,14 +30,14 @@
     padding: 10px 30px 10px 30px;
 }
 
-.title {
+.loyalty-title {
     font-size: 55px;
     font-weight: bold;
     color: black;
     line-height: normal;
 }
 
-.desc {
+.loyalty-desc {
     font-size: 15px;
     /* font-weight: bold; */
     color: #6a7280;

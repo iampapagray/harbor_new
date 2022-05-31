@@ -34,29 +34,29 @@ const Loyalty = () => {
             </div>
             <div className="loyalty-box loyalty-box-1">
                 <div className="inner-loyalty-box">
-                    <p className="title">Do you have what it takes?</p>
-                    <p className="desc">Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
+                    <p className="loyalty-title">Do you have what it takes?</p>
+                    <p className="loyalty-desc">Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
                     <Button className="play-button" variant="secondary">Play Game</Button>{' '}
-                    <p className="desc">Coming Soon</p>
+                    <p className="loyalty-desc">Coming Soon</p>
                 </div>
             </div>
             <div className="loyalty-box loyalty-box-2">
                 <div className="inner-loyalty-box">
-                    <p className="title">Lead your gang of mobsters!</p>
-                    <p className="desc">Help her to transform the sleepy countryside village into flourishing modern family town!</p>
+                    <p className="loyalty-title">Lead your gang of mobsters!</p>
+                    <p className="loyalty-desc">Help her to transform the sleepy countryside village into flourishing modern family town!</p>
                 </div>
                 <img className="loyalty-video" src={TurfWars} />
             </div>
             <div className="loyalty-box loyalty-box-3">
                 <div className="inner-loyalty-box">
-                    <p className="title">Claim control over Mafia Town</p>
-                    <p className="desc">Get ready to fight in hundreds of missions in Mafia Town districts against hideous criminals, bosses and forces of law. Take over the control and become the capo di tutti capi.</p>
+                    <p className="loyalty-title">Claim control over Mafia Town</p>
+                    <p className="loyalty-desc">Get ready to fight in hundreds of missions in Mafia Town districts against hideous criminals, bosses and forces of law. Take over the control and become the capo di tutti capi.</p>
                 </div>
                 <img src={LoyaltyMap} />
             </div>
             <div className="loyalty-box loyalty-box-4">
                 <div className="inner-loyalty-box">
-                    <p className="title">Claim control over Mafia Town</p>
+                    <p className="loyalty-title">Claim control over Mafia Town</p>
                 </div>
                 <img src={controlHeader} />
                 <div className="loyalty-box-4-sub-images">
@@ -67,8 +67,8 @@ const Loyalty = () => {
             </div>
             <div className="loyalty-box loyalty-box-5">
                 <div className="inner-loyalty-box">
-                    <p className="title">Collect Underlings</p>
-                    <p className="desc">Over 100 of the wackiest Mobsters you’ve ever seen, ready to fight for their Capo. </p>
+                    <p className="loyalty-title">Collect Underlings</p>
+                    <p className="loyalty-desc">Over 100 of the wackiest Mobsters you’ve ever seen, ready to fight for their Capo. </p>
                 </div>
                 <div className="loyalty-box-5-sub-images">
                     <img src={underlingSwat} className="loyalty-box-5-sub-image loyalty-box-5-sub-image-1" />
