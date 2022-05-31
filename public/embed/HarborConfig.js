@@ -83,7 +83,8 @@ function configureUnity() {
             governance: governanceConfig,
             marketplace: marketplaceConfig,
             faq: faqConfig
-        }
+        },
+		use_web_buttons : true
     };
 
     myGameInstance.SendMessage('ConfigurationManager', 'Set', JSON.stringify(config));

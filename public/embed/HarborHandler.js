@@ -10,6 +10,7 @@ function receiveMessageFromUnity(message) {
 	}
 }
 
+
 // called when ENTER button (inside canvas) clicked
 function onEnterClicked() {
 	var audio = document.getElementById("minigame-audio-player");
@@ -24,6 +25,11 @@ function onExitClicked() {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onExitClicked");
 	}
+	// show explore
+	exploreButton.style.display = "block";
+
+	// disable touches = enable scrolling
+	unityCanvas.style.pointerEvents = "none";
 }
 
 // called when harbor scene is loaded
@@ -31,6 +37,9 @@ function onHarborSceneLoaded() {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onHarborSceneLoaded");
 	}
+	
+	// show explore button
+	exploreButton.style.display = "block";
 }
 
 // called when icon above building was clicked
