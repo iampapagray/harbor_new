@@ -33,6 +33,6 @@
     height: 75%;
 }
 
-#unity-loading-bar { position: absolute; left: 50%; top: 90%; transform: translate(-50%, -50%); display: none }
+#unity-loading-bar { position: absolute; left: 50%; top: 90%; transform: translate(-50%, -150%); display: none }
 #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('../assets/general/progress-bar-empty-light.png') no-repeat center }
 #unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('../assets/general/progress-bar-full-light.png') no-repeat center }
