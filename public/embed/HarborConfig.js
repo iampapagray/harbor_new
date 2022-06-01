@@ -29,8 +29,7 @@ function configureUnity() {
         URL: "/leena",
         ButtonLabel: "About",
         IsButtonActive: true,
-		VideoURL: "https://www.youtube.com/watch?v=QtGt8w3dcfE
-        "
+		VideoURL: "https://www.youtube.com/watch?v=QtGt8w3dcfE"
     };
 
 
