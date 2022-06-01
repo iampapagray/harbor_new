@@ -31,5 +31,5 @@ createUnityInstance(unityCanvas, {
     configureUnity();
 	
 	// show enter button
-	setTimeout(function(){enterButton.style.display = "block"; }, 2200);
+	setTimeout(function(){enterButton.style.display = "block"; }, 2700);
 });
