@@ -59,6 +59,22 @@ const MiniGame = () => {
 		// enable touches in unity
 		document.querySelector("#unity-canvas").style.pointerEvents = "auto";
 		document.querySelector("#explore_button").style.display = "none";
+
+        // Hide NavBar
+        var navbar = document.getElementById("navbar-id");
+        var id = null;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        var opacity = 1;
+        function frame() {
+            if (opacity == 0) {
+                clearInterval(id);
+            } else {
+                console.log(opacity);
+                opacity = opacity - 0.01;
+            }
+            navbar.style.opacity = String(opacity);
+        }
 	};
 
 
