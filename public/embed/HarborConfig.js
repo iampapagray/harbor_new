@@ -84,7 +84,8 @@ function configureUnity() {
             marketplace: marketplaceConfig,
             faq: faqConfig
         },
-		use_web_buttons : true
+		use_web_buttons : true,
+		intro_delay : 10
     };
 
     myGameInstance.SendMessage('ConfigurationManager', 'Set', JSON.stringify(config));
