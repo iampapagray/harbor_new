@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/NavBar.css';
+import React, { useEffect, useState } from "react";
 import { Navbar, OverlayTrigger, Tooltip, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
 import Logo from "../assets/general/HarborLogo.png";
 
@@ -10,6 +11,53 @@ const renderComingSoonTooltip = (props) => (
   );
 
 function NavBar(props) {
+
+    var lastScrollTop = 0;
+
+    useEffect(() => {
+        var navbar = document.getElementById("navbar-id");
+        navbar.style.display = "flex";
+        navbar.style.opacity = "0";
+        var opacity = 0.0;
+
+        window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+            var id = null;
+            if (st > lastScrollTop){
+               // downscroll code
+                clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                	if (opacity >= 1) {
+                		clearInterval(id);
+                        opacity = 1;
+                	} else {
+                		opacity = opacity + 0.01;
+                	}
+                	navbar.style.opacity = opacity;
+                }
+            } else {
+               // upscroll code
+               clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                	if (opacity <= 0) {
+                		clearInterval(id);
+                        opacity = 0;
+                	} else {
+                		opacity -= 0.01;
+                	}
+                	navbar.style.opacity = opacity;
+                }
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+         }, false);
+    
+        return () => {
+            window.removeEventListener("scroll");
+        };
+    }, []);
+
     return (
         <Navbar id="navbar-id" bg={props.style} variant={props.style} expand="lg">
             <Container className="nav-container-left">

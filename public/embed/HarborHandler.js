@@ -12,11 +12,11 @@ function receiveMessageFromUnity(message) {
 
 // called when ENTER button (inside canvas) clicked
 function onEnterClicked() {
-	var audio = document.getElementById("minigame-audio-player");
-	audio.play();
-	if (showAllCallbacksFromUnityAsAlerts) {
-		alert("onEnterClicked");
-	}
+	// var audio = document.getElementById("minigame-audio-player");
+	// audio.play();
+	// if (showAllCallbacksFromUnityAsAlerts) {
+	// 	alert("onEnterClicked");
+	// }
 
 	// hide enter button in case of timeouted transition from intro
 	document.getElementById("enter_button").style.display = "none";
