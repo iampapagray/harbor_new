@@ -5,9 +5,10 @@ import cloudLeft from '../assets/leena/MapObjects/Clouds/MapClouds02.png';
 import cloudRight from '../assets/leena/MapObjects/Clouds/MapClouds03.png';
 import Logo from '../assets/leena/Logo/Leenas_Place_logo.png';
 import Teaser from '../assets/leena/Gameplay/TaylorsTown_teaser.mp4';
-import TwistBottom from '../assets/leena/Visuals/TT_store_03.jpg';
+import TwistBottom from '../assets/leena/Visuals/TT_store_03.png';
 import TwistLeft from '../assets/leena/Characters/Taylor_highpoly_v01.png';
-import DreamTown from '../assets/leena/Visuals/Memory_S1E2_updated.PNG';
+
+import DreamTown from '../assets/leena/Gameplay/Group 2702.png';
 
 import ConstructionSite from '../assets/leena/MapObjects/Buildings/ConstructionSite.png';
 import Library from '../assets/leena/MapObjects/Buildings/library.png';

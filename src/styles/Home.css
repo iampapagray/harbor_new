@@ -1,10 +1,15 @@
 .home-container {
     height: 100%;
+    overflow-y: hidden;
+}
+
+.btn {
+    font-weight: 500;
 }
 
 .roadmap-title {
-    font-size: 55px;
-    font-weight: bold;
+    font-size: 65px;
+    font-weight: 900;
     color: black;
     line-height: normal;
 }
@@ -14,6 +19,7 @@
     color: black;
     line-height: normal;
     text-align: left;
+    font-weight: 600;
 }
 
 .roadmap-container {
@@ -26,6 +32,7 @@
 .roadmap-box {
     margin-bottom: 7%;
     width: 80%;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -40,7 +47,7 @@
 
 .roadmap-box-1-top {
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 .roadmap-box-1-bottom {
@@ -51,7 +58,7 @@
 
 .roadmap-box-1-bottom-left {
     width: 50%;
-    /* padding: 30px 0 30px 0; */
+    padding: 30px 0 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,8 +68,10 @@
 }
 
 .roadmap-box-1-bottom-left img {
-    width: 70%;
+    width: 90%;
     margin-bottom: 10%;
+    margin-top: -20%;
+    max-width: 400px;
 }
 
 .roadmap-box-1-bottom-right {
@@ -77,18 +86,22 @@
 }
 
 .roadmap-box-1-bottom-right img {
-    width: 70%;
-    margin-top: 10%;
+    width: 90%;
+    margin-top: 2%;
 }
 
 .roadmap-box-1-bottom-left-text {
     color: white;
-    width: 70%;
+    width: 80%;
+    line-height: 55px;
+    max-height: 300px;
 }
 
 .roadmap-box-1-bottom-right-text {
     color: black;
-    width: 70%;
+    width: 80%;
+    line-height: 55px;
+    max-height: 300px;
 }
 
 .roadmap-box-2 {
@@ -99,6 +112,7 @@
 
 .roadmap-title-box-2 {
     text-align: left;
+    margin-bottom: 30px;
 }
 
 .roadmap-box-2-left {
@@ -116,7 +130,9 @@
 }
 
 .box-2-play-button {
-    margin-top: 30px;
+    margin-top: 20px;
+    max-width: 175px;
+    margin-left: 20px;
 }
 
 .roadmap-box-2-timeline-line-item {
@@ -137,13 +153,13 @@
 }
 
 .roadmap-box-2-timeline-line-item-right-top {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     text-align: left;
 }
 
 .roadmap-box-2-timeline-line-item-right-bottom {
-    font-size: 14px;
+    font-size: 12px;
     text-align: left;
 }
 
@@ -155,6 +171,10 @@
 
 .roadmap-box-upcoming-games {
 
+}
+
+.roadmap-box-upcoming-games-play-button {
+    max-width: 175px;
 }
 
 .roadmap-box-upcoming-games-top {
@@ -193,6 +213,14 @@
     width: 45%;
 }
 
+.roadmap-box-upcoming-games-bottom-item p {
+    margin-left: 20px;
+}
+
+.roadmap-box-upcoming-games-bottom-item button {
+    margin-left: 20px;
+}
+
 .roadmap-box-upcoming-games-bottom-item img {
     height: 300px;
     object-fit: contain;
@@ -220,6 +248,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .roadmap-box-team img {

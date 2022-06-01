@@ -16,7 +16,7 @@ import Team from '../assets/home/team.png';
 const Home = () => {
 
     return (
-        <div className="home-container">
+        <div className="home-container" id="home-container-id">
             <MiniGame />
             <div className="roadmap-container" id="roadmap-container-id">
                 <div className="roadmap-box roadmap-box-1">
@@ -66,7 +66,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <Button className="box-2-play-button" variant="secondary">Explore Harbor</Button>{' '}
+                        <Button href="/" className="box-2-play-button" variant="success">Explore Harbor</Button>{' '}
                     </div>
                     <div className="roadmap-box-2-right">
                         <img src={ManAndBoat} />
@@ -87,13 +87,13 @@ const Home = () => {
                             <img src={leena} />
                             <p className="roadmap-box-upcoming-games-bottom-item-title">Leena's Place</p>
                             <p className="roadmap-box-upcoming-games-bottom-item-desc">Leena returns home and becomes mayor of her small town with the vision of building her boring town into a modern lively abode for her friends and family</p>
-                            <Button className="roadmap-box-upcoming-games-play-button" variant="secondary">Learn More</Button>{' '}
+                            <Button className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
                         </div>
                         <div className="roadmap-box-upcoming-games-bottom-item">
                             <img src={loyalty} />
                             <p className="roadmap-box-upcoming-games-bottom-item-title">Loyalty</p>
-                            <p className="roadmap-box-upcoming-games-bottom-item-desc">Kick up your own gang and run your family’s crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
-                            <Button className="roadmap-box-upcoming-games-play-button" variant="secondary">Learn More</Button>{' '}
+                            <p className="roadmap-box-upcoming-games-bottom-item-desc">Kick up your own gang and run your family’s crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra</p>
+                            <Button className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
                         </div>
                     </div>
                 </div>

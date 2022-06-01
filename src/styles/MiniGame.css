@@ -1,6 +1,5 @@
 
 .minigame-container {
-    overflow-y: scroll;
     height: 100%;
 }
 
@@ -10,7 +9,6 @@
     color: #45a5f3;
     background-size: auto 100%;
     background-position: center center;
-    /*overflow-y: scroll;*/
 }
 
 .unity-canvas-container {
@@ -21,9 +19,8 @@
     /*overflow-y: scroll;*/
 }
 
-.scroll-arrow-container {
-    height: 7.5%;
-    display: flex;
+/* .scroll-arrow-container {
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -33,7 +30,7 @@
 .scroll-arrow {
     transform: rotate(90deg);
     height: 75%;
-}
+} */
 
 
 

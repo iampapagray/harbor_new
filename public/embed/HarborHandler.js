@@ -18,6 +18,10 @@ function onEnterClicked() {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onEnterClicked");
 	}
+
+	var home = document.getElementById("home-container-id");
+
+    home.style.overflowY = "visible";
 }
 
 // called when LEAVE button (inside harbor scene) clicked

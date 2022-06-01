@@ -81,36 +81,36 @@ const Loyalty = () => {
                 <div className="loyalty-line-item">
                     <img className="loyalty-line-item-img" src={mobBoss} />
                     <div className="loyalty-line-item-content">
-                        <p className="leena-line-item-text-title">Fight mob bosses in campaign</p>
-                        <p className="leena-line-item-text-desc">Tackle on this on-going and dangerous campaign filled with other Mafia Bosses which want your head!</p>
+                        <p className="loyalty-line-item-text-title">Fight mob bosses in campaign</p>
+                        <p className="loyalty-line-item-text-desc">Tackle on this on-going and dangerous campaign filled with other Mafia Bosses which want your head!</p>
                     </div>
                 </div>
                 <div className="loyalty-line-item">
                     <div className="loyalty-line-item-content">
-                        <p className="leena-line-item-text-title">Train your gang for battle</p>
-                        <p className="leena-line-item-text-desc">Competition is fierce! Make sure you constantly upgrade your devoted mobsters!</p>
+                        <p className="loyalty-line-item-text-title">Train your gang for battle</p>
+                        <p className="loyalty-line-item-text-desc">Competition is fierce! Make sure you constantly upgrade your devoted mobsters!</p>
                     </div>
                     <img className="loyalty-line-item-img" src={trainGang} />
                 </div>
                 <div className="loyalty-line-item">
                     <img className="loyalty-line-item-img" src={versus} />
                     <div className="loyalty-line-item-content">
-                        <p className="leena-line-item-text-title">Battle others in turf wars</p>
-                        <p className="leena-line-item-text-desc">Committing crime takes bullets! Be prepared to fight 1on1 with other player bosses in PvP turf battles!</p>
+                        <p className="loyalty-line-item-text-title">Battle others in turf wars</p>
+                        <p className="loyalty-line-item-text-desc">Committing crime takes bullets! Be prepared to fight 1on1 with other player bosses in PvP turf battles!</p>
                     </div>
                 </div>
                 <div className="loyalty-line-item">
                     <div className="loyalty-line-item-content">
-                        <p className="leena-line-item-text-title">Create or join families</p>
-                        <p className="leena-line-item-text-desc">Here and there, everyone has to accept help. Fight alongside your Mafia Family allies and prosper together!</p>
+                        <p className="loyalty-line-item-text-title">Create or join families</p>
+                        <p className="loyalty-line-item-text-desc">Here and there, everyone has to accept help. Fight alongside your Mafia Family allies and prosper together!</p>
                     </div>
                     <img className="loyalty-line-item-img" src={ladies} />
                 </div>
                 <div className="loyalty-line-item">
                     <img className="loyalty-line-item-img" src={takeOut} />
                     <div className="loyalty-line-item-content">
-                        <p className="leena-line-item-text-title">Undertake raid quests</p>
-                        <p className="leena-line-item-text-desc">Raid prisons and liberate your future colleagues in crime! Family has cash problems? No worries! A well performed bank robbery will cover everything!</p>
+                        <p className="loyalty-line-item-text-title">Undertake raid quests</p>
+                        <p className="loyalty-line-item-text-desc">Raid prisons and liberate your future colleagues in crime! Family has cash problems? No worries! A well performed bank robbery will cover everything!</p>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@
 .loyalty-bg {
     width: 100%;
     height: 500px;
+    background-size: auto 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -32,9 +33,10 @@
 
 .loyalty-title {
     font-size: 55px;
-    font-weight: bold;
+    font-weight: 900;
     color: black;
-    line-height: normal;
+    line-height: 55px;
+    margin-top: 10px;
 }
 
 .loyalty-desc {
@@ -46,6 +48,7 @@
 .loyalty-box {
     margin-bottom: 7%;
     width: 80%;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -105,7 +108,7 @@
 }
 
 .loyalty-box-5-sub-images {
-    width: 100%;
+    width: 90%;
 }
 
 .loyalty-box-5-sub-image {
@@ -165,22 +168,22 @@
     margin-right: 5%;
 }
 
-.leena-line-item-text-title {
-    font-size: 45px;
-    font-weight: bold;
+.loyalty-line-item-text-title {
+    font-size: 40px;
+    font-weight: 800;
     color: black;
-    line-height: normal;
+    line-height: 50px;
     text-align: left;
 }
 
-.leena-line-item-text-desc {
+.loyalty-line-item-text-desc {
     font-size: 13px;
     /* font-weight: bold; */
     color: #6a7280;
     text-align: left;
 }
 
-.leena-line-item-text {
+.loyalty-line-item-text {
     color: white;
     font-size: 24px;
     font-weight: bold;
