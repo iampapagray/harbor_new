@@ -1,5 +1,6 @@
 import MiniGame from './MiniGame.js';
 import Footer from './Footer.js';
+import NavBar from './NavBar.js';
 import { Button } from 'react-bootstrap';
 import '../styles/Home.css';
 
@@ -17,6 +18,7 @@ const Home = () => {
 
     return (
         <div className="home-container" id="home-container-id">
+            {/* <NavBar style="light"/> */}
             <MiniGame />
             <div className="roadmap-container" id="roadmap-container-id">
                 <div className="roadmap-box roadmap-box-1">

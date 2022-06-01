@@ -12,7 +12,9 @@ var unityCanvas = document.querySelector("#unity-canvas");
 // turn off touches on canvas
 unityCanvas.style.pointerEvents = "none";
 
-console.log("RUN SCRIPT");
+// var navbar = document.getElementById("navbar-id");
+// navbar.style.display = "none";
+
 createUnityInstance(unityCanvas, {
     dataUrl: "embed/Build/Harbor.data",
     frameworkUrl: "embed/Build/Harbor.framework.js",

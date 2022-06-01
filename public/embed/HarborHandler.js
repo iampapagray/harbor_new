@@ -2,7 +2,6 @@
 // All callbacks from Unity could be handled here
 ///////////////////////////////
 
-
 // called as general message from Unity
 function receiveMessageFromUnity(message) {
 	if (showAllCallbacksFromUnityAsAlerts) {
@@ -19,9 +18,28 @@ function onEnterClicked() {
 		alert("onEnterClicked");
 	}
 
+	// Allow Home to scroll
 	var home = document.getElementById("home-container-id");
-
     home.style.overflowY = "visible";
+
+	// Restore NavBar
+	var navbar = document.getElementById("navbar-id");
+	navbar.style.opacity = "0";
+	navbar.style.display = "flex";
+	var id = null;
+	clearInterval(id);
+	id = setInterval(frame, 10);
+	var opacity = 0;
+	function frame() {
+		if (opacity == 1) {
+			clearInterval(id);
+		} else {
+			console.log(opacity);
+			opacity += 0.01;
+		}
+		navbar.style.opacity = String(opacity);
+	}
+
 }
 
 // called when LEAVE button (inside harbor scene) clicked

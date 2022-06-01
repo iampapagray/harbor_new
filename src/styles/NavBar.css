@@ -1,5 +1,8 @@
 .navbar {
     width: 100%;
+    position: fixed;
+    /* background: linear-gradient(to bottom, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0.5) 100%); */
+    left: 0;
     height: 7.5%;
     min-height: 50px;
     padding: 15px 10px 15px 10px;

@@ -11,7 +11,7 @@ const renderComingSoonTooltip = (props) => (
 
 function NavBar(props) {
     return (
-        <Navbar bg={props.style} variant={props.style} expand="lg">
+        <Navbar id="navbar-id" bg={props.style} variant={props.style} expand="lg">
             <Container className="nav-container-left">
                 <Navbar.Brand href="/">
                     <img

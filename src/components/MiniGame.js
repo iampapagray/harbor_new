@@ -20,25 +20,17 @@ var loadScript = function(srcInput) {
 const MiniGame = () => {
 
     useEffect(() => {
-        console.log("run scripts");
+
+        // Remove the navbar on initial screen, restored in HarborHandler.js
+        var navbar = document.getElementById("navbar-id");
+	    navbar.style.display = "none";
+
         loadScript("embed/Build/Harbor.loader.js");
         loadScript("embed/HarborHandler.js");
         loadScript("embed/HarborSender.js");
         loadScript("embed/HarborConfig.js");
         loadScript("embed/RunScript.js");
     }, []);
-
-    // const inputEl = useRef(null);
-    const executeScroll = () => {
-        console.log("scroll");
-        // const inputEl = useRef(null);
-        // inputEl.current.scrollIntoView()
-        const roadmap = document.getElementById("roadmap-container-id"); 
-        window.scrollTo({
-            top: roadmap.offsetTop,
-            behavior: "smooth"
-        });
-    };
 	
 	const enter_harbor = () => {
 		// calls HarborSender.send_enter - to unity(
@@ -95,9 +87,6 @@ const MiniGame = () => {
             <div className="unity-canvas-container">
                 <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
             </div>
-            {/* <div className="scroll-arrow-container">
-                <img className="scroll-arrow" src={ArrowRight} onClick={executeScroll}/>
-            </div> */}
 		</div>
     );
 }
