@@ -12,7 +12,7 @@ function configureUnity() {
         URL: "/loyalty",
         ButtonLabel: "About",
         IsButtonActive : true,
-		VideoURL: "https://youtu.be/S2iSekvIb5k"
+		VideoURL: "https://www.youtube.com/watch?v=EyfVjLMyf4U"
     };
 
     var wthConfig = {
@@ -29,7 +29,8 @@ function configureUnity() {
         URL: "/leena",
         ButtonLabel: "About",
         IsButtonActive: true,
-		VideoURL: "https://youtu.be/zL84sZNOuX8"
+		VideoURL: "https://www.youtube.com/watch?v=QtGt8w3dcfE
+        "
     };
 
 
