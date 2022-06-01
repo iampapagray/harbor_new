@@ -25,25 +25,25 @@ function onEnterClicked() {
 	var home = document.getElementById("home-container-id");
     home.style.overflowY = "visible";
 
-	// Restore NavBar
-	var navbar = document.getElementById("navbar-id");
-	navbar.style.opacity = "0";
-	navbar.style.display = "flex";
-	var id = null;
-	var loaded = false;
-	clearInterval(id);
-	id = setInterval(frame, 10);
-	var opacity = 0;
-	function frame() {
-		if (opacity == 1 && !loaded) {
-			clearInterval(id);
-			loaded = true;
-		} else {
-			console.log(opacity);
-			opacity += 0.01;
-		}
-		navbar.style.opacity = String(opacity);
-	}
+	// // Restore NavBar
+	// var navbar = document.getElementById("navbar-id");
+	// navbar.style.opacity = "0";
+	// navbar.style.display = "flex";
+	// var id = null;
+	// var loaded = false;
+	// clearInterval(id);
+	// id = setInterval(frame, 10);
+	// var opacity = 0;
+	// function frame() {
+	// 	if (opacity == 1 && !loaded) {
+	// 		clearInterval(id);
+	// 		loaded = true;
+	// 	} else {
+	// 		console.log(opacity);
+	// 		opacity += 0.01;
+	// 	}
+	// 	navbar.style.opacity = String(opacity);
+	// }
 
 }
 

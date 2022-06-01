@@ -6,6 +6,7 @@
     height: 7.5%;
     min-height: 50px;
     padding: 15px 10px 15px 10px;
+    z-index: 20;
 }
 
 .nav-container-right {

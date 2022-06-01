@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+
 import MiniGame from './MiniGame.js';
 import Footer from './Footer.js';
 import NavBar from './NavBar.js';
@@ -14,7 +16,60 @@ import ArrowLeft from '../assets/home/arrow-left.svg';
 import ArrowRight from '../assets/home/arrow-right.svg';
 import Team from '../assets/home/team.png';
 
+
 const Home = () => {
+
+    // const [scrolling, setScrolling] = useState(false);
+    // const [scrollTop, setScrollTop] = useState(0);
+    var lastScrollTop = 0;
+
+    useEffect(() => {
+        var navbar = document.getElementById("navbar-id");
+        navbar.style.display = "flex";
+        navbar.style.opacity = "0";
+        var opacity = 0.0;
+
+        window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+            var id = null;
+            if (st > lastScrollTop){
+               // downscroll code
+                clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                	if (opacity >= 1) {
+                		clearInterval(id);
+                        opacity = 1;
+                	} else {
+                		console.log("OPACITY UP");
+                        console.log(opacity);
+                		opacity = opacity + 0.01;
+                	}
+                	navbar.style.opacity = opacity;
+                }
+            } else {
+               // upscroll code
+               clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                	if (opacity <= 0) {
+                		clearInterval(id);
+                        opacity = 0;
+                	} else {
+                		console.log("OPACITY DOWN");
+                        console.log(opacity);
+                		opacity -= 0.01;
+                	}
+                	navbar.style.opacity = opacity;
+                }
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+         }, false);
+    
+        return () => {
+            window.removeEventListener("scroll");
+        };
+    }, []);
 
     return (
         <div className="home-container" id="home-container-id">
