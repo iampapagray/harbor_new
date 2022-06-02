@@ -9,6 +9,13 @@ function send_enter() {
 	myGameInstance.SendMessage('BrowserInvoker', 'Enter');
 }
 
+function send_explore() {
+	// BrowserInvoker - receiver object name - remains the same
+	// Enter - name of method to invoke
+	myGameInstance.SendMessage('BrowserInvoker', 'Explore');
+}
+
+
 function toggle_debug_layer() {
 	myGameInstance.SendMessage('BrowserInvoker', 'ToggleDebugLayer');
 }

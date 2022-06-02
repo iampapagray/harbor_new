@@ -10,8 +10,9 @@ function configureUnity() {
         Name: "Loyalty",
         Description: "",
         URL: "/loyalty",
-        ButtonLabel: "Play Now",
-        IsButtonActive : true
+        ButtonLabel: "About",
+        IsButtonActive : true,
+		VideoURL: "https://www.youtube.com/watch?v=EyfVjLMyf4U"
     };
 
     var wthConfig = {
@@ -26,8 +27,9 @@ function configureUnity() {
         Name: "Leena's Place",
         Description: "",
         URL: "/leena",
-        ButtonLabel: "Play Now",
-        IsButtonActive: true
+        ButtonLabel: "About",
+        IsButtonActive: true,
+		VideoURL: "https://www.youtube.com/watch?v=QtGt8w3dcfE"
     };
 
 
@@ -71,8 +73,6 @@ function configureUnity() {
         IsButtonActive: false
     };
 
-
-
     config = {
         buildings: {
             loyalty: loyaltyConfig,
@@ -83,7 +83,9 @@ function configureUnity() {
             governance: governanceConfig,
             marketplace: marketplaceConfig,
             faq: faqConfig
-        }
+        },
+		use_web_buttons : true,
+		intro_delay : 10
     };
 
     myGameInstance.SendMessage('ConfigurationManager', 'Set', JSON.stringify(config));
