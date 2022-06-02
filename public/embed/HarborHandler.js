@@ -81,7 +81,7 @@ function onButtonClicked(id) {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onButtonClicked:" + id);
 	}
-	window.open(config.buildings[id].URL, "_self");
+	window.open(config.buildings[id].URL, "_blank");
 }
 
 // called when button inside popup was clicked
@@ -89,7 +89,7 @@ function onVideoButtonClicked(id) {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onVideoButtonClicked:" + id);
 	}
-	window.open(config.buildings[id].VideoURL, "_self");
+	window.open(config.buildings[id].VideoURL, "_blank");
 }
 
 
