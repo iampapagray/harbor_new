@@ -3,6 +3,8 @@ import '../styles/NavBar.css';
 import React, { useEffect, useState } from "react";
 import { Navbar, OverlayTrigger, Tooltip, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
 import Logo from "../assets/general/HarborLogo.png";
+import LogoBlue from "../assets/general/HarborLogoBlue.svg";
+import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 
 const renderComingSoonTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -64,12 +66,19 @@ function NavBar(props) {
                 <Navbar.Brand href="/">
                     <img
                         alt=""
-                        src={Logo}
+                        src={LogoBlue}
                         width="30"
                         height="30"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top harbor-logo-img"
                     />{' '}
-                    Harbor</Navbar.Brand>
+                    <img
+                        alt=""
+                        src={LogoText}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top harbor-logo-text"
+                    />{' '}
+                    </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

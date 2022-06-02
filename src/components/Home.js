@@ -6,18 +6,67 @@ import NavBar from './NavBar.js';
 import { Button } from 'react-bootstrap';
 import '../styles/Home.css';
 
-import GameInHands from '../assets/home/hands.png';
-import HarborMobileSample from '../assets/home/mobile-prev.png';
-import HarborTimelineIcon from '../assets/home/harbortimelineicon.png';
+// import GameInHands from '../assets/home/hands.png';
+// import HarborMobileSample from '../assets/home/mobile-prev.png';
+import Characters from '../assets/home/characters.png';
+import HarborTimelineIcon from '../assets/home/harbortimelineicon.svg';
 import ManAndBoat from '../assets/home/boat-and-man.png';
 import leena from '../assets/home/leena.png';
 import loyalty from '../assets/home/loyalty.png';
 import ArrowLeft from '../assets/home/arrow-left.svg';
 import ArrowRight from '../assets/home/arrow-right.svg';
 import Team from '../assets/home/team.png';
+import Experience from '../assets/home/experience.png';
+import Roadmap from '../assets/home/roadmap.png';
+import PastExperiences from '../assets/home/past-experiences.png';
 
 
 const Home = () => {
+
+    const scrollRight = (id) => {
+        console.log("rightss");
+        const elem = document.getElementById(id);
+        console.log(elem);
+        const maxVal = elem.scrollWidth - elem.clientWidth;
+
+        var id = null;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        var scrollLeft = elem.scrollLeft;
+        function frame() {
+            if (scrollLeft >= maxVal) {
+                clearInterval(id);
+                scrollLeft = maxVal;
+            } else {
+                scrollLeft += 30;
+            }
+            elem.scrollLeft = scrollLeft;
+        }
+        console.log(elem.scrollLeft);
+    }
+
+    const scrollLeft = (id) => {
+        console.log("right");
+        const elem = document.getElementById(id);
+        console.log(elem);
+        const maxVal = elem.scrollWidth - elem.clientWidth;
+
+        var id = null;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        var scrollLeft = elem.scrollLeft;
+        function frame() {
+            if (scrollLeft <= 0) {
+                clearInterval(id);
+                scrollLeft = 0;
+            } else {
+                scrollLeft -= 30;
+            }
+            elem.scrollLeft = scrollLeft;
+        }
+
+        console.log(elem.scrollLeft);
+    }
 
     return (
         <div className="home-container" id="home-container-id">
@@ -26,22 +75,13 @@ const Home = () => {
             <div className="roadmap-container" id="roadmap-container-id">
                 <div className="roadmap-box roadmap-box-1">
                     <div className="roadmap-box-1-top">
-                        <p className="roadmap-title">Overview</p>
+                        <p className="roadmap-title">Creating blockchain games for the masses</p>
                     </div>
-                    <div className="roadmap-box-1-bottom">
-                        <div className="roadmap-box-1-bottom-left">
-                            <img src={GameInHands} />
-                            <p className="desc roadmap-box-1-bottom-left-text">Onboarding the next 100m blockchain gamers</p>
-                        </div>
-                        <div className="roadmap-box-1-bottom-right">
-                            <p className="desc roadmap-box-1-bottom-right-text">Crafting top mobile gaming experiences we all cherish</p>
-                            <img src={HarborMobileSample} />
-                        </div>
-                    </div>
+                    <img src={Characters} />
                 </div>
                 <div className="roadmap-box roadmap-box-2">
                     <div className="roadmap-box-2-left">
-                        <p className="roadmap-title roadmap-title-box-2">Vision</p>
+                        <p className="roadmap-title roadmap-title-box-2">Arrr's Vision</p>
                         <div className="roadmap-box-2-timeline">
                             <div className="roadmap-box-2-timeline-line-item">
                                 <div className="roadmap-box-2-timeline-line-item-left">
@@ -77,15 +117,27 @@ const Home = () => {
                         <img src={ManAndBoat} />
                     </div>
                 </div>
-                <div className="roadmap-box-3">
+                <div className="roadmap-box roadmap-box-team">
+                    <p className="roadmap-title">Core Team</p>
+                    <p className="team-desc">Harbor blends experience from the best of mobile gaming, Silicon Valley, and venture capital</p>
+                    <img className="roadmap-box-team-img"src={Team} />
+                    <img className="roadmap-box-team-banner" src={Experience} />
+                </div>
+                <div className="roadmap-box roadmap-box-past-experiences">
+                    <div className="roadmap-box-past-experiences-top">
+                        <p className="roadmap-title">Past Experiences</p>
+                        <div className="roadmap-icon-menu">
+                            <img src={ArrowLeft} onClick={() => scrollLeft("roadmap-box-past-experiences-bottom")} />
+                            <img src={ArrowRight} onClick={() => scrollRight("roadmap-box-past-experiences-bottom")} />
+                        </div>
+                    </div>
+                    <div className="roadmap-box-past-experiences-bottom" id="roadmap-box-past-experiences-bottom">
+                        <img src={PastExperiences} />
+                    </div>
                 </div>
                 <div className="roadmap-box roadmap-box-upcoming-games">
                     <div className="roadmap-box-upcoming-games-top">
                         <p className="roadmap-title">Upcoming Games</p>
-                        {/* <div className="roadmap-icon-menu">
-                            <img src={ArrowLeft} />
-                            <img src={ArrowRight} />
-                        </div> */}
                     </div>
                     <div className="roadmap-box-upcoming-games-bottom">
                         <div className="roadmap-box-upcoming-games-bottom-item">
@@ -102,8 +154,17 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="roadmap-box roadmap-box-team">
-                    <img src={Team} />
+                <div className="roadmap-box roadmap-box-roadmap">
+                    <div className="roadmap-box-roadmap-top">
+                        <p className="roadmap-title">Roadmap</p>
+                        <div className="roadmap-icon-menu">
+                            <img src={ArrowLeft} onClick={() => scrollLeft("roadmap-box-roadmap-bottom")} />
+                            <img src={ArrowRight} onClick={() => scrollRight("roadmap-box-roadmap-bottom")} />
+                        </div>
+                    </div>
+                    <div className="roadmap-box-roadmap-bottom" id="roadmap-box-roadmap-bottom">
+                        <img src={Roadmap} />
+                    </div>
                 </div>
             </div>
             <Footer />

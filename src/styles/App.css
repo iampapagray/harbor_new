@@ -26,8 +26,13 @@ html {
   }
 }
 
+@font-face {
+  font-family: Inter;
+  src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
 * {
-  font-family: "Avenir"!important;
+  font-family: "Inter"!important;
 }
 
 .App-header {

@@ -9,6 +9,10 @@
     z-index: 20;
 }
 
+.nav-link {
+    font-family: "Inter"!important;
+}
+
 .nav-container-right {
     display: flex!important;
     justify-content: flex-end!important;
@@ -17,6 +21,16 @@
 .nav-container-left {
     display: flex!important;
     justify-content: flex-start!important;
+}
+
+.harbor-logo-img {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.harbor-logo-text {
+    width: 65px;
+    margin-left: 2px;
 }
 
 button {
