@@ -22,31 +22,43 @@ function NavBar(props) {
         navbar.style.opacity = "0";
         var opacity = 0.0;
 
+        var midScroll = false;
+
         window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
             var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
             var id = null;
             if (st > lastScrollTop){
                // downscroll code
+               console.log("downscroll");
                 clearInterval(id);
-                id = setInterval(frame, 10);
+                if (!midScroll) {
+                    id = setInterval(frame, 10);
+                }
                 function frame() {
                 	if (opacity >= 1) {
+                        midScroll = false;
                 		clearInterval(id);
                         opacity = 1;
                 	} else {
+                        midScroll = true;
                 		opacity = opacity + 0.01;
                 	}
                 	navbar.style.opacity = opacity;
                 }
             } else {
                // upscroll code
+               console.log("upscroll");
                clearInterval(id);
-                id = setInterval(frame, 10);
+                if (!midScroll) {
+                    id = setInterval(frame, 10);
+                }
                 function frame() {
                 	if (opacity <= 0) {
                 		clearInterval(id);
                         opacity = 0;
+                        midScroll = false;
                 	} else {
+                        midScroll = true;
                 		opacity -= 0.01;
                 	}
                 	navbar.style.opacity = opacity;

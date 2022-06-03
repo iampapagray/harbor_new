@@ -3,6 +3,37 @@
     overflow-y: hidden;
 }
 
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    background-color: #031323;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-overlay-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.harbor-logo-img-home {
+    height: 100px;
+}
+
+.harbor-logo-text-home {
+    margin-left: 20px;
+    height: 50px;
+}
+
 .btn {
     font-weight: 500;
 }
@@ -40,8 +71,7 @@
 
 .roadmap-box {
     margin-bottom: 12%;
-    width: 80%;
-    max-width: 1000px;
+    width: 85%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -49,7 +79,7 @@
 }
 
 .roadmap-box-1 {
-    margin-top: 50px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
 }
@@ -68,6 +98,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .roadmap-title-box-2 {
@@ -76,14 +107,14 @@
 }
 
 .roadmap-box-2-left {
-    width: 50%;
+    width: 49%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 .roadmap-box-2-right {
-    width: 50%;
+    width: 47%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,14 +145,15 @@
 }
 
 .roadmap-box-2-timeline-line-item-right-top {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
 }
 
 .roadmap-box-2-timeline-line-item-right-bottom {
-    font-size: 12px;
+    font-size: 16px;
     text-align: left;
+    color: #6B7280
 }
 
 .roadmap-box-2-timeline-line-item-left img {
@@ -142,12 +174,12 @@
 }
 
 .roadmap-box-past-experiences-bottom {
-    max-width: 100%;
+    width: 100%;
     overflow: scroll;
 }
 
 .roadmap-box-past-experiences-bottom img {
-    height: 250px;
+    height: 300px;
 }
 
 /* --------------- */
@@ -162,12 +194,12 @@
 
 .roadmap-box-roadmap-bottom {
     display: flex;
-    max-width: 100%;
+    width: 100%;
     overflow: scroll;
 }
 
 .roadmap-box-roadmap img {
-    height: 300px;
+    height: 350px;
 }
 
 /* --------------- */
@@ -185,6 +217,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .roadmap-icon-menu {
@@ -251,7 +284,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
 }
 
 .roadmap-box-team p {
@@ -266,9 +299,8 @@
 
 .roadmap-box-team-img {
     margin-top: 2%;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
     width: 90%;
-    max-width: 1000px;
 }
 
 .roadmap-box-team-banner {

@@ -20,6 +20,10 @@ import Experience from '../assets/home/experience.png';
 import Roadmap from '../assets/home/roadmap.png';
 import PastExperiences from '../assets/home/past-experiences.png';
 
+import LogoBlue from "../assets/general/HarborLogoBlue.svg";
+import LogoWhite from "../assets/general/HarborLogoWhite.svg";
+import LogoText from "../assets/general/HarborLogoTextWhite.svg";
+
 
 const Home = () => {
 
@@ -68,9 +72,78 @@ const Home = () => {
         console.log(elem.scrollLeft);
     }
 
+    const logoPulse = () => {
+        const elem = document.getElementById("home-overlay-icon-container");
+        console.log("pulse");
+    
+        var id = null;
+        var opacity = 0.0;
+        elem.style.opacity = opacity;
+        var increase = true;
+
+        // clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+            if (opacity > 1) {
+                opacity = 1;
+                increase = false;
+            } else if (opacity < 0) {
+                opacity = 0;
+                increase = true;
+            } else {
+                if (increase) {
+                    opacity = opacity + 0.01;
+                } else {
+                    opacity = opacity - 0.01;
+                }
+            }
+            elem.style.opacity = opacity;
+        }
+    }
+
+    useEffect(() => {
+        logoPulse();
+        window.addEventListener('load', (event) => {
+            setTimeout(() => {
+                const elem = document.getElementById("home-overlay-id");
+                var id = null;
+                elem.style.opacity = 1;
+                console.log("initial opacity ", elem.style.opacity);
+                var opacity = parseFloat(elem.style.opacity);
+
+                // clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                    if (opacity <= 0) {
+                        opacity = 0;
+                        elem.style.display = "none";
+                        clearInterval(id);
+                    } else {
+                        opacity = opacity - 0.01;
+                    }
+                    elem.style.opacity = opacity;
+                }
+            }, 5000);
+        });
+    }, []);
+
     return (
         <div className="home-container" id="home-container-id">
             {/* <NavBar style="light"/> */}
+            <div className="home-overlay" id="home-overlay-id">
+                <div className="home-overlay-icon-container" id="home-overlay-icon-container">
+                    <img
+                        alt=""
+                        src={LogoWhite}
+                        className="d-inline-block align-top harbor-logo-img-home"
+                    />{' '}
+                    <img
+                        alt=""
+                        src={LogoText}
+                        className="d-inline-block align-top harbor-logo-text-home"
+                    />{' '}
+                </div>
+            </div>
             <MiniGame />
             <div className="roadmap-container" id="roadmap-container-id">
                 <div className="roadmap-box roadmap-box-1">
