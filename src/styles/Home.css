@@ -70,7 +70,7 @@
 }
 
 .roadmap-box {
-    margin-bottom: 12%;
+    margin-bottom: 8%;
     width: 85%;
     max-width: 1500px;
     display: flex;
@@ -80,7 +80,7 @@
 }
 
 .roadmap-box-1 {
-    margin-top: 70px;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
 }
@@ -88,11 +88,12 @@
 .roadmap-box-1-top {
     width: 100%;
     max-width: 600px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .roadmap-box-1 img {
     width: 100%;
+    max-width: 1500px;
 }
 
 .roadmap-box-2 {

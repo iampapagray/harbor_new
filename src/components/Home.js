@@ -124,7 +124,7 @@ const Home = () => {
                     }
                     elem.style.opacity = opacity;
                 }
-            }, 5000);
+            }, 3000);
         // });
     }, []);
 
