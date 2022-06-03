@@ -103,7 +103,8 @@ const Home = () => {
 
     useEffect(() => {
         logoPulse();
-        window.addEventListener('load', (event) => {
+        // window.addEventListener('load', (event) => {
+        //     console.log("PAGE LOADED");
             setTimeout(() => {
                 const elem = document.getElementById("home-overlay-id");
                 var id = null;
@@ -124,7 +125,7 @@ const Home = () => {
                     elem.style.opacity = opacity;
                 }
             }, 5000);
-        });
+        // });
     }, []);
 
     return (

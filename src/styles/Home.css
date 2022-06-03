@@ -72,6 +72,7 @@
 .roadmap-box {
     margin-bottom: 12%;
     width: 85%;
+    max-width: 1500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -245,7 +246,7 @@
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
-    width: 45%;
+    width: 48%;
 }
 
 .roadmap-box-upcoming-games-bottom-item p {
@@ -258,7 +259,7 @@
 }
 
 .roadmap-box-upcoming-games-bottom-item img {
-    height: 300px;
+    width: 100%;
     object-fit: contain;
 }
 

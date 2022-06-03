@@ -6,6 +6,10 @@ function configureUnity() {
 
     console.log("configure unity");
 
+    const elem = document.getElementById("home-container-id");
+    elem.dataset.ready=1;
+
+
     var loyaltyConfig = {
         Name: "Loyalty",
         Description: "",
