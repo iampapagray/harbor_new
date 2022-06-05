@@ -155,15 +155,15 @@ const Home = () => {
                 </div>
                 <div className="roadmap-box roadmap-box-2">
                     <div className="roadmap-box-2-left">
-                        <p className="roadmap-title roadmap-title-box-2">Arrr's Vision</p>
+                        <p className="roadmap-title roadmap-title-box-2">Arrr' Vision</p>
                         <div className="roadmap-box-2-timeline">
                             <div className="roadmap-box-2-timeline-line-item">
                                 <div className="roadmap-box-2-timeline-line-item-left">
                                     <img src={HarborTimelineIcon} />
                                 </div>
                                 <div className="roadmap-box-2-timeline-line-item-right">
-                                    <p className="roadmap-box-2-timeline-line-item-right-top">Merging F2P and P2E</p>
-                                    <p className="roadmap-box-2-timeline-line-item-right-bottom">Harbor merges the best from story driven mobile free-to-play and blockchain-based play-and-earn economics.</p>
+                                    <p className="roadmap-box-2-timeline-line-item-right-top">Fun-first Approach</p>
+                                    <p className="roadmap-box-2-timeline-line-item-right-bottom">Our number one focus is creating exciting gameplay experiences for all gamers on Harbor.</p>
                                 </div>
                             </div>
                             <div className="roadmap-box-2-timeline-line-item">
@@ -171,8 +171,8 @@ const Home = () => {
                                     <img src={HarborTimelineIcon} />
                                 </div>
                                 <div className="roadmap-box-2-timeline-line-item-right">
-                                    <p className="roadmap-box-2-timeline-line-item-right-top">Making blockchain gaming fun</p>
-                                    <p className="roadmap-box-2-timeline-line-item-right-bottom">Harbor merges the best from story driven mobile free-to-play and blockchain-based play-and-earn economics.</p>
+                                    <p className="roadmap-box-2-timeline-line-item-right-top">Merging F2P and P2E</p>
+                                    <p className="roadmap-box-2-timeline-line-item-right-bottom">Harbor games merge the best elements from mobile free-to-play with play-to-earn economics.</p>
                                 </div>
                             </div>
                             <div className="roadmap-box-2-timeline-line-item">
@@ -181,7 +181,7 @@ const Home = () => {
                                 </div>
                                 <div className="roadmap-box-2-timeline-line-item-right">
                                     <p className="roadmap-box-2-timeline-line-item-right-top">Driving mass adoption</p>
-                                    <p className="roadmap-box-2-timeline-line-item-right-bottom">Harbor merges the best from story driven mobile free-to-play and blockchain-based play-and-earn economics. </p>
+                                    <p className="roadmap-box-2-timeline-line-item-right-bottom">We tap into the pool of billions of mobile gamers to drive adoption for blockchain gaming.</p>
                                 </div>
                             </div>
                         </div>

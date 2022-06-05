@@ -41,7 +41,7 @@ const Leena = () => {
             <div className="leena-box leena-box-1">
                 <div className="inner-leena-box">
                     <p className="leena-title">Become the mayor and build your town</p>
-                    <p className="leena-desc">Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
+                    <p className="leena-desc">Leena returns home and becomes mayor of her small town with the vision of rebuilding it into a modern, lively abode for her friends and family.</p>
                     <Button className="play-button" variant="secondary">Play Game</Button>{' '}
                     <p className="leena-desc">Coming Soon</p>
                 </div>
