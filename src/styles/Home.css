@@ -125,7 +125,7 @@
 
 .box-2-play-button {
     margin-top: 20px;
-    max-width: 175px;
+    max-width: 50%;
     margin-left: 20px;
     background: linear-gradient(135deg, #0081F7 0%, #00AAEB 100%);
 }

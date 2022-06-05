@@ -80,9 +80,9 @@ const MiniGame = () => {
                 </div>
             </div>
 			<div className="button_container">
-			<img id="enter_button" onClick={enter_harbor} src={EnterButton}/>
-			<img id="explore_button" onClick={explore} src={ExploreButton}/>
-			<img id="return_home_button" onClick={returnHome} src={ReturnHomeButton}/>
+                <img id="enter_button" onClick={enter_harbor} src={EnterButton}/>
+                <img id="explore_button" onClick={explore} src={ExploreButton}/>
+                <img id="return_home_button" onClick={returnHome} src={ReturnHomeButton}/>
 			</div>
 			
             <div className="unity-canvas-container">
