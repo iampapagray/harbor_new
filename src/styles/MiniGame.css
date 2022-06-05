@@ -34,9 +34,9 @@
 
 
 
-#enter_button { position: absolute; left: 50%; top: 85%; transform: translate(-50%, -50%); display: none }
-#explore_button { position: absolute; left: 50%; top: 85%; transform: translate(-50%, -50%); display: none }
-
+#enter_button { position: absolute; left: 50%; bottom: 62px; transform: translate(-50%, -50%); display: none }
+#explore_button { position: absolute; left: 50%; bottom: 62px; transform: translate(-50%, -50%); display: none; width:200px }
+#return_home_button { position: absolute; right: 40px; top: 15px; width:122px;  display: none }
 
 #unity-loading-bar { position: absolute; left: 50%; top: 90%; transform: translate(-50%, -150%); display: none }
 #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: url('../assets/general/progress-bar-empty-light.png') no-repeat center }

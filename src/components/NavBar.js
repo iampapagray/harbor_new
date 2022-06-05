@@ -20,6 +20,7 @@ function NavBar(props) {
         var navbar = document.getElementById("navbar-id");
         navbar.style.display = "flex";
         navbar.style.opacity = "0";
+		navbar.style.pointerEvents = "none";
         var opacity = 0.0;
 
         var midScroll = false;
@@ -39,12 +40,14 @@ function NavBar(props) {
                         midScroll = false;
                 		clearInterval(id);
                         opacity = 1;
-                	} else {
+						// enable clicks if shown
+						navbar.style.pointerEvents = "auto";
+					} else {
                         midScroll = true;
                 		opacity = opacity + 0.01;
                 	}
                 	navbar.style.opacity = opacity;
-                }
+	            }
             } else {
                // upscroll code
                console.log("upscroll");
@@ -57,12 +60,14 @@ function NavBar(props) {
                 		clearInterval(id);
                         opacity = 0;
                         midScroll = false;
-                	} else {
+                		// disable clicks if hidden
+						navbar.style.pointerEvents = "none";
+					} else {
                         midScroll = true;
                 		opacity -= 0.01;
                 	}
                 	navbar.style.opacity = opacity;
-                }
+		        }
             }
             lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
          }, false);

@@ -3,6 +3,7 @@ import '../styles/MiniGame.css';
 import SplashScreen from '../assets/general/Splash.png';
 import EnterButton from '../assets/general/WebButtonEnter.png';
 import ExploreButton from '../assets/general/WebButtonExplore.png';
+import ReturnHomeButton from '../assets/general/WebReturnHome.png';
 import Sound from '../assets/general/harbor-soundtrack.mp3';
 import ArrowRight from '../assets/home/arrow-right.svg';
 import ReactAudioPlayer from 'react-audio-player';
@@ -59,8 +60,14 @@ const MiniGame = () => {
 		// enable touches in unity
 		document.querySelector("#unity-canvas").style.pointerEvents = "auto";
 		document.querySelector("#explore_button").style.display = "none";
+		document.querySelector("#return_home_button").style.display = "block";
 	};
 
+
+	const returnHome = ()=> {
+		window.send_leave();
+		document.querySelector("#return_home_button").style.display = "none";
+	};
 
     return (
 	
@@ -75,6 +82,7 @@ const MiniGame = () => {
 			<div className="button_container">
 			<img id="enter_button" onClick={enter_harbor} src={EnterButton}/>
 			<img id="explore_button" onClick={explore} src={ExploreButton}/>
+			<img id="return_home_button" onClick={returnHome} src={ReturnHomeButton}/>
 			</div>
 			
             <div className="unity-canvas-container">
