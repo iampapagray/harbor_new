@@ -4,13 +4,15 @@
     /* background: linear-gradient(to bottom, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0.5) 100%); */
     left: 0;
     height: 7.5%;
-    min-height: 50px;
+    min-height: 75px;
+    max-height: 90px;
     padding: 15px 10px 15px 10px;
     z-index: 20;
 }
 
 .nav-link {
     font-family: "Inter"!important;
+    font-size: 18px;
 }
 
 .nav-container-right {
@@ -23,14 +25,23 @@
     justify-content: flex-start!important;
 }
 
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .harbor-logo-img {
-    height: 100%;
-    margin-left: 10px;
+    width: 50px;
+    height: auto;
+    margin-left: 15px;
 }
 
 .harbor-logo-text {
-    width: 65px;
-    margin-left: 2px;
+    width: 85px;
+    height: auto;
+    margin-left: 10px;
 }
 
 button {

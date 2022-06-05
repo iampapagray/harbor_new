@@ -36,6 +36,7 @@
 
 .btn {
     font-weight: 500;
+    font-size: 24px;
 }
 
 .roadmap-title {
@@ -72,7 +73,7 @@
 .roadmap-box {
     margin-bottom: 8%;
     width: 85%;
-    max-width: 1500px;
+    max-width: 2000px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -147,13 +148,13 @@
 }
 
 .roadmap-box-2-timeline-line-item-right-top {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
 .roadmap-box-2-timeline-line-item-right-bottom {
-    font-size: 16px;
+    font-size: 21px;
     text-align: left;
     color: #6B7280
 }
@@ -177,11 +178,15 @@
 
 .roadmap-box-past-experiences-bottom {
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
 }
 
 .roadmap-box-past-experiences-bottom img {
-    height: 300px;
+    min-height: 300px;
+    max-height: 600px;
+    overflow-x: scroll;
 }
 
 /* --------------- */
@@ -197,11 +202,15 @@
 .roadmap-box-roadmap-bottom {
     display: flex;
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
 }
 
-.roadmap-box-roadmap img {
-    height: 350px;
+.roadmap-box-roadmap-bottom img {
+    min-height: 350px;
+    max-height: 650px;
+    overflow-x: scroll;
 }
 
 /* --------------- */
@@ -265,7 +274,7 @@
 }
 
 .roadmap-box-upcoming-games-bottom-item-title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     text-align: left;
     margin: 0;
@@ -273,7 +282,7 @@
 }
 
 .roadmap-box-upcoming-games-bottom-item-desc {
-    font-size: 14px;
+    font-size: 20px;
     text-align: left;
     margin: 0;
     margin-top: 10px;
@@ -282,6 +291,7 @@
 
 .roadmap-box-team {
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -295,7 +305,7 @@
 
 .team-desc {
     color: #6C798F;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -303,6 +313,7 @@
     margin-top: 2%;
     margin-bottom: 5%;
     width: 90%;
+    max-width: 2000px;
 }
 
 .roadmap-box-team-banner {
