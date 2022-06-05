@@ -44,7 +44,7 @@ function NavBar(props) {
 						navbar.style.pointerEvents = "auto";
 					} else {
                         midScroll = true;
-                		opacity = opacity + 0.01;
+                		opacity = opacity + 0.02;
                 	}
                 	navbar.style.opacity = opacity;
 	            }
@@ -64,7 +64,7 @@ function NavBar(props) {
 						navbar.style.pointerEvents = "none";
 					} else {
                         midScroll = true;
-                		opacity -= 0.01;
+                		opacity -= 0.02;
                 	}
                 	navbar.style.opacity = opacity;
 		        }
