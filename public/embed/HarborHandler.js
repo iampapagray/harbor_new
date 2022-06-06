@@ -18,12 +18,8 @@ function onEnterClicked() {
 	// 	alert("onEnterClicked");
 	// }
 
-	// hide enter button in case of timeouted transition from intro
-	document.getElementById("enter_button").style.display = "none";
-
-	// Allow Home to scroll
-	var home = document.getElementById("home-container-id");
-    home.style.overflowY = "visible";
+	// hide loading bar
+	loadingBar.style.display = "none";
 
 	// // Restore NavBar
 	// var navbar = document.getElementById("navbar-id");
@@ -64,6 +60,10 @@ function onHarborSceneLoaded() {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onHarborSceneLoaded");
 	}
+		// Allow Home to scroll
+	var home = document.getElementById("home-container-id");
+    home.style.overflowY = "visible";
+
 	
 	// show explore button
 	exploreButton.style.display = "block";
