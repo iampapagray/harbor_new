@@ -75,14 +75,13 @@ const MiniGame = () => {
         // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>	
 		<div className="minigame-container">
             <div id="unity-loading-bar">
-                <div id="unity-progress-bar-empty">
-                    <div id="unity-progress-bar-full"></div>
-                </div>
+                <div id="unity-progress-bar-bg">
+                    <div id="unity-progress-bar-fill"></div>
+	            </div>
             </div>
 			<div className="button_container">
-                <img id="enter_button" onClick={enter_harbor} src={EnterButton}/>
-                <img id="explore_button" onClick={explore} src={ExploreButton}/>
-                <img id="return_home_button" onClick={returnHome} src={ReturnHomeButton}/>
+				<img id="explore_button" onClick={explore} src={ExploreButton}/>
+				<img id="return_home_button" onClick={returnHome} src={ReturnHomeButton}/>		
 			</div>
 			
             <div className="unity-canvas-container">
