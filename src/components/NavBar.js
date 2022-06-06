@@ -100,7 +100,7 @@ function NavBar(props) {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavDropdown title="Games" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/leena">Leena</NavDropdown.Item>
+                            <NavDropdown.Item href="/leena">Leena's Place</NavDropdown.Item>
                             <NavDropdown.Item href="/loyalty">Loyalty</NavDropdown.Item>
                         </NavDropdown>
                         <OverlayTrigger
@@ -128,18 +128,18 @@ function NavBar(props) {
                 </Navbar.Collapse>
             </Container>
             <Container className="nav-container-right">
-                <OverlayTrigger
+                {/* <OverlayTrigger
                     placement="bottom"
                     delay={{ show: 250, hide: 250 }}
                     overlay={renderComingSoonTooltip}
                 >
                     <Button variant="outline-dark">Buy Harbor</Button>
-                </OverlayTrigger>
+                </OverlayTrigger> */}
                 {/* <Button variant="outline-dark">Login</Button> */}
                 {/* <Button variant="success">Register</Button>{' '} */}
-                <NavDropdown title="Download" id="basic-nav-dropdown">
+                {/* <NavDropdown title="Download" id="basic-nav-dropdown">
                     <NavDropdown.Item>Coming Soon</NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
                 {/* <NavDropdown title="EN" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Test</NavDropdown.Item>
                 </NavDropdown> */}

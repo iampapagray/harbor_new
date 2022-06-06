@@ -149,7 +149,7 @@ const Home = () => {
             <div className="roadmap-container" id="roadmap-container-id">
                 <div className="roadmap-box roadmap-box-1">
                     <div className="roadmap-box-1-top">
-                        <p className="roadmap-title">Creating blockchain games for the masses</p>
+                        <p className="roadmap-title">We are creating blockchain games for the masses</p>
                     </div>
                     <img src={Characters} />
                 </div>
@@ -179,13 +179,13 @@ const Home = () => {
                                 <div className="roadmap-box-2-timeline-line-item-left">
                                     <img src={HarborTimelineIcon} />
                                 </div>
-                                <div className="roadmap-box-2-timeline-line-item-right">
+                            <div className="roadmap-box-2-timeline-line-item-right">
                                     <p className="roadmap-box-2-timeline-line-item-right-top">Driving mass adoption</p>
                                     <p className="roadmap-box-2-timeline-line-item-right-bottom">We tap into the pool of billions of mobile gamers to drive adoption for blockchain gaming.</p>
                                 </div>
                             </div>
                         </div>
-                        <Button href="/" className="box-2-play-button" variant="success">Explore Harbor</Button>{' '}
+                        <Button href="#home-container-id" className="box-2-play-button" variant="success">Explore Harbor</Button>{' '}
                     </div>
                     <div className="roadmap-box-2-right">
                         <img src={ManAndBoat} />
