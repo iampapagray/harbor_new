@@ -89,7 +89,7 @@ function configureUnity() {
             faq: faqConfig
         },
 		use_web_buttons : true,
-		intro_delay : 10
+		intro_delay : 3
     };
 
     myGameInstance.SendMessage('ConfigurationManager', 'Set', JSON.stringify(config));
