@@ -107,7 +107,7 @@ const Home = () => {
             id: "starwars",
             url: StarWars,
             title: "Star Wars: Assault Team",
-            link: "google.com",
+            link: "https://star-wars-assault-team.en.uptodown.com/android",
         },
         {
             id: "emporea",
@@ -306,13 +306,13 @@ const Home = () => {
                                 <img src={leena} />
                                 <p className="roadmap-box-upcoming-games-bottom-item-title">Leena's Place</p>
                                 <p className="roadmap-box-upcoming-games-bottom-item-desc">Leena returns home as mayor of her town with the vision of building her boring town into a modern lively abode for her friends and family</p>
-                                <Button className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
+                                <Button href="/leena" target="_blank" className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
                             </div>
                             <div className="roadmap-box-upcoming-games-bottom-item">
                                 <img src={loyalty} />
                                 <p className="roadmap-box-upcoming-games-bottom-item-title">Loyalty</p>
                                 <p className="roadmap-box-upcoming-games-bottom-item-desc">Kick up your own gang and run your family’s crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra</p>
-                                <Button className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
+                                <Button href="/loyalty" target="_blank" className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
                             </div>
                         </div>
                     </div>
