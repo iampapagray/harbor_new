@@ -42,8 +42,8 @@ const Leena = () => {
                 <div className="inner-leena-box">
                     <p className="leena-title">Become the mayor and build your town</p>
                     <p className="leena-desc">Leena returns home and becomes mayor of her small town with the vision of rebuilding it into a modern, lively abode for her friends and family.</p>
-                    <Button className="play-button" variant="secondary">Play Game</Button>{' '}
-                    <p className="leena-desc">Coming Soon</p>
+                    <Button className="leena-play-button" variant="secondary">Play Game</Button>{' '}
+                    <p className="leena-desc-small">Coming Soon</p>
                 </div>
             </div>
             <div className="leena-box leena-box-2">

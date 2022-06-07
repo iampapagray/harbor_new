@@ -37,7 +37,7 @@ const Loyalty = () => {
                     <p className="loyalty-title">Do you have what it takes?</p>
                     <p className="loyalty-desc">Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town.</p>
                     <Button className="play-button" variant="secondary">Play Game</Button>{' '}
-                    <p className="loyalty-desc">Coming Soon</p>
+                    <p className="loyalty-desc-small">Coming Soon</p>
                 </div>
             </div>
             <div className="loyalty-box loyalty-box-2">
@@ -56,9 +56,9 @@ const Loyalty = () => {
             </div>
             <div className="loyalty-box loyalty-box-4">
                 <div className="inner-loyalty-box">
-                    <p className="loyalty-title">Claim control over Mafia Town</p>
+                    <p className="loyalty-title">Ready to handle your mafia business?</p>
                 </div>
-                <img src={controlHeader} />
+                <img className="control-img" src={controlHeader} />
                 <div className="loyalty-box-4-sub-images">
                     <img src={controlOne} className="loyalty-box-4-sub-image" />
                     <img src={controlTwo} className="loyalty-box-4-sub-image" />

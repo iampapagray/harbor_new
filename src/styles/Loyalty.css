@@ -12,7 +12,7 @@
 
 .loyalty-bg {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     background-size: auto 100%;
     display: flex;
     justify-content: center;
@@ -33,15 +33,14 @@
 .play-button {
     margin-top: 20px;
     padding: 10px 30px 10px 30px;
-    background: linear-gradient(135deg, #0081F7 0%, #00AAEB 100%);
+    background: #6C798F;
 }
 
 .loyalty-title {
     font-size: 55px;
     font-weight: 900;
     color: black;
-    line-height: 55px;
-    margin-top: 10px;
+    line-height: 60px;
 }
 
 .loyalty-desc {
@@ -50,11 +49,16 @@
     color: #6a7280;
 }
 
+.loyalty-desc-small {
+    font-size: 16px;
+    color: #6a7280;
+}
+
 .loyalty-box {
     margin-bottom: 7%;
+    display: flex;
     width: 85%;
     max-width: 2000px;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -62,6 +66,7 @@
 
 .inner-loyalty-box {
     width: 70%;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -73,6 +78,7 @@
     height: auto!important;
     border-radius: 30px;
     width: 100%;
+    margin-top: 10px;
 }
 
 .loyalty-box-1 {
@@ -101,6 +107,10 @@
     justify-content: space-evenly;
 }
 
+.control-img {
+    margin-top: 20px;
+}
+
 .loyalty-box-4 img.loyalty-box-4-sub-image {
     width: 30%;
     border-radius: 20px;
@@ -109,7 +119,11 @@
 }
 
 .loyalty-box-5 {
-    width: 100%;
+    width: 100%!important;
+    background-color: #f4f4f7;
+    padding-top: 5%;
+    margin: 0;
+    padding-bottom: 5%;
 }
 
 .loyalty-box-5-sub-images {
@@ -138,6 +152,10 @@
 
 .loyalty-box-5-sub-image-4 {
     width: 21%;
+}
+
+.loyalty-box-6 {
+    margin-top: 5%;
 }
 
 .loyalty-line-item {
