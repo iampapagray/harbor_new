@@ -2,14 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import MiniGame from './MiniGame.js';
 import Footer from './Footer.js';
-import NavBar from './NavBar.js';
 import { Button } from 'react-bootstrap';
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
 import '../styles/Home.css';
 
-// import GameInHands from '../assets/home/hands.png';
-// import HarborMobileSample from '../assets/home/mobile-prev.png';
 import Characters from '../assets/home/characters.png';
 import HarborTimelineIcon from '../assets/home/harbortimelineicon.svg';
 import ManAndBoat from '../assets/home/boat-and-man.png';
@@ -19,9 +16,7 @@ import ArrowLeft from '../assets/home/arrow-left.svg';
 import ArrowRight from '../assets/home/arrow-right.svg';
 import Team from '../assets/home/team.png';
 import Experience from '../assets/home/experience.png';
-import Roadmap from '../assets/home/roadmap.png';
 
-// import PastExperiences from '../assets/home/past-experiences.png';
 import Emporea from '../assets/home/experience/experience-emporea.png';
 import Neemo from '../assets/home/experience/experience-neemo.png';
 import TrainStation from '../assets/home/experience/experience-train-station.png';
@@ -31,6 +26,10 @@ import ToyStory from '../assets/home/experience/experience-toy-story.png';
 
 import LogoWhite from "../assets/general/HarborLogoWhite.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";
+
+import WorldIcon from "../assets/home/world-icon.svg";
+import CommunityIcon from "../assets/home/community-icon.svg";
+import BetaIcon from "../assets/home/beta-icon.svg";
 
 var experienceStartIndex = 0;
 
@@ -139,7 +138,7 @@ const Home = () => {
         {
             year: "2022",
             quarter: "Q3",
-            icon: LogoWhite,
+            icon: CommunityIcon,
             title: "Community Launch",
             desc1: "Telegram & Discord launched",
             desc2: "Game MVP/Vertical slice",
@@ -159,7 +158,7 @@ const Home = () => {
         {
             year: "2022",
             quarter: "Q3",
-            icon: LogoWhite,
+            icon: BetaIcon,
             title: "Internal beta launch",
             desc1: "Taylor's Town global launch",
             desc2: "Web platform testing",
@@ -169,7 +168,7 @@ const Home = () => {
         {
             year: "2022",
             quarter: "Q3",
-            icon: LogoWhite,
+            icon: BetaIcon,
             title: "Beta Launch",
             desc2: "Public beta testing",
             desc1: "NFT marketplace launch",
@@ -179,7 +178,7 @@ const Home = () => {
         {
             year: "2022",
             quarter: "Q3",
-            icon: LogoWhite,
+            icon: WorldIcon,
             title: "Token Launch & NFT Sale",
             desc1: "Telegram & Discord launched",
             desc2: "Game MVP/Vertical slice",
