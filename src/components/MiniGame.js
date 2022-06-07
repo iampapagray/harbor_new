@@ -26,6 +26,9 @@ const MiniGame = () => {
         var navbar = document.getElementById("navbar-id");
 	    navbar.style.display = "none";
 
+		document.getElementById("unity-loading-bar").style.display="block";
+	
+
         loadScript("embed/Build/Harbor.loader.js");
         loadScript("embed/HarborHandler.js");
         loadScript("embed/HarborSender.js");
@@ -70,15 +73,17 @@ const MiniGame = () => {
 	};
 
     return (
-	
 		// <Unity className="game-embed" unityContext={unityContext} />
         // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>	
 		<div className="minigame-container">
             <div id="unity-loading-bar">
                 <div id="unity-progress-bar-bg">
-                    <div id="unity-progress-bar-fill"></div>
-	            </div>
-            </div>
+                    <div id="unity-progress-bar-fill">
+						<div id="unity-progress-bar-circle"></div>
+						</div>
+					<div id="unity-loading-text">Loading...</div>
+				</div>
+	        </div>
 			<div className="button_container">
 				<img id="explore_button" onClick={explore} src={ExploreButton}/>
 				<img id="return_home_button" onClick={returnHome} src={ReturnHomeButton}/>		
