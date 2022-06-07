@@ -24,7 +24,8 @@ function configureUnity() {
         Description: "",
         URL: "/",
         ButtonLabel: "Coming Soon",
-        IsButtonActive: false
+        IsButtonActive: false,
+		Disabled: true
     };
 
     var leenasplaceConfig = {

@@ -55,15 +55,19 @@ function onExitClicked() {
 	unityCanvas.style.pointerEvents = "none";
 }
 
+// called when unity screen is white and harbor scene starts loading 
+function onHarborSceneStartLoading() {
+  //Allow Home to scroll
+  //This is the best place to enable scroll bar, screen is white and screen jump is not visible
+  var home = document.getElementById("home-container-id");  
+  home.style.overflowY = "visible";
+}
+
 // called when harbor scene is loaded
 function onHarborSceneLoaded() {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onHarborSceneLoaded");
 	}
-		// Allow Home to scroll
-	var home = document.getElementById("home-container-id");
-    home.style.overflowY = "visible";
-
 	
 	// show explore button
 	exploreButton.style.display = "block";
