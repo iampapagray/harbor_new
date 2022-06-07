@@ -15,6 +15,10 @@ function send_explore() {
 	myGameInstance.SendMessage('BrowserInvoker', 'Explore');
 }
 
+function send_leave() {
+	myGameInstance.SendMessage('BrowserInvoker', 'Leave');
+}
+
 
 function toggle_debug_layer() {
 	myGameInstance.SendMessage('BrowserInvoker', 'ToggleDebugLayer');

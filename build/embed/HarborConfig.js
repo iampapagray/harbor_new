@@ -6,6 +6,10 @@ function configureUnity() {
 
     console.log("configure unity");
 
+    const elem = document.getElementById("home-container-id");
+    elem.dataset.ready=1;
+
+
     var loyaltyConfig = {
         Name: "Loyalty",
         Description: "",
@@ -49,7 +53,7 @@ function configureUnity() {
         IsButtonActive: false
     };
 
-    var teamConfig = {
+    var governanceConfig = {
         Name: "Governance",
         Description: "The governance of Harbor is done via our HARBOR token. Users can stake HARBOR to earn rewards, upgrade their NFTs, and make decisions to guide the community.",
         URL: "/",
@@ -57,17 +61,17 @@ function configureUnity() {
         IsButtonActive: false
     };
 
-    var marketConfig = {
-        Name: "Market",
+    var marketplaceConfig = {
+        Name: "Marketplace",
         Description: "The Harbor Marketplace is a decentralized marketplace to buy, sell, and trade your items with other players. Power up your progress and share your treasures with the community!",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
     };
 
-    var AboutConfig = {
+    var aboutConfig = {
         Name: "About",
-        Description: "Harbor Games is a passionate team of mobile gaming veterans focused on creating the next generation of GameFi that scales to millions of players. Over the last 15 years our games have reached over 200M players and generated over $150M+ of revenue. Explore the Harbor to learn more about our team, platform, and upcoming titles!",
+        Description: "Check out our commonly asked questions! If you have any more, please contact us.",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
@@ -82,10 +86,10 @@ function configureUnity() {
             staking: stakingConfig,
             governance: governanceConfig,
             marketplace: marketplaceConfig,
-            faq: faqConfig
+            faq: aboutConfig
         },
 		use_web_buttons : true,
-		intro_delay : 10
+		intro_delay : 3
     };
 
     myGameInstance.SendMessage('ConfigurationManager', 'Set', JSON.stringify(config));

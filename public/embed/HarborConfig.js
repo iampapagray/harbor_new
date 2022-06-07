@@ -45,9 +45,9 @@ function configureUnity() {
         IsButtonActive: true
     };
 
-    var stakingConfig = {
-        Name: "Staking",
-        Description: "Stake your NFTs and HARBOR token to earn rewards, tokens, rare items, and level up your characters.",
+    var investorConfig = {
+        Name: "Investors",
+        Description: "Harbor is opening its port to investors soon! Until then, please get in touch.",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
@@ -61,17 +61,17 @@ function configureUnity() {
         IsButtonActive: false
     };
 
-    var marketplaceConfig = {
-        Name: "Marketplace",
-        Description: "The Harbor Marketplace is a decentralized marketplace to buy, sell, and trade your items with other players. Power up your progress and share your treasures with the community!",
+    var marketConfig = {
+        Name: "Market",
+        Description: "The Harbor Market is a decentralized marketplace to buy, sell, and trade your items with other players. Power up your progress and share your treasures with the community!",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
     };
 
-    var faqConfig = {
-        Name: "FAQ",
-        Description: "Check out our commonly asked questions! If you have any more, please contact us.",
+    var aboutConfig = {
+        Name: "About",
+        Description: "Harbor Games is a passionate team of mobile gaming veterans focused on creating the next generation of GameFi that scales to millions of players. Over the last 15 years our games have reached over 200M players and generated over $150M+ of revenue. Explore the Harbor to learn more about our team, platform, and upcoming titles!",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
@@ -83,10 +83,10 @@ function configureUnity() {
             wth: wthConfig,
             leenasplace: leenasplaceConfig,
             deck: deckConfig,
-            staking: stakingConfig,
+            staking: investorConfig,
             governance: governanceConfig,
-            marketplace: marketplaceConfig,
-            faq: faqConfig
+            marketplace: marketConfig,
+            faq: aboutConfig
         },
 		use_web_buttons : true,
 		intro_delay : 3
