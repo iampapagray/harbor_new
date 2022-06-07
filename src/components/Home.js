@@ -279,14 +279,16 @@ const Home = () => {
                             {
                                 allExperienceDivs.map(function(item, i) {
                                     return (
-                                        <div className="roadmap-box-past-experiences-item">
-                                            <a href={item.link} target="_blank">
-                                                <div className="roadmap-box-past-experiences-image">
-                                                    <img src={item.url} onClick={console.log("click")} />
+                                        <div className="roadmap-box-past-experiences-item-container">
+                                            <div className="roadmap-box-past-experiences-item">
+                                                <a href={item.link} target="_blank">
+                                                    <div className="roadmap-box-past-experiences-image">
+                                                        <img src={item.url} onClick={console.log("click")} />
+                                                    </div>
+                                                </a>
+                                                <div className="roadmap-box-past-experiences-text">
+                                                    <p>{item.title}</p>
                                                 </div>
-                                            </a>
-                                            <div className="roadmap-box-past-experiences-text">
-                                                <p>{item.title}</p>
                                             </div>
                                         </div>
                                     );
@@ -320,10 +322,6 @@ const Home = () => {
                     <div className="roadmap-box-roadmap-inner">
                         <div className="roadmap-box-roadmap-top">
                             <p className="roadmap-title">Roadmap</p>
-                            {/* <div className="roadmap-icon-menu">
-                                <img src={ArrowLeft} onClick={() => scrollLeft("roadmap-box-roadmap-bottom")} />
-                                <img src={ArrowRight} onClick={() => scrollRight("roadmap-box-roadmap-bottom")} />
-                            </div> */}
                         </div>
                         <div className="roadmap-box-roadmap-bottom" id="roadmap-box-roadmap-bottom">
                             {/* <img src={Roadmap} /> */}
@@ -331,17 +329,19 @@ const Home = () => {
                                 {
                                     allRoadmapDivs.map(function(item, i) {
                                         return (
-                                            <div className={item.color == "gray" ? "roadmap-box-roadmap-item" : "roadmap-box-roadmap-item roadmap-box-roadmap-item-blue"} >
-                                                <div className="roadmap-box-roadmap-item-top">
-                                                    <p className="roadmap-box-roadmap-item-year">{item.year}</p>
-                                                    <p className="roadmap-box-roadmap-item-quarter">{item.quarter}</p>
-                                                </div>
-                                                <div className="roadmap-box-roadmap-item-bottom">
-                                                    <img className="roadmap-box-roadmap-item-icon" src={item.icon} />
-                                                    <p className="roadmap-box-roadmap-item-title">{item.title}</p>
-                                                    <p className="roadmap-box-roadmap-item-desc">{item.desc1}</p>
-                                                    <p className="roadmap-box-roadmap-item-desc">{item.desc2}</p>
-                                                    <p className="roadmap-box-roadmap-item-desc">{item.desc3}</p>
+                                            <div className="roadmap-box-roadmap-item-container">
+                                                <div className={item.color == "gray" ? "roadmap-box-roadmap-item" : "roadmap-box-roadmap-item roadmap-box-roadmap-item-blue"} >
+                                                    <div className="roadmap-box-roadmap-item-top">
+                                                        <p className="roadmap-box-roadmap-item-year">{item.year}</p>
+                                                        <p className="roadmap-box-roadmap-item-quarter">{item.quarter}</p>
+                                                    </div>
+                                                    <div className="roadmap-box-roadmap-item-bottom">
+                                                        <img className="roadmap-box-roadmap-item-icon" src={item.icon} />
+                                                        <p className="roadmap-box-roadmap-item-title">{item.title}</p>
+                                                        <p className="roadmap-box-roadmap-item-desc">{item.desc1}</p>
+                                                        <p className="roadmap-box-roadmap-item-desc">{item.desc2}</p>
+                                                        <p className="roadmap-box-roadmap-item-desc">{item.desc3}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         );

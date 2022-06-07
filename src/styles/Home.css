@@ -178,7 +178,6 @@
 }
 
 .nav-left {
-    margin-right: 15px;
 }
 
 .roadmap-box-past-experiences-top {
@@ -202,15 +201,19 @@
     overflow-y: hidden; */
 }
 
+.roadmap-box-past-experiences-item-container {
+    padding: 4%;
+    background-color: #f4f4f7;
+}
+
 .roadmap-box-past-experiences-item {
     /* width: 30%; */
-    margin-right: 3%;
     display: flex;
     flex-direction: column;
     height: auto;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: white;
 }
 
@@ -261,6 +264,11 @@
     width: 100%;
 }
 
+.roadmap-box-roadmap-item-container {
+    padding: 4%;
+    background-color: white;
+}
+
 .roadmap-box-roadmap-item {
     display: flex;
     flex-direction: column;
@@ -269,7 +277,6 @@
     /* width: 30%; */
     /* height: 200px; */
     align-items: center;
-    margin-right: 10px;
     background: #6C798F;
     border-radius: 20px;
 }
