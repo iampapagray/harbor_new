@@ -27,7 +27,7 @@ import ToyStory from '../assets/home/experience/experience-toy-story.png';
 import LogoWhite from "../assets/general/HarborLogoWhite.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 
-import WorldIcon from "../assets/home/world-icon.svg";
+import WorldIcon from "../assets/home/globe-icon.svg";
 import CommunityIcon from "../assets/home/community-icon.svg";
 import BetaIcon from "../assets/home/beta-icon.svg";
 
@@ -137,7 +137,7 @@ const Home = () => {
     var allRoadmapDivs = [
         {
             year: "2022",
-            quarter: "Q3",
+            quarter: "Q2",
             icon: CommunityIcon,
             title: "Community Launch",
             desc1: "Telegram & Discord launched",
@@ -147,17 +147,17 @@ const Home = () => {
         },
         {
             year: "2022",
-            quarter: "Q4",
+            quarter: "Q3",
             icon: LogoWhite,
-            title: "Token Launch & NFT sale",
+            title: "Token & NFT Launch",
             desc1: "Telegram & Discord launched",
             desc2: "Game MVP/Vertical slice",
             desc3: "Gameplay gifs, art style released",
             color: "gray"
         },
         {
-            year: "2022",
-            quarter: "Q3",
+            year: "2023",
+            quarter: "Q4",
             icon: BetaIcon,
             title: "Internal beta launch",
             desc1: "Taylor's Town global launch",
@@ -166,8 +166,8 @@ const Home = () => {
             color: "gray"
         },
         {
-            year: "2022",
-            quarter: "Q3",
+            year: "2023",
+            quarter: "Q1",
             icon: BetaIcon,
             title: "Beta Launch",
             desc2: "Public beta testing",
@@ -176,10 +176,10 @@ const Home = () => {
             color: "gray"
         },
         {
-            year: "2022",
-            quarter: "Q3",
+            year: "2023",
+            quarter: "Q2",
             icon: WorldIcon,
-            title: "Token Launch & NFT Sale",
+            title: "Token & NFT Launch",
             desc1: "Telegram & Discord launched",
             desc2: "Game MVP/Vertical slice",
             desc3: "Gameplay gifs, art style released",
@@ -305,7 +305,7 @@ const Home = () => {
                             <div className="roadmap-box-upcoming-games-bottom-item">
                                 <img src={leena} />
                                 <p className="roadmap-box-upcoming-games-bottom-item-title">Leena's Place</p>
-                                <p className="roadmap-box-upcoming-games-bottom-item-desc">Leena returns home and becomes mayor of her small town with the vision of building her boring town into a modern lively abode for her friends and family</p>
+                                <p className="roadmap-box-upcoming-games-bottom-item-desc">Leena returns home as mayor of her town with the vision of building her boring town into a modern lively abode for her friends and family</p>
                                 <Button className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
                             </div>
                             <div className="roadmap-box-upcoming-games-bottom-item">
