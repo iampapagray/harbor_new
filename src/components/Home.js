@@ -4,6 +4,8 @@ import MiniGame from './MiniGame.js';
 import Footer from './Footer.js';
 import NavBar from './NavBar.js';
 import { Button } from 'react-bootstrap';
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image';
 import '../styles/Home.css';
 
 // import GameInHands from '../assets/home/hands.png';
@@ -18,19 +20,45 @@ import ArrowRight from '../assets/home/arrow-right.svg';
 import Team from '../assets/home/team.png';
 import Experience from '../assets/home/experience.png';
 import Roadmap from '../assets/home/roadmap.png';
-import PastExperiences from '../assets/home/past-experiences.png';
 
-import LogoBlue from "../assets/general/HarborLogoBlue.svg";
+// import PastExperiences from '../assets/home/past-experiences.png';
+import Emporea from '../assets/home/experience/experience-emporea.png';
+import Neemo from '../assets/home/experience/experience-neemo.png';
+import TrainStation from '../assets/home/experience/experience-train-station.png';
+import StarWars from '../assets/home/experience/experience-star-wars.png';
+import ToyStory from '../assets/home/experience/experience-toy-story.png';
+
+
 import LogoWhite from "../assets/general/HarborLogoWhite.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 
+var experienceStartIndex = 0;
 
 const Home = () => {
 
+    const [shownExperienceDivs, setShownExperienceDivs] = useState([
+        {
+            id: "neemo",
+            url: Neemo,
+            title: "Neemo's Reef",
+            link: "https://nemos-reef.en.uptodown.com/android"
+        },
+        {
+            id: "toystory",
+            url: ToyStory,
+            title: "Toy Story: Smash It!",
+            link: "https://toy-story-smash-it-free.en.uptodown.com/android",
+        },
+        {
+            id: "starwars",
+            url: StarWars,
+            title: "Star Wars: Assault Team",
+            link: "google.com",
+        },
+    ]);
+
     const scrollRight = (id) => {
-        console.log("rightss");
         const elem = document.getElementById(id);
-        console.log(elem);
         const maxVal = elem.scrollWidth - elem.clientWidth;
 
         var id = null;
@@ -46,13 +74,10 @@ const Home = () => {
             }
             elem.scrollLeft = scrollLeft;
         }
-        console.log(elem.scrollLeft);
     }
 
     const scrollLeft = (id) => {
-        console.log("right");
         const elem = document.getElementById(id);
-        console.log(elem);
         const maxVal = elem.scrollWidth - elem.clientWidth;
 
         var id = null;
@@ -68,13 +93,10 @@ const Home = () => {
             }
             elem.scrollLeft = scrollLeft;
         }
-
-        console.log(elem.scrollLeft);
     }
 
     const logoPulse = () => {
         const elem = document.getElementById("home-overlay-icon-container");
-        console.log("pulse");
     
         var id = null;
         var opacity = 0.0;
@@ -99,6 +121,38 @@ const Home = () => {
             }
             elem.style.opacity = opacity;
         }
+    }
+
+    const EXPERIENCE_ITEMS_SHOWN = 3;
+
+    const changeExperience = (direction) => {
+        if (direction == "left") {
+            experienceStartIndex = experienceStartIndex - 1;
+        } else {
+            experienceStartIndex = experienceStartIndex + 1;
+        }
+        if (experienceStartIndex <= -1 * allExperienceDivs.length) {
+            experienceStartIndex = 0;
+        }
+        if (experienceStartIndex >= allExperienceDivs.length - 1) {
+            experienceStartIndex = 0;
+        }
+        // console.log("EXPERIENCE START INDEX ", experienceStartIndex);
+        var increment = 0;
+        var newShownExperienceDevs = [];
+        while (increment < EXPERIENCE_ITEMS_SHOWN) {
+            var index = experienceStartIndex + increment;
+            if (index < 0) {
+                index = allExperienceDivs.length + index;
+            }
+            if (index > allExperienceDivs.length - 1) {
+                index = index - allExperienceDivs.length;
+            }
+            // console.log("index is ", index);
+            newShownExperienceDevs[increment] = allExperienceDivs[index];
+            increment += 1;
+        }
+        setShownExperienceDivs(newShownExperienceDevs);
     }
 
     useEffect(() => {
@@ -127,6 +181,58 @@ const Home = () => {
             }, 3000);
         // });
     }, []);
+
+    var allExperienceDivs = [
+        {
+            id: "neemo",
+            url: Neemo,
+            title: "Neemo's Reef",
+            link: "https://nemos-reef.en.uptodown.com/android"
+        },
+        {
+            id: "toystory",
+            url: ToyStory,
+            title: "Toy Story: Smash It!",
+            link: "https://toy-story-smash-it-free.en.uptodown.com/android",
+        },
+        {
+            id: "starwars",
+            url: StarWars,
+            title: "Star Wars: Assault Team",
+            link: "google.com",
+        },
+        {
+            id: "emporea",
+            url: Emporea,
+            title: "Emporea",
+            link: "https://play.google.com/store/apps/details?id=air.com.PixelFederation.EmporeaGame&hl=en_US&gl=US",
+        },
+        {
+            id: "trainstation",
+            url: TrainStation,
+            title: "Trainstation 2",
+            link: "https://play.google.com/store/apps/details?id=air.com.pixelfederation.TrainStationGame&hl=en_US&gl=US",
+        },
+
+    ]
+
+    const pastExperienceProperties = {
+        duration: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        indicators: true,
+        prevArrow: <img className="nav-left" src={ArrowLeft} />,
+        nextArrow: <img src={ArrowRight} />,
+      };
+
+    //   const style = {
+    //     textAlign: 'center',
+    //     background: 'teal',
+    //     padding: '200px 0',
+    //     fontSize: '30px'
+    //   };
+      
 
     return (
         <div className="home-container" id="home-container-id">
@@ -200,13 +306,30 @@ const Home = () => {
                 <div className="roadmap-box roadmap-box-past-experiences">
                     <div className="roadmap-box-past-experiences-top">
                         <p className="roadmap-title">Past Experiences</p>
-                        <div className="roadmap-icon-menu">
-                            <img src={ArrowLeft} onClick={() => scrollLeft("roadmap-box-past-experiences-bottom")} />
-                            <img src={ArrowRight} onClick={() => scrollRight("roadmap-box-past-experiences-bottom")} />
-                        </div>
+                        {/* <div className="roadmap-icon-menu">
+                            <img src={ArrowLeft} onClick={() => changeExperience("left")} />
+                            <img src={ArrowRight} onClick={() => changeExperience("right")} />
+                        </div> */}
                     </div>
                     <div className="roadmap-box-past-experiences-bottom" id="roadmap-box-past-experiences-bottom">
-                        <img src={PastExperiences} />
+                        <Slide {...pastExperienceProperties}>
+                            {
+                                shownExperienceDivs.map(function(item, i) {
+                                    return (
+                                        <div className="roadmap-box-past-experiences-item">
+                                            <a href={item.link} target="_blank">
+                                                <div className="roadmap-box-past-experiences-image">
+                                                    <img src={item.url} onClick={console.log("click")} />
+                                                </div>
+                                            </a>
+                                            <div className="roadmap-box-past-experiences-text">
+                                                <p>{item.title}</p>
+                                            </div>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </Slide>
                     </div>
                 </div>
                 <div className="roadmap-box roadmap-box-upcoming-games">
