@@ -36,65 +36,6 @@ var experienceStartIndex = 0;
 
 const Home = () => {
 
-    const [shownExperienceDivs, setShownExperienceDivs] = useState([
-        {
-            id: "neemo",
-            url: Neemo,
-            title: "Neemo's Reef",
-            link: "https://nemos-reef.en.uptodown.com/android"
-        },
-        {
-            id: "toystory",
-            url: ToyStory,
-            title: "Toy Story: Smash It!",
-            link: "https://toy-story-smash-it-free.en.uptodown.com/android",
-        },
-        {
-            id: "starwars",
-            url: StarWars,
-            title: "Star Wars: Assault Team",
-            link: "google.com",
-        },
-    ]);
-
-    const scrollRight = (id) => {
-        const elem = document.getElementById(id);
-        const maxVal = elem.scrollWidth - elem.clientWidth;
-
-        var id = null;
-        clearInterval(id);
-        id = setInterval(frame, 10);
-        var scrollLeft = elem.scrollLeft;
-        function frame() {
-            if (scrollLeft >= maxVal) {
-                clearInterval(id);
-                scrollLeft = maxVal;
-            } else {
-                scrollLeft += 30;
-            }
-            elem.scrollLeft = scrollLeft;
-        }
-    }
-
-    const scrollLeft = (id) => {
-        const elem = document.getElementById(id);
-        const maxVal = elem.scrollWidth - elem.clientWidth;
-
-        var id = null;
-        clearInterval(id);
-        id = setInterval(frame, 10);
-        var scrollLeft = elem.scrollLeft;
-        function frame() {
-            if (scrollLeft <= 0) {
-                clearInterval(id);
-                scrollLeft = 0;
-            } else {
-                scrollLeft -= 30;
-            }
-            elem.scrollLeft = scrollLeft;
-        }
-    }
-
     const logoPulse = () => {
         const elem = document.getElementById("home-overlay-icon-container");
     
@@ -121,38 +62,6 @@ const Home = () => {
             }
             elem.style.opacity = opacity;
         }
-    }
-
-    const EXPERIENCE_ITEMS_SHOWN = 3;
-
-    const changeExperience = (direction) => {
-        if (direction == "left") {
-            experienceStartIndex = experienceStartIndex - 1;
-        } else {
-            experienceStartIndex = experienceStartIndex + 1;
-        }
-        if (experienceStartIndex <= -1 * allExperienceDivs.length) {
-            experienceStartIndex = 0;
-        }
-        if (experienceStartIndex >= allExperienceDivs.length - 1) {
-            experienceStartIndex = 0;
-        }
-        // console.log("EXPERIENCE START INDEX ", experienceStartIndex);
-        var increment = 0;
-        var newShownExperienceDevs = [];
-        while (increment < EXPERIENCE_ITEMS_SHOWN) {
-            var index = experienceStartIndex + increment;
-            if (index < 0) {
-                index = allExperienceDivs.length + index;
-            }
-            if (index > allExperienceDivs.length - 1) {
-                index = index - allExperienceDivs.length;
-            }
-            // console.log("index is ", index);
-            newShownExperienceDevs[increment] = allExperienceDivs[index];
-            increment += 1;
-        }
-        setShownExperienceDivs(newShownExperienceDevs);
     }
 
     useEffect(() => {
@@ -224,14 +133,70 @@ const Home = () => {
         indicators: true,
         prevArrow: <img className="nav-left" src={ArrowLeft} />,
         nextArrow: <img src={ArrowRight} />,
-      };
+    };
 
-    //   const style = {
-    //     textAlign: 'center',
-    //     background: 'teal',
-    //     padding: '200px 0',
-    //     fontSize: '30px'
-    //   };
+    var allRoadmapDivs = [
+        {
+            year: "2022",
+            quarter: "Q3",
+            icon: LogoWhite,
+            title: "Community Launch",
+            desc1: "Telegram & Discord launched",
+            desc2: "Game MVP/Vertical slice",
+            desc3: "Gameplay gifs, art style released",
+            color: "blue",
+        },
+        {
+            year: "2022",
+            quarter: "Q4",
+            icon: LogoWhite,
+            title: "Token Launch & NFT sale",
+            desc1: "Telegram & Discord launched",
+            desc2: "Game MVP/Vertical slice",
+            desc3: "Gameplay gifs, art style released",
+            color: "gray"
+        },
+        {
+            year: "2022",
+            quarter: "Q3",
+            icon: LogoWhite,
+            title: "Internal beta launch",
+            desc1: "Taylor's Town global launch",
+            desc2: "Web platform testing",
+            desc3: "Multiplayer, community, game",
+            color: "gray"
+        },
+        {
+            year: "2022",
+            quarter: "Q3",
+            icon: LogoWhite,
+            title: "Beta Launch",
+            desc2: "Public beta testing",
+            desc1: "NFT marketplace launch",
+            desc3: "FTUE and game data balance",
+            color: "gray"
+        },
+        {
+            year: "2022",
+            quarter: "Q3",
+            icon: LogoWhite,
+            title: "Token Launch & NFT Sale",
+            desc1: "Telegram & Discord launched",
+            desc2: "Game MVP/Vertical slice",
+            desc3: "Gameplay gifs, art style released",
+            color: "gray"
+        },
+    ];
+
+    const roadmapProperties = {
+        duration: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        indicators: true,
+        prevArrow: <img className="nav-left" src={ArrowLeft} />,
+        nextArrow: <img src={ArrowRight} />,
+    };
       
 
     return (
@@ -306,15 +271,11 @@ const Home = () => {
                 <div className="roadmap-box roadmap-box-past-experiences">
                     <div className="roadmap-box-past-experiences-top">
                         <p className="roadmap-title">Past Experiences</p>
-                        {/* <div className="roadmap-icon-menu">
-                            <img src={ArrowLeft} onClick={() => changeExperience("left")} />
-                            <img src={ArrowRight} onClick={() => changeExperience("right")} />
-                        </div> */}
                     </div>
                     <div className="roadmap-box-past-experiences-bottom" id="roadmap-box-past-experiences-bottom">
                         <Slide {...pastExperienceProperties}>
                             {
-                                shownExperienceDivs.map(function(item, i) {
+                                allExperienceDivs.map(function(item, i) {
                                     return (
                                         <div className="roadmap-box-past-experiences-item">
                                             <a href={item.link} target="_blank">
@@ -354,13 +315,34 @@ const Home = () => {
                 <div className="roadmap-box roadmap-box-roadmap">
                     <div className="roadmap-box-roadmap-top">
                         <p className="roadmap-title">Roadmap</p>
-                        <div className="roadmap-icon-menu">
+                        {/* <div className="roadmap-icon-menu">
                             <img src={ArrowLeft} onClick={() => scrollLeft("roadmap-box-roadmap-bottom")} />
                             <img src={ArrowRight} onClick={() => scrollRight("roadmap-box-roadmap-bottom")} />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="roadmap-box-roadmap-bottom" id="roadmap-box-roadmap-bottom">
-                        <img src={Roadmap} />
+                        {/* <img src={Roadmap} /> */}
+                        <Slide {...roadmapProperties}>
+                            {
+                                allRoadmapDivs.map(function(item, i) {
+                                    return (
+                                        <div className={item.color == "gray" ? "roadmap-box-roadmap-item" : "roadmap-box-roadmap-item roadmap-box-roadmap-item-blue"} >
+                                            <div className="roadmap-box-roadmap-item-top">
+                                                <p className="roadmap-box-roadmap-item-year">{item.year}</p>
+                                                <p className="roadmap-box-roadmap-item-quarter">{item.quarter}</p>
+                                            </div>
+                                            <div className="roadmap-box-roadmap-item-bottom">
+                                                <img className="roadmap-box-roadmap-item-icon" src={item.icon} />
+                                                <p className="roadmap-box-roadmap-item-title">{item.title}</p>
+                                                <p className="roadmap-box-roadmap-item-desc">{item.desc1}</p>
+                                                <p className="roadmap-box-roadmap-item-desc">{item.desc2}</p>
+                                                <p className="roadmap-box-roadmap-item-desc">{item.desc3}</p>
+                                            </div>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </Slide>
                     </div>
                 </div>
             </div>

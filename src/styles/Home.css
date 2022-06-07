@@ -170,7 +170,7 @@
 }
 
 .nav-left {
-    margin-right: 7.5px;
+    margin-right: 15px;
 }
 
 .roadmap-box-past-experiences-top {
@@ -235,15 +235,72 @@
 
 .roadmap-box-roadmap-bottom {
     width: 100%;
-    overflow: hidden;
-    /* overflow-x: scroll;
-    overflow-y: hidden; */
 }
 
-.roadmap-box-roadmap-bottom img {
-    min-height: 350px;
-    max-height: 650px;
-    overflow-x: scroll;
+.roadmap-box-roadmap-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10%;
+    /* width: 30%; */
+    /* height: 200px; */
+    align-items: center;
+    margin-right: 10px;
+    background: #6C798F;
+    border-radius: 20px;
+}
+
+.roadmap-box-roadmap-item p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.roadmap-box-roadmap-item-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40%;
+}
+
+.roadmap-box-roadmap-item-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.roadmap-box-roadmap-item-blue {
+    background: linear-gradient(135deg, #0081F7 0%, #00AAEB 100%);
+}
+
+.roadmap-box-roadmap-item-year {
+    color: white;
+    font-size: 24px;
+}
+
+.roadmap-box-roadmap-item-quarter {
+    color: white;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.roadmap-box-roadmap-item-icon {
+    width: 60px;
+}
+
+.roadmap-box-roadmap-item-title {
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+}
+
+.roadmap-box-roadmap-item-desc {
+    font-size: 20px;
+    color: white;
 }
 
 /* --------------- */
