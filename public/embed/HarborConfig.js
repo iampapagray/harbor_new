@@ -12,7 +12,7 @@ function configureUnity() {
 
     var loyaltyConfig = {
         Name: "Loyalty",
-        Description: "",
+        Description: "Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town. Here and there, everyone has to accept help. Fight alongside your Mafia Family allies and prosper together!",
         URL: "/loyalty",
         ButtonLabel: "About",
         IsButtonActive : true,
@@ -30,7 +30,7 @@ function configureUnity() {
 
     var leenasplaceConfig = {
         Name: "Leena's Place",
-        Description: "",
+        Description: "Leena returns home and becomes mayor of her small town with the vision of rebuilding it into a modern, lively abode for her friends and family. Help her to transform the sleepy countryside village into flourishing modern family town!",
         URL: "/leena",
         ButtonLabel: "About",
         IsButtonActive: true,
