@@ -57,6 +57,23 @@
     min-width: 200px;
 }
 
+
+#fullscreen_explore_button {
+	opacity: 0;
+	position: absolute;
+    display: none;
+	width:100%;
+	height:100%;
+    left: 0%;
+    top:0;
+}
+
+
+.button:hover {
+	   opacity: 0.85;
+}
+
+
 #unity-loading-bar { 
 	position: absolute; 
 	left: 50%; 

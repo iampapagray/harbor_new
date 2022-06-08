@@ -50,6 +50,7 @@ function onExitClicked() {
 	}
 	// show explore
 	exploreButton.style.display = "block";
+	fullScreenExploreButton.style.display = "block";
 
 	// disable touches = enable scrolling
 	unityCanvas.style.pointerEvents = "none";
@@ -71,6 +72,7 @@ function onHarborSceneLoaded() {
 	
 	// show explore button
 	exploreButton.style.display = "block";
+	fullScreenExploreButton.style.display = "block";
 }
 
 // called when icon above building was clicked

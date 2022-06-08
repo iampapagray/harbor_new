@@ -6,6 +6,7 @@ var progressBarFill = document.querySelector("#unity-progress-bar-fill");
 var loadingBar = document.querySelector("#unity-loading-bar");
 var enterButton = document.querySelector("#enter_button");
 var exploreButton = document.querySelector("#explore_button");
+var fullScreenExploreButton = document.querySelector("#fullscreen_explore_button");
 var unityCanvas = document.querySelector("#unity-canvas");
 
 
