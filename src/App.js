@@ -10,12 +10,15 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import NavBarNew from './components/NavBarNew';
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar style="dark"/>
+        {/* <NavBar style="dark"  /> */}
+        <NavBarNew  />
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/leena" element={ <div><Leena /><Footer /></div> } />

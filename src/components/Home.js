@@ -130,8 +130,8 @@ const Home = () => {
         slidesToScroll: 1,
         autoplay: false,
         indicators: true,
-        prevArrow: <img className="nav-left" src={ArrowLeft} />,
-        nextArrow: <img src={ArrowRight} />,
+        prevArrow: <img className="nav-left" src={ArrowLeft} alt="" />,
+        nextArrow: <img src={ArrowRight} alt="" />,
     };
 
     var allRoadmapDivs = [
@@ -193,166 +193,250 @@ const Home = () => {
         slidesToScroll: 1,
         autoplay: false,
         indicators: true,
-        prevArrow: <img className="nav-left" src={ArrowLeft} />,
-        nextArrow: <img src={ArrowRight} />,
+        prevArrow: <img className="nav-left" src={ArrowLeft} alt="" />,
+        nextArrow: <img src={ArrowRight} alt="" />,
     };
       
 
     return (
-        <div className="home-container" id="home-container-id">
-            {/* <NavBar style="light"/> */}
-            <div className="home-overlay" id="home-overlay-id">
-                <div className="home-overlay-icon-container" id="home-overlay-icon-container">
-                    <img
-                        alt=""
-                        src={LogoWhite}
-                        className="d-inline-block align-top harbor-logo-img-home"
-                    />{' '}
-                    <img
-                        alt=""
-                        src={LogoText}
-                        className="d-inline-block align-top harbor-logo-text-home"
-                    />{' '}
-                </div>
-            </div>
-            <MiniGame />
-            <div className="roadmap-container" id="roadmap-container-id">
-                <div className="roadmap-box roadmap-box-1">
-                    <div className="roadmap-box-1-top">
-                        <p className="roadmap-title">We are creating blockchain games for the masses</p>
-                    </div>
-                    <img src={Characters} />
-                </div>
-                <div className="roadmap-box roadmap-box-2">
-                    <div className="roadmap-box roadmap-box-2-inner">
-                        <div className="roadmap-box-2-left">
-                            <p className="roadmap-title roadmap-title-box-2">Arrr' Vision</p>
-                            <div className="roadmap-box-2-timeline">
-                                <div className="roadmap-box-2-timeline-line-item">
-                                    <div className="roadmap-box-2-timeline-line-item-left">
-                                        <img src={HarborTimelineIcon} />
-                                    </div>
-                                    <div className="roadmap-box-2-timeline-line-item-right">
-                                        <p className="roadmap-box-2-timeline-line-item-right-top">Fun-first Approach</p>
-                                        <p className="roadmap-box-2-timeline-line-item-right-bottom">Our number one focus is creating exciting gameplay experiences for all gamers on Harbor.</p>
-                                    </div>
-                                </div>
-                                <div className="roadmap-box-2-timeline-line-item">
-                                    <div className="roadmap-box-2-timeline-line-item-left">
-                                        <img src={HarborTimelineIcon} />
-                                    </div>
-                                    <div className="roadmap-box-2-timeline-line-item-right">
-                                        <p className="roadmap-box-2-timeline-line-item-right-top">Merging F2P and P2E</p>
-                                        <p className="roadmap-box-2-timeline-line-item-right-bottom">Harbor games merge the best elements from mobile free-to-play with play-to-earn economics.</p>
-                                    </div>
-                                </div>
-                                <div className="roadmap-box-2-timeline-line-item">
-                                    <div className="roadmap-box-2-timeline-line-item-left">
-                                        <img src={HarborTimelineIcon} />
-                                    </div>
-                                <div className="roadmap-box-2-timeline-line-item-right">
-                                        <p className="roadmap-box-2-timeline-line-item-right-top">Driving mass adoption</p>
-                                        <p className="roadmap-box-2-timeline-line-item-right-bottom">We tap into the pool of billions of mobile gamers to drive adoption for blockchain gaming.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <Button href="#home-container-id" className="box-2-play-button" variant="success">Explore Harbor</Button>{' '}
-                        </div>
-                        <div className="roadmap-box-2-right">
-                            <img src={ManAndBoat} />
-                        </div>
-                    </div>
-                </div>
-                <div className="roadmap-box roadmap-box-team">
-                    <p className="roadmap-title">Core Team</p>
-                    <p className="team-desc">Harbor consolidates experience from the best of Silicon Valley, venture capital, and mobile gaming, to create one of the best teams in all of blockchain gaming, with an unrivaled track record.</p>
-                    <img className="roadmap-box-team-img"src={Team} />
-                    <img className="roadmap-box-team-banner" src={Experience} />
-                </div>
-                <div className="roadmap-box roadmap-box-past-experiences">
-                    <div className="roadmap-box-past-experiences-top">
-                        <p className="roadmap-title">Past Experiences</p>
-                    </div>
-                    <div className="roadmap-box-past-experiences-bottom" id="roadmap-box-past-experiences-bottom">
-                        <Slide {...pastExperienceProperties}>
-                            {
-                                allExperienceDivs.map(function(item, i) {
-                                    return (
-                                        <div className="roadmap-box-past-experiences-item-container">
-                                            <div className="roadmap-box-past-experiences-item">
-                                                <a href={item.link} target="_blank">
-                                                    <div className="roadmap-box-past-experiences-image">
-                                                        <img src={item.url} onClick={console.log("click")} />
-                                                    </div>
-                                                </a>
-                                                <div className="roadmap-box-past-experiences-text">
-                                                    <p>{item.title}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    );
-                                })
-                            }
-                        </Slide>
-                    </div>
-                </div>
-                <div className="roadmap-box roadmap-box-upcoming-games">
-                    <div className="roadmap-box roadmap-box-upcoming-games-inner">
-                        <div className="roadmap-box-upcoming-games-top">
-                            <p className="roadmap-title">Upcoming Games</p>
-                        </div>
-                        <div className="roadmap-box-upcoming-games-bottom">
-                            <div className="roadmap-box-upcoming-games-bottom-item">
-                                <img src={leena} />
-                                <p className="roadmap-box-upcoming-games-bottom-item-title">Leena's Place</p>
-                                <p className="roadmap-box-upcoming-games-bottom-item-desc">Leena returns home as mayor of her town with the vision of building her boring town into a modern lively abode for her friends and family</p>
-                                <Button href="/leena" target="_blank" className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
-                            </div>
-                            <div className="roadmap-box-upcoming-games-bottom-item">
-                                <img src={loyalty} />
-                                <p className="roadmap-box-upcoming-games-bottom-item-title">Loyalty</p>
-                                <p className="roadmap-box-upcoming-games-bottom-item-desc">Kick up your own gang and run your family’s crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra</p>
-                                <Button href="/loyalty" target="_blank" className="roadmap-box-upcoming-games-play-button" variant="success">Learn More</Button>{' '}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="roadmap-box roadmap-box-roadmap">
-                    <div className="roadmap-box-roadmap-inner">
-                        <div className="roadmap-box-roadmap-top">
-                            <p className="roadmap-title">Roadmap</p>
-                        </div>
-                        <div className="roadmap-box-roadmap-bottom" id="roadmap-box-roadmap-bottom">
-                            {/* <img src={Roadmap} /> */}
-                            <Slide {...roadmapProperties}>
-                                {
-                                    allRoadmapDivs.map(function(item, i) {
-                                        return (
-                                            <div className="roadmap-box-roadmap-item-container">
-                                                <div className={item.color == "gray" ? "roadmap-box-roadmap-item" : "roadmap-box-roadmap-item roadmap-box-roadmap-item-blue"} >
-                                                    <div className="roadmap-box-roadmap-item-top">
-                                                        <p className="roadmap-box-roadmap-item-year">{item.year}</p>
-                                                        <p className="roadmap-box-roadmap-item-quarter">{item.quarter}</p>
-                                                    </div>
-                                                    <div className="roadmap-box-roadmap-item-bottom">
-                                                        <img className="roadmap-box-roadmap-item-icon" src={item.icon} />
-                                                        <p className="roadmap-box-roadmap-item-title">{item.title}</p>
-                                                        <p className="roadmap-box-roadmap-item-desc">{item.desc1}</p>
-                                                        <p className="roadmap-box-roadmap-item-desc">{item.desc2}</p>
-                                                        <p className="roadmap-box-roadmap-item-desc">{item.desc3}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        );
-                                    })
-                                }
-                            </Slide>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Footer />
+      <div className="home-container" id="home-container-id">
+        <div className="home-overlay" id="home-overlay-id">
+          <div
+            className="home-overlay-icon-container"
+            id="home-overlay-icon-container"
+          >
+            <img
+              alt=""
+              src={LogoWhite}
+              className="d-inline-block align-top harbor-logo-img-home"
+            />{" "}
+            <img
+              alt=""
+              src={LogoText}
+              className="d-inline-block align-top harbor-logo-text-home"
+            />{" "}
+          </div>
         </div>
+        <MiniGame />
+        <div className="roadmap-container" id="roadmap-container-id">
+          <div className="roadmap-box roadmap-box-1">
+            <div className="roadmap-box-1-top">
+              <p className="roadmap-title">
+                We are creating blockchain games for the masses
+              </p>
+            </div>
+            <img src={Characters} alt="" />
+          </div>
+          <div className="roadmap-box roadmap-box-2">
+            <div className="roadmap-box roadmap-box-2-inner">
+              <div className="roadmap-box-2-left">
+                <p className="roadmap-title roadmap-title-box-2">
+                  Arrr' Vision
+                </p>
+                <div className="roadmap-box-2-timeline">
+                  <div className="roadmap-box-2-timeline-line-item">
+                    <div className="roadmap-box-2-timeline-line-item-left">
+                      <img src={HarborTimelineIcon} alt="" />
+                    </div>
+                    <div className="roadmap-box-2-timeline-line-item-right">
+                      <p className="roadmap-box-2-timeline-line-item-right-top">
+                        Fun-first Approach
+                      </p>
+                      <p className="roadmap-box-2-timeline-line-item-right-bottom">
+                        Our number one focus is creating exciting gameplay
+                        experiences for all gamers on Harbor.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="roadmap-box-2-timeline-line-item">
+                    <div className="roadmap-box-2-timeline-line-item-left">
+                      <img src={HarborTimelineIcon} alt="" />
+                    </div>
+                    <div className="roadmap-box-2-timeline-line-item-right">
+                      <p className="roadmap-box-2-timeline-line-item-right-top">
+                        Merging F2P and P2E
+                      </p>
+                      <p className="roadmap-box-2-timeline-line-item-right-bottom">
+                        Harbor games merge the best elements from mobile
+                        free-to-play with play-to-earn economics.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="roadmap-box-2-timeline-line-item">
+                    <div className="roadmap-box-2-timeline-line-item-left">
+                      <img src={HarborTimelineIcon} alt="" />
+                    </div>
+                    <div className="roadmap-box-2-timeline-line-item-right">
+                      <p className="roadmap-box-2-timeline-line-item-right-top">
+                        Driving mass adoption
+                      </p>
+                      <p className="roadmap-box-2-timeline-line-item-right-bottom">
+                        We tap into the pool of billions of mobile gamers to
+                        drive adoption for blockchain gaming.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  href="#home-container-id"
+                  className="box-2-play-button"
+                  variant="success"
+                >
+                  Explore Harbor
+                </Button>{" "}
+              </div>
+              <div className="roadmap-box-2-right">
+                <img src={ManAndBoat} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="roadmap-box roadmap-box-team">
+            <p className="roadmap-title">Core Team</p>
+            <p className="team-desc">
+              Harbor consolidates experience from the best of Silicon Valley,
+              venture capital, and mobile gaming, to create one of the best
+              teams in all of blockchain gaming, with an unrivaled track record.
+            </p>
+            <img className="roadmap-box-team-img" src={Team} alt="" />
+            <img className="roadmap-box-team-banner" src={Experience} alt="" />
+          </div> 
+          <div className="roadmap-box roadmap-box-past-experiences">
+            <div className="roadmap-box-past-experiences-top">
+              <p className="roadmap-title">Past Experiences</p>
+            </div>
+            <div
+              className="roadmap-box-past-experiences-bottom"
+              id="roadmap-box-past-experiences-bottom"
+            >
+              <Slide {...pastExperienceProperties}>
+                {allExperienceDivs.map(function (item, i) {
+                  return (
+                    <div className="roadmap-box-past-experiences-item-container">
+                      <div className="roadmap-box-past-experiences-item">
+                        <a href={item.link} target="_blank" rel="noreferrer">
+                          <div className="roadmap-box-past-experiences-image">
+                            <img
+                              src={item.url}
+                              onClick={console.log("click")}
+                              alt=""
+                            />
+                          </div>
+                        </a>
+                        <div className="roadmap-box-past-experiences-text">
+                          <p>{item.title}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slide>
+            </div>
+          </div>
+          <div className="roadmap-box roadmap-box-upcoming-games">
+            <div className="roadmap-box roadmap-box-upcoming-games-inner">
+              <div className="roadmap-box-upcoming-games-top">
+                <p className="roadmap-title">Upcoming Games</p>
+              </div>
+              <div className="roadmap-box-upcoming-games-bottom">
+                <div className="roadmap-box-upcoming-games-bottom-item">
+                  <img src={leena} alt="" />
+                  <p className="roadmap-box-upcoming-games-bottom-item-title">
+                    Leena's Place
+                  </p>
+                  <p className="roadmap-box-upcoming-games-bottom-item-desc">
+                    Leena returns home as mayor of her town with the vision of
+                    building her boring town into a modern lively abode for her
+                    friends and family
+                  </p>
+                  <Button
+                    href="/leena"
+                    target="_blank"
+                    className="roadmap-box-upcoming-games-play-button"
+                    variant="success"
+                  >
+                    Learn More
+                  </Button>{" "}
+                </div>
+                <div className="roadmap-box-upcoming-games-bottom-item">
+                  <img src={loyalty} alt="" />
+                  <p className="roadmap-box-upcoming-games-bottom-item-title">
+                    Loyalty
+                  </p>
+                  <p className="roadmap-box-upcoming-games-bottom-item-desc">
+                    Kick up your own gang and run your family’s crime
+                    activities. Choose which mobsters and gangsters should be
+                    devoted to your Cosa Nostra
+                  </p>
+                  <Button
+                    href="/loyalty"
+                    target="_blank"
+                    className="roadmap-box-upcoming-games-play-button"
+                    variant="success"
+                  >
+                    Learn More
+                  </Button>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="roadmap-box roadmap-box-roadmap">
+            <div className="roadmap-box-roadmap-inner">
+              <div className="roadmap-box-roadmap-top">
+                <p className="roadmap-title">Roadmap</p>
+              </div>
+              <div
+                className="roadmap-box-roadmap-bottom"
+                id="roadmap-box-roadmap-bottom"
+              >
+                <Slide {...roadmapProperties}>
+                  {allRoadmapDivs.map(function (item, i) {
+                    return (
+                      <div className="roadmap-box-roadmap-item-container">
+                        <div
+                          className={
+                            item.color === "gray"
+                              ? "roadmap-box-roadmap-item"
+                              : "roadmap-box-roadmap-item roadmap-box-roadmap-item-blue"
+                          }
+                        >
+                          <div className="roadmap-box-roadmap-item-top">
+                            <p className="roadmap-box-roadmap-item-year">
+                              {item.year}
+                            </p>
+                            <p className="roadmap-box-roadmap-item-quarter">
+                              {item.quarter}
+                            </p>
+                          </div>
+                          <div className="roadmap-box-roadmap-item-bottom">
+                            <img
+                              className="roadmap-box-roadmap-item-icon"
+                              src={item.icon}
+                              alt=""
+                            />
+                            <p className="roadmap-box-roadmap-item-title">
+                              {item.title}
+                            </p>
+                            <p className="roadmap-box-roadmap-item-desc">
+                              {item.desc1}
+                            </p>
+                            <p className="roadmap-box-roadmap-item-desc">
+                              {item.desc2}
+                            </p>
+                            <p className="roadmap-box-roadmap-item-desc">
+                              {item.desc3}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Slide>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
     );
 }
     

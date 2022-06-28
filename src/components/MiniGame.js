@@ -86,9 +86,9 @@ const MiniGame = () => {
 				</div>
 	        </div>
 			<div className="button_container">
-				<img id="fullscreen_explore_button" onClick={explore}/>			
-				<img id="explore_button" className="button" onClick={explore} src={ExploreButton}/>
-				<img id="return_home_button" className="button" onClick={returnHome} src={ReturnHomeButton}/>		
+				<img id="fullscreen_explore_button" onClick={explore} alt=""/>			
+				<img id="explore_button" className="button" onClick={explore} src={ExploreButton} alt="" />
+				<img id="return_home_button" className="button" onClick={returnHome} src={ReturnHomeButton} alt="" />		
 			</div>
 			
             <div className="unity-canvas-container">

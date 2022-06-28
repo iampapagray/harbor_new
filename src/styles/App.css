@@ -26,13 +26,14 @@ html {
   }
 }
 
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @font-face {
   font-family: Inter;
   src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf');
-}
+} */
 
 * {
-  font-family: "Inter"!important;
+  font-family: "Inter" !important;
 }
 
 .App-header {
