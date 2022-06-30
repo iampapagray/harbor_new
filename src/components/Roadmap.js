@@ -81,8 +81,8 @@ function Roadmap(props) {
     }
 
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-py-22 tw-bg-gray-100">
-        <div className="tw-flex tw-w-full tw-justify-between tw-items-center tw-px-37 tw-mb-15">
+      <div className="tw-flex tw-flex-col tw-w-full tw-px-30 tw-py-22 tw-bg-gray-100">
+        <div className="tw-flex tw-w-full tw-justify-between tw-items-center tw-mb-15">
           <h2 className="tw-font-inter tw-font-bold tw-text-heading tw-text-black tw-tracking-tightest">
             Roadmap
           </h2>
@@ -95,13 +95,13 @@ function Roadmap(props) {
             </div>
           </div>
         </div>
-        <div className="tw-px-37 tw-flex tw-justify-between tw-gap-6 tw-w-full">
+        <div className=" tw-flex tw-justify-between tw-gap-6 tw-w-full">
           {roadmaps.map((roadmap, index) => {
             return (
               <div className={clsx("tw-w-full tw-h-full tw-group")} key={index}>
                 <div
                   className={clsx(
-                    "tw-h-68 tw-w-full tw-rounded-xl tw-text-left tw-pl-5 tw-pt-8.4 tw-text-white group-hover:tw-bg-bleugry",
+                    "tw-h-68 tw-w-full tw-transition-colors tw-ease-in-out tw-duration-500 tw-rounded-xl tw-text-left tw-pl-5 tw-pt-8.4 tw-text-white group-hover:tw-bg-bleugry",
                     {
                       "tw-bg-gradient-to-br tw-from-dark-blue tw-to-light-blue":
                         checkCurrent(roadmap) === true,

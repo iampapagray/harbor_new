@@ -26,8 +26,8 @@ function UpcomingGames(props) {
     ];
 
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-bg-white tw-py-22">
-        <div className="tw-flex tw-w-full tw-justify-between tw-items-center tw-px-37 tw-mb-13">
+      <div className="tw-flex tw-flex-col tw-w-full tw-px-30 tw-bg-white tw-py-22">
+        <div className="tw-flex tw-w-full tw-justify-between tw-items-center  tw-mb-13">
           <h2 className="tw-font-inter tw-font-bold tw-text-heading tw-text-black tw-tracking-tightest">
             Upcoming Games
           </h2>
@@ -40,7 +40,7 @@ function UpcomingGames(props) {
             </div>
           </div>
         </div>
-        <div className="tw-flex tw-pl-33 tw-pr-35">
+        <div className="tw-flex">
           <div className="tw-flex">
             {upcomingGames.map((game, index) => {
               return (
@@ -55,7 +55,7 @@ function UpcomingGames(props) {
                     alt={game.name}
                     className={clsx("tw-h-full")}
                   />
-                  <div className="tw-text-left tw-ml-8 tw-mt-11 tw-w-95 ">
+                  <div className="tw-text-left tw-ml-8 tw-mt-11 tw-w-96 ">
                     <h3 className="tw-text-2xl tw-font-inter tw-font-bold">
                       {game.name}
                     </h3>
