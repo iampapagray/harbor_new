@@ -74,7 +74,7 @@ function NavBarNew(props) {
     ];
 
     return (
-      <nav className="tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-bg-black tw-h-15 tw-px-10 tw-py-3.7">
+      <nav className="tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-bg-darker tw-h-15 tw-px-10 tw-py-3.7">
         <div className="tw-brand tw-flex tw-w-26 tw-justify-between">
           <img src={LogoBlue} alt="Harbor Logo" />
           <img src={LogoText} alt="Harbor Text" className="h-3.5 my-auto" />
@@ -194,7 +194,7 @@ function NavBarNew(props) {
                           {
                             "mx-0 tw-px-5 tw-border-[1.5px] tw-rounded-md":
                               button.isOutline,
-                            "tw-ml-2.5 tw-mr-0 tw-px-5 tw-rounded-md tw-bg-blue-500":
+                            "tw-ml-2.5 tw-mr-0 tw-px-5 tw-rounded-md tw-bg-gradient-to-br tw-from-dark-blue tw-to-light-blue ":
                               !button.isOutline,
                           }
                         )}

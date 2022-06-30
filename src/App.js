@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import './styles/App.css';
 import Leena from './components/Leena.js';
@@ -11,19 +11,36 @@ import {
   Route,
 } from "react-router-dom";
 import NavBarNew from './components/NavBarNew';
+import FooterNew from './components/FooterNew';
 
 function App() {
 
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <NavBar style="dark"  /> */}
-        <NavBarNew  />
+        <NavBarNew />
         <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/leena" element={ <div><Leena /><Footer /></div> } />
-          <Route path="/loyalty" element={ <div><Loyalty /><Footer /></div> } />
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/leena"
+            element={
+              <div>
+                <Leena />
+                <FooterNew />
+              </div>
+            }
+          />
+          <Route
+            path="/loyalty"
+            element={
+              <div>
+                <Loyalty />
+                <FooterNew />
+              </div>
+            }
+          />
         </Routes>
+        {/* <FooterNew /> */}
       </BrowserRouter>
     </div>
   );

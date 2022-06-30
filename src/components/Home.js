@@ -30,6 +30,10 @@ import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 import WorldIcon from "../assets/home/globe-icon.svg";
 import CommunityIcon from "../assets/home/community-icon.svg";
 import BetaIcon from "../assets/home/beta-icon.svg";
+import FooterNew from "./FooterNew.js";
+import UpcomingGames from "./UpcomingGames.js";
+import Roadmap from "./Roadmap.js";
+import Blockchain from "./Blockchain.js";
 
 var experienceStartIndex = 0;
 
@@ -65,8 +69,8 @@ const Home = () => {
 
     useEffect(() => {
         logoPulse();
-        // window.addEventListener('load', (event) => {
-        //     console.log("PAGE LOADED");
+       // // window.addEventListener('load', (event) => {
+       // //     console.log("PAGE LOADED");
             setTimeout(() => {
                 const elem = document.getElementById("home-overlay-id");
                 var id = null;
@@ -197,7 +201,6 @@ const Home = () => {
         nextArrow: <img src={ArrowRight} alt="" />,
     };
       
-
     return (
       <div className="home-container" id="home-container-id">
         <div className="home-overlay" id="home-overlay-id">
@@ -218,15 +221,8 @@ const Home = () => {
           </div>
         </div>
         <MiniGame />
+        <Blockchain />
         <div className="roadmap-container" id="roadmap-container-id">
-          <div className="roadmap-box roadmap-box-1">
-            <div className="roadmap-box-1-top">
-              <p className="roadmap-title">
-                We are creating blockchain games for the masses
-              </p>
-            </div>
-            <img src={Characters} alt="" />
-          </div>
           <div className="roadmap-box roadmap-box-2">
             <div className="roadmap-box roadmap-box-2-inner">
               <div className="roadmap-box-2-left">
@@ -299,7 +295,7 @@ const Home = () => {
             </p>
             <img className="roadmap-box-team-img" src={Team} alt="" />
             <img className="roadmap-box-team-banner" src={Experience} alt="" />
-          </div> 
+          </div>
           <div className="roadmap-box roadmap-box-past-experiences">
             <div className="roadmap-box-past-experiences-top">
               <p className="roadmap-title">Past Experiences</p>
@@ -311,7 +307,10 @@ const Home = () => {
               <Slide {...pastExperienceProperties}>
                 {allExperienceDivs.map(function (item, i) {
                   return (
-                    <div className="roadmap-box-past-experiences-item-container">
+                    <div
+                      key={i}
+                      className="roadmap-box-past-experiences-item-container"
+                    >
                       <div className="roadmap-box-past-experiences-item">
                         <a href={item.link} target="_blank" rel="noreferrer">
                           <div className="roadmap-box-past-experiences-image">
@@ -332,110 +331,10 @@ const Home = () => {
               </Slide>
             </div>
           </div>
-          <div className="roadmap-box roadmap-box-upcoming-games">
-            <div className="roadmap-box roadmap-box-upcoming-games-inner">
-              <div className="roadmap-box-upcoming-games-top">
-                <p className="roadmap-title">Upcoming Games</p>
-              </div>
-              <div className="roadmap-box-upcoming-games-bottom">
-                <div className="roadmap-box-upcoming-games-bottom-item">
-                  <img src={leena} alt="" />
-                  <p className="roadmap-box-upcoming-games-bottom-item-title">
-                    Leena's Place
-                  </p>
-                  <p className="roadmap-box-upcoming-games-bottom-item-desc">
-                    Leena returns home as mayor of her town with the vision of
-                    building her boring town into a modern lively abode for her
-                    friends and family
-                  </p>
-                  <Button
-                    href="/leena"
-                    target="_blank"
-                    className="roadmap-box-upcoming-games-play-button"
-                    variant="success"
-                  >
-                    Learn More
-                  </Button>{" "}
-                </div>
-                <div className="roadmap-box-upcoming-games-bottom-item">
-                  <img src={loyalty} alt="" />
-                  <p className="roadmap-box-upcoming-games-bottom-item-title">
-                    Loyalty
-                  </p>
-                  <p className="roadmap-box-upcoming-games-bottom-item-desc">
-                    Kick up your own gang and run your family’s crime
-                    activities. Choose which mobsters and gangsters should be
-                    devoted to your Cosa Nostra
-                  </p>
-                  <Button
-                    href="/loyalty"
-                    target="_blank"
-                    className="roadmap-box-upcoming-games-play-button"
-                    variant="success"
-                  >
-                    Learn More
-                  </Button>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="roadmap-box roadmap-box-roadmap">
-            <div className="roadmap-box-roadmap-inner">
-              <div className="roadmap-box-roadmap-top">
-                <p className="roadmap-title">Roadmap</p>
-              </div>
-              <div
-                className="roadmap-box-roadmap-bottom"
-                id="roadmap-box-roadmap-bottom"
-              >
-                <Slide {...roadmapProperties}>
-                  {allRoadmapDivs.map(function (item, i) {
-                    return (
-                      <div className="roadmap-box-roadmap-item-container">
-                        <div
-                          className={
-                            item.color === "gray"
-                              ? "roadmap-box-roadmap-item"
-                              : "roadmap-box-roadmap-item roadmap-box-roadmap-item-blue"
-                          }
-                        >
-                          <div className="roadmap-box-roadmap-item-top">
-                            <p className="roadmap-box-roadmap-item-year">
-                              {item.year}
-                            </p>
-                            <p className="roadmap-box-roadmap-item-quarter">
-                              {item.quarter}
-                            </p>
-                          </div>
-                          <div className="roadmap-box-roadmap-item-bottom">
-                            <img
-                              className="roadmap-box-roadmap-item-icon"
-                              src={item.icon}
-                              alt=""
-                            />
-                            <p className="roadmap-box-roadmap-item-title">
-                              {item.title}
-                            </p>
-                            <p className="roadmap-box-roadmap-item-desc">
-                              {item.desc1}
-                            </p>
-                            <p className="roadmap-box-roadmap-item-desc">
-                              {item.desc2}
-                            </p>
-                            <p className="roadmap-box-roadmap-item-desc">
-                              {item.desc3}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </Slide>
-              </div>
-            </div>
-          </div>
         </div>
-        <Footer />
+        {<UpcomingGames />}
+        {<Roadmap />}
+        <FooterNew />
       </div>
     );
 }

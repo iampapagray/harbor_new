@@ -23,8 +23,10 @@ const MiniGame = () => {
     useEffect(() => {
 
         // Remove the navbar on initial screen, restored in HarborHandler.js
-        var navbar = document.getElementById("navbar-id");
-	    navbar.style.display = "none";
+
+		//TODO I dont even know what this is doing
+        // var navbar = document.getElementById("navbar-id");
+	    // navbar.style.display = "none";
 
 		document.getElementById("unity-loading-bar").style.display="block";
 	
