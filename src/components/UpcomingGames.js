@@ -62,7 +62,7 @@ function UpcomingGames(props) {
                     <p className="tw-text-sm tw-font-inter tw-text-textgrey tw-mt-2.5 tw-mb-5">
                       {game.description}
                     </p>
-                    <button className="tw-bg-gradient-to-br tw-from-dark-blue tw-to-light-blue tw-ml-0 tw-py-4 tw-px-6 tw-text-white tw-text-buttonText tw-rounded-md tw-font-inter">
+                    <button className="tw-bg-gradient-to-br tw-from-dark-blue tw-to-light-blue tw-font-medium tw-ml-0 tw-py-4 tw-px-6 tw-text-white tw-text-buttonText tw-rounded-md tw-font-inter">
                       Learn more
                     </button>
                   </div>

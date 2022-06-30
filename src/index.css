@@ -8,6 +8,7 @@
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;
+    @apply tw-bg-darker;
   }
 
   .navButton {

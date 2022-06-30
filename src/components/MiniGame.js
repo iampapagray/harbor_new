@@ -76,27 +76,46 @@ const MiniGame = () => {
 	};
 
     return (
-		// <Unity className="game-embed" unityContext={unityContext} />
-        // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>	
-		<div className="minigame-container">
-            <div id="unity-loading-bar">
-                <div id="unity-progress-bar-bg">
-                    <div id="unity-progress-bar-fill">
-						<div id="unity-progress-bar-circle"></div>
-						</div>
-					<div id="unity-loading-text">Loading...</div>
-				</div>
-	        </div>
-			<div className="button_container">
-				<img id="fullscreen_explore_button" onClick={explore} alt=""/>			
-				<img id="explore_button" className="button" onClick={explore} src={ExploreButton} alt="" />
-				<img id="return_home_button" className="button" onClick={returnHome} src={ReturnHomeButton} alt="" />		
-			</div>
-			
-            <div className="unity-canvas-container">
-                <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
+      // <Unity className="game-embed" unityContext={unityContext} />
+      // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>
+      <div className="minigame-container">
+        <div id="unity-loading-bar">
+          <div id="unity-progress-bar-bg">
+            <div id="unity-progress-bar-fill">
+              <div id="unity-progress-bar-circle"></div>
             </div>
-		</div>
+            <div id="unity-loading-text">Loading...</div>
+          </div>
+        </div>
+        <div className="button_container">
+          <img id="fullscreen_explore_button" onClick={explore} alt="" />
+          <img
+            id="explore_button"
+            className="button"
+            onClick={explore}
+            src={ExploreButton}
+            alt=""
+          />
+          <img
+            id="return_home_button"
+            className="button"
+            onClick={returnHome}
+            src={ReturnHomeButton}
+            alt=""
+          />
+        </div>
+
+        <div className="unity-canvas-container tw-pt-15">
+          <canvas
+            id="unity-canvas"
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundImage: `url(${SplashScreen})`,
+            }}
+          ></canvas>
+        </div>
+      </div>
     );
 }
     
