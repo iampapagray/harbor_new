@@ -26,8 +26,8 @@ import FooterNew from "./FooterNew.js";
 import UpcomingGames from "./UpcomingGames.js";
 import Roadmap from "./Roadmap.js";
 import Blockchain from "./Blockchain.js";
-import NavBarNew from "./NavBarNew";
 import Vision from "./Vision.js";
+import CoreTeam from "./CoreTeam.js";
 
 var experienceStartIndex = 0;
 
@@ -154,15 +154,9 @@ const Home = () => {
         <MiniGame />
         <Blockchain />
         <Vision />
+        <CoreTeam />
         <div className="roadmap-container" id="roadmap-container-id">
           <div className="roadmap-box roadmap-box-team">
-            <p className="roadmap-title">Core Team</p>
-            <p className="team-desc">
-              Harbor consolidates experience from the best of Silicon Valley,
-              venture capital, and mobile gaming, to create one of the best
-              teams in all of blockchain gaming, with an unrivaled track record.
-            </p>
-            <img className="roadmap-box-team-img" src={Team} alt="" />
             <img className="roadmap-box-team-banner" src={Experience} alt="" />
           </div>
           <div className="roadmap-box roadmap-box-past-experiences">
@@ -201,8 +195,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {<UpcomingGames />}
-        {<Roadmap />}
+        <UpcomingGames />
+        <Roadmap />
         <FooterNew />
       </div>
     );
