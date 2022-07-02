@@ -1,28 +1,20 @@
 /* eslint-disable no-restricted-globals */
-import React, { useEffect, useState, Fragment } from "react";
-import {
-  Navbar,
-  OverlayTrigger,
-  Tooltip,
-  Nav,
-  Container,
-  Button,
-  NavDropdown,
-} from "react-bootstrap";
+import React, { Fragment } from "react";
+// import {Tooltip} from "react-bootstrap";
 import clsx from "clsx";
 import { Menu, Transition } from "@headlessui/react";
-// import Logo from "../assets/general/HarborLogo.png";
+
 import LogoBlue from "../assets/general/HarborLogoBlue.svg";
 import DropdownIcon from "../assets/general/arrow-down.svg";
 import GlobalIcon from "../assets/general/global.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 
 
-const renderComingSoonTooltip = (props) => (
-  <Tooltip id="button-tooltip" {...props}>
-    Coming Soon!
-  </Tooltip>
-);
+// const renderComingSoonTooltip = (props) => (
+//   <Tooltip id="button-tooltip" {...props}>
+//     Coming Soon!
+//   </Tooltip>
+// );
 
 function NavBarNew(props) {
 

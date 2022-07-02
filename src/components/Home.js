@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import MiniGame from './MiniGame.js';
-import Footer from './Footer.js';
-import { Button } from 'react-bootstrap';
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
 import '../styles/Home.css';
 
 import ArrowLeft from '../assets/home/arrow-left.svg';
 import ArrowRight from '../assets/home/arrow-right.svg';
-import Team from '../assets/home/team.png';
-import Experience from '../assets/home/experience.png';
 
 import Emporea from '../assets/home/experience/experience-emporea.png';
 import Neemo from '../assets/home/experience/experience-neemo.png';
@@ -28,8 +24,10 @@ import Roadmap from "./Roadmap.js";
 import Blockchain from "./Blockchain.js";
 import Vision from "./Vision.js";
 import CoreTeam from "./CoreTeam.js";
+import Brands from "./Brands.js";
+import Experience from "./Experience.js";
 
-var experienceStartIndex = 0;
+// var experienceStartIndex = 0;
 
 const Home = () => {
 
@@ -155,46 +153,8 @@ const Home = () => {
         <Blockchain />
         <Vision />
         <CoreTeam />
-        <div className="roadmap-container" id="roadmap-container-id">
-          <div className="roadmap-box roadmap-box-team">
-            <img className="roadmap-box-team-banner" src={Experience} alt="" />
-          </div>
-          <div className="roadmap-box roadmap-box-past-experiences">
-            <div className="roadmap-box-past-experiences-top">
-              <p className="roadmap-title">Past Experiences</p>
-            </div>
-            <div
-              className="roadmap-box-past-experiences-bottom"
-              id="roadmap-box-past-experiences-bottom"
-            >
-              <Slide {...pastExperienceProperties}>
-                {allExperienceDivs.map(function (item, i) {
-                  return (
-                    <div
-                      key={i}
-                      className="roadmap-box-past-experiences-item-container"
-                    >
-                      <div className="roadmap-box-past-experiences-item">
-                        <a href={item.link} target="_blank" rel="noreferrer">
-                          <div className="roadmap-box-past-experiences-image">
-                            <img
-                              src={item.url}
-                              onClick={console.log("click")}
-                              alt=""
-                            />
-                          </div>
-                        </a>
-                        <div className="roadmap-box-past-experiences-text">
-                          <p>{item.title}</p>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slide>
-            </div>
-          </div>
-        </div>
+        <Brands />
+        <Experience />
         <UpcomingGames />
         <Roadmap />
         <FooterNew />

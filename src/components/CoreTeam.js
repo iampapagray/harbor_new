@@ -1,5 +1,4 @@
 import React, { } from 'react';
-import clsx from 'clsx';
 import Filip from '../assets/team/filip.svg';
 import Maghnus from '../assets/team/magnus.svg';
 import Milada from '../assets/team/milada.svg';

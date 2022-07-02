@@ -32,10 +32,10 @@ function UpcomingGames(props) {
             Upcoming Games
           </h2>
           <div className="tw-flex navIcons">
-            <div className="navButton tw-bg-buttongrey">
+            <div className="navButton tw-bg-buttongrey hover:tw-bg-gradient-to-br hover:tw-from-dark-blue hover:tw-to-light-blue">
               <img src={arrowLeft} alt="arrow left" className="tw--ml-1" />
             </div>
-            <div className="navButton tw-ml-2.5 tw-bg-buttongrey">
+            <div className="navButton tw-ml-2.5 tw-bg-buttongrey hover:tw-bg-gradient-to-br hover:tw-from-dark-blue hover:tw-to-light-blue">
               <img src={arrowRight} alt="arrow right" className="tw-ml-1" />
             </div>
           </div>

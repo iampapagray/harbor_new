@@ -1,0 +1,45 @@
+import clsx from 'clsx'
+import { Rovio, Disney, Pixel, Atlassian, Hype } from '../assets/brands/'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+
+const Brands = (props) => {
+    const brandImages = [Rovio, Disney, Pixel, Atlassian, Hype, Rovio];
+
+    return (
+      <div className="tw-px-30 tw-py-15 tw-bg-gradient-to-br tw-from-dark-blue tw-to-light-blue">
+        <div className="tw-flex tw-h-14 tw-items-center">
+          {/* <div className="tw-flex tw-h-full tw-w-10 tw-bg-red-300"></div> */}
+          <div className="tw-flex tw-w-full tw-h-full tw-items-center">
+            <Swiper
+                className="tw-flex tw-items-center tw-h-full tw-justify-between"
+                spaceBetween={50}
+                slidesPerView={5}
+                loop={true}
+                autoplay={true}
+                //   autoplay={{
+                //     delay: 1500,
+                //     disableOnInteraction: false,
+                //   }}
+                onSlideChange={() => console.log("slide change")}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+
+              {brandImages.map((brand, index) => {
+                    return (
+                        <SwiperSlide key={index} className="tw-flex tw-h-full tw-justify-center tw-items-center">
+                            <img src={brand} alt="" className="tw-items-center" />
+                        </SwiperSlide>
+                    )
+                })}
+            </Swiper>
+          </div>
+          {/* <div className="tw-flex tw-h-full tw-w-10 tw-bg-red-300"></div> */}
+        </div>
+      </div>
+    );
+}
+
+export default Brands
