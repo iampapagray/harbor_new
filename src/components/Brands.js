@@ -1,10 +1,12 @@
-import clsx from 'clsx'
 import { Rovio, Disney, Pixel, Atlassian, Hype } from '../assets/brands/'
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
+import "swiper/css/autoplay";
 
 
+SwiperCore.use([Autoplay]);
 const Brands = (props) => {
     const brandImages = [Rovio, Disney, Pixel, Atlassian, Hype, Rovio];
 
@@ -18,11 +20,10 @@ const Brands = (props) => {
                 spaceBetween={50}
                 slidesPerView={5}
                 loop={true}
-                autoplay={true}
-                //   autoplay={{
-                //     delay: 1500,
-                //     disableOnInteraction: false,
-                //   }}
+                autoplay={{
+                  delay: 2400,
+                  disableOnInteraction: false,
+                }}
                 onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}
             >
