@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 // import {Tooltip} from "react-bootstrap";
 import clsx from "clsx";
 import { Menu, Transition } from "@headlessui/react";
@@ -17,63 +17,91 @@ import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 // );
 
 function NavBarNew(props) {
+  const [screenHeight, setScreenHeight] = useState(0);
+  const [fullBg, setFullBg] = useState(false);
+  const detectHeight = () => {
+    setScreenHeight(window.innerHeight);
+    console.log("Height ",screenHeight);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", detectHeight);
+    return () => window.removeEventListener("resize", detectHeight);
+  });
 
-    const navs = [
-        {
-            title: "Games", path: "#", isDropDown: true, children: [
-                {title: "Loyalty", path: "/loyalty"},
-                {title: "Leena's Place", path: "/leena"},
-            ],
-        },
-        { title: "Staking", path: "#", isDropDown: false, },
-        { title: "Marketplace", path: "#", isDropDown: false, },
-        { title: "Governance", path: "#", isDropDown: false, },
-        { title: "Roadmap", path: "#", isDropDown: false, },
-        { title: "FAQ", path: "#", isDropDown: false, },
-    ]
+  const handleScroll = () => { 
+    if(window.pageYOffset > (screenHeight/2)){
+      setFullBg(true);
+    } else {
+      setFullBg(false);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+  
+  const navs = [
+      {
+          title: "Games", path: "#", isDropDown: true, children: [
+              {title: "Loyalty", path: "/loyalty"},
+              {title: "Leena's Place", path: "/leena"},
+          ],
+      },
+      { title: "Staking", path: "#", isDropDown: false, },
+      { title: "Marketplace", path: "#", isDropDown: false, },
+      { title: "Governance", path: "#", isDropDown: false, },
+      { title: "Roadmap", path: "#", isDropDown: false, },
+      { title: "FAQ", path: "#", isDropDown: false, },
+  ]
 
-    const buttons = [
-      {
-        title: "EN",
-        path: "#",
-        isDropDown: true,
-        children: [{ title: "English", path: "#" }],
-        hasPrefix: true,
-        prefixIcon: GlobalIcon,
-        isButton: false,
-      },
-      {
-        title: "Download",
-        path: "#",
-        isDropDown: true,
-        children: [{ title: "As", path: "#" }],
-        hasPrefix: false,
-      },
-      {
-        title: "Login",
-        path: "#",
-        isDropDown: false,
-        isButton: true,
-        isOutline: true,
-      },
-      {
-        title: "Register",
-        path: "#",
-        isDropDown: false,
-        isButton: true,
-        isOutline: false,
-      },
-    ];
+  const buttons = [
+    {
+      title: "EN",
+      path: "#",
+      isDropDown: true,
+      children: [{ title: "English", path: "#" }],
+      hasPrefix: true,
+      prefixIcon: GlobalIcon,
+      isButton: false,
+    },
+    {
+      title: "Download",
+      path: "#",
+      isDropDown: true,
+      children: [{ title: "As", path: "#" }],
+      hasPrefix: false,
+    },
+    {
+      title: "Login",
+      path: "#",
+      isDropDown: false,
+      isButton: true,
+      isOutline: true,
+    },
+    {
+      title: "Register",
+      path: "#",
+      isDropDown: false,
+      isButton: true,
+      isOutline: false,
+    },
+  ];
 
-    return (
-      <nav className="tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-bg-darker tw-h-15 tw-px-10 tw-py-3.7">
-        <div className="tw-brand tw-flex tw-w-26 tw-justify-between">
-          <img src={LogoBlue} alt="Harbor Logo" />
-          <img src={LogoText} alt="Harbor Text" className="h-3.5 my-auto" />
-        </div>
+  return (
+    <nav
+      className={clsx(
+        "tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-transition-all duration-1000 tw-ease-in-out tw-h-15 tw-px-10 tw-py-3.7",
+        { "tw-bg-darker": fullBg, "tw-bg-transparent": !fullBg }
+      )}
+    >
+      <div className="tw-brand tw-flex tw-w-26 tw-justify-between">
+        <img src={LogoBlue} alt="Harbor Logo" />
+        <img src={LogoText} alt="Harbor Text" className="h-3.5 my-auto" />
+      </div>
 
-        <div className="tw-hidden lg:tw-flex tw-flex-grow tw-h-7.5">
-          <div className="tw-w-full tw-h-full tw-flex tw-justify-between tw-ml-5">
+      <div className="tw-hidden lg:tw-flex tw-flex-grow tw-h-7.5">
+        {fullBg 
+          ? <div className="tw-w-full tw-h-full tw-flex tw-justify-between tw-ml-5">
             <Menu as="div" className="tw-relative tw-flex ">
               {navs.map((nav, index) => {
                 if (nav.isDropDown) {
@@ -123,6 +151,7 @@ function NavBarNew(props) {
                 }
               })}
             </Menu>
+          
             <div className="tw-flex">
               <Menu as="div" className="tw-relative tw-flex">
                 {buttons.map((button, index) => {
@@ -198,10 +227,14 @@ function NavBarNew(props) {
                 })}
               </Menu>
             </div>
-          </div>
-        </div>
-      </nav>
-    );
+            </div>
+          : <div className="tw-bg-yellow-300 tw-h-full tw-w-full tw-flex tw-justify-end">
+              HELLO
+            </div>
+        }
+      </div>
+    </nav>
+  );
 }
 
 export default NavBarNew;

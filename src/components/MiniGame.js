@@ -105,7 +105,7 @@ const MiniGame = () => {
           />
         </div>
 
-        <div className="unity-canvas-container tw-pt-15">
+        <div className="unity-canvas-container tw-pt-0">
           <canvas
             id="unity-canvas"
             style={{
