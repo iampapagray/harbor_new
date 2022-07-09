@@ -118,7 +118,7 @@ function NavBarNew(props) {
                 if (nav.isDropDown) {
                   return (
                     <div key={index}>
-                      <Menu.Button className="tw-flex tw-justify-center tw-items-center tw-h-full tw-rounded-md tw-text-xs tw-font-inter tw-bg-opacity-20 tw-font-medium tw-text-white hover:tw-bg-opacity-30 focus:tw-outline-none focus-visible:tw-outline-none">
+                      <Menu.Button className="tw-flex tw-justify-center tw-items-center tw-h-full tw-rounded-md tw-text-sm tw-font-inter tw-bg-opacity-20 tw-font-medium tw-text-white hover:tw-bg-opacity-30 focus:tw-outline-none focus-visible:tw-outline-none">
                         {nav.title}
                         <img
                           src={DropdownIcon}
@@ -135,7 +135,7 @@ function NavBarNew(props) {
                         leaveFrom="tw-transform tw-opacity-100 tw-scale-100"
                         leaveTo="tw-transform tw-opacity-0 tw-scale-95"
                       >
-                        <Menu.Items className="tw-absolute tw-left-0 tw-mt-1 tw-text-xs tw-w-max tw-origin-top-right tw-divide-y tw-divide-gray-100 tw-rounded-md tw-bg-white tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none">
+                        <Menu.Items className="tw-absolute tw-left-0 tw-mt-1 tw-text-sm tw-w-max tw-origin-top-right tw-divide-y tw-divide-gray-100 tw-rounded-md tw-bg-white tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none">
                           <div className="tw-px-1 tw-py-1">
                             {nav.children.map((child, index) => {
                               return (
@@ -160,7 +160,7 @@ function NavBarNew(props) {
                     <Menu.Item
                       key={index}
                       href={nav.path}
-                      className="tw-text-white tw-text-xs tw-font-inter tw-ml-4.5"
+                      className="tw-text-white tw-text-sm tw-font-inter tw-ml-4.5"
                     >
                       <button>{nav.title}</button>
                     </Menu.Item>
@@ -175,7 +175,7 @@ function NavBarNew(props) {
                   <span>
                     <Menu.Button
                       className={clsx(
-                        "tw-flex tw-ml-0 tw-justify-center tw-items-center tw-h-full tw-rounded-md tw-text-xs tw-font-inter tw-bg-opacity-20 tw-font-medium tw-text-white hover:tw-bg-opacity-30 focus:tw-outline-none focus-visible:tw-outline-none"
+                        "tw-flex tw-ml-0 tw-justify-center tw-items-center tw-h-full tw-rounded-md tw-text-sm tw-font-inter tw-bg-opacity-20 tw-font-medium tw-text-white hover:tw-bg-opacity-30 focus:tw-outline-none focus-visible:tw-outline-none"
                       )}
                     >
                       <img
@@ -201,7 +201,7 @@ function NavBarNew(props) {
                   >
                     <Menu.Items
                       static
-                      className="tw-absolute tw-right-0 tw-mt-1 tw-text-xs tw-w-max tw-origin-top-right tw-divide-y tw-divide-gray-100 tw-rounded-md tw-bg-white tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none"
+                      className="tw-absolute tw-right-0 tw-mt-1 tw-text-sm tw-w-max tw-origin-top-right tw-divide-y tw-divide-gray-100 tw-rounded-md tw-bg-white tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none"
                       role="menu1"
                       aria-orientation="vertical"
                       aria-labelledby={lang.title}
@@ -228,7 +228,7 @@ function NavBarNew(props) {
                           <Menu.Button
                             key={index}
                             className={clsx(
-                              "tw-flex tw-justify-center tw-items-center tw-h-full tw-rounded-md tw-text-xs tw-font-inter tw-bg-opacity-20 tw-font-medium tw-text-white hover:tw-bg-opacity-30 focus:tw-outline-none focus-visible:tw-outline-none",
+                              "tw-flex tw-justify-center tw-items-center tw-h-full tw-rounded-md tw-text-sm tw-font-inter tw-bg-opacity-20 tw-font-medium tw-text-white hover:tw-bg-opacity-30 focus:tw-outline-none focus-visible:tw-outline-none",
                               { "tw-ml-0": index === 0, "tw-mx-5": index !== 0 }
                             )}
                             id={button.title}
@@ -258,7 +258,7 @@ function NavBarNew(props) {
                         >
                           <Menu.Items
                             static
-                            className="tw-absolute tw-right-0 tw-mt-1 tw-text-xs tw-w-max tw-origin-top-right tw-divide-y tw-divide-gray-100 tw-rounded-md tw-bg-white tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none"
+                            className="tw-absolute tw-right-0 tw-mt-1 tw-text-sm tw-w-max tw-origin-top-right tw-divide-y tw-divide-gray-100 tw-rounded-md tw-bg-white tw-shadow-lg tw-ring-1 tw-ring-black tw-ring-opacity-5 focus:tw-outline-none"
                             role="menu"
                             aria-orientation="vertical"
                             aria-labelledby={button.title}
@@ -281,7 +281,7 @@ function NavBarNew(props) {
                       <Menu.Button
                         key={index}
                         className={clsx(
-                          "tw-text-white tw-text-xs tw-font-inter",
+                          "tw-text-white tw-text-sm tw-font-inter",
                           {
                             "mx-0 tw-px-5 tw-border-[1.5px] tw-rounded-md":
                               button.isOutline,
