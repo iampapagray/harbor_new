@@ -23,12 +23,9 @@ const Brands = (props) => {
               loop={true}
               mode={"horizontal"}
               freeMode={true}
-              freeModeFluid={true}
+              freemodefluid={true}
               longSwipesMs={0}
               resistance={false}
-              setWrapperTransition={"linear"}
-              freeModeMomentum={true}
-              momentumRatio={1}
               autoplay={{
                 delay: 0,
                 disableOnInteraction: false,
