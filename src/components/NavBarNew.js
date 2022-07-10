@@ -90,6 +90,11 @@ function NavBarNew(props) {
       isButton: false,
   }
 
+  function showNav() {
+    console.log("Changing Nav view")
+    setFullBg(true);
+  }
+
   return (
     <nav
       className={clsx(
@@ -138,9 +143,8 @@ function NavBarNew(props) {
                           <div className="tw-px-1 tw-py-1">
                             {nav.children.map((child, index) => {
                               return (
-                                <Link to={child.path}>
+                                <Link key={index} to={child.path}>
                                   <Menu.Item
-                                    key={index}
                                     className="tw-block"
                                     href={child.path}
                                   >
@@ -299,14 +303,17 @@ function NavBarNew(props) {
           </div>
         ) : (
           <div className="tw-bg-transparent tw-h-full tw-w-full tw-flex tw-items-center tw-justify-end">
-            <div className="tw-flex tw-items-center tw-group tw-cursor-pointer">
+            <div
+              className="tw-flex tw-items-center tw-group tw-cursor-pointer"
+              onClick={showNav}
+            >
               <img
                 src={Hamburger}
                 alt="Hamburger"
-                className="tw-h-9 tw-w-9 tw-z-10 group-hover:tw-translate-x-6"
+                className="tw-h-9 tw-w-9 tw-z-10 tw-translate-x-3 group-hover:tw-translate-x-6"
               />
-              <div className="tw-bg-darker tw-mx-0 tw-px-0 tw-h-7.5 tw-flex tw-items-center tw-rounded-full tw-transition-all tw-transition-slowest tw-duration-700 tw-ease-in-out tw-z-0  tw-w-0 group-hover:tw-w-17">
-                <p className="tw-mb-0 tw-text-white tw-text-xs  tw-opacity-0 group-hover:tw-opacity-100 group-hover:tw-pl-7.5 tw-font-medium">
+              <div className="tw-bg-darker tw-mx-0 tw-px-0 tw-h-7.5 tw-overflow-x-hidden tw-flex tw-items-center tw-rounded-full tw-transition-all tw-duration-700 tw-ease-in-out tw-z-0 tw-w-0 group-hover:tw-w-17">
+                <p className="tw-mb-0 tw-text-white tw-text-xs tw-opacity-0 group-hover:tw-opacity-100 tw-delay-500 group-hover:tw-pl-7.5  tw-z-0 tw-font-medium">
                   Menu
                 </p>
               </div>

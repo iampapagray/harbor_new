@@ -8,6 +8,7 @@ import Youtube from "../assets/general/youtube.svg";
 import Twitter from "../assets/general/twitter.svg";
 import Discord from "../assets/general/discord.svg";
 import Plane from "../assets/general/plane.svg";
+import { Link } from "react-router-dom";
 
 // create react component
 function FooterNew(props) {
@@ -73,9 +74,14 @@ function FooterNew(props) {
                           <div className="tw-px-1 tw-py-1">
                             {nav.children.map((child, ind) => {
                               return (
-                                <Menu.Item key={ind} className="tw-block tw-text-black">
-                                  <button className="">{child.title}</button>
-                                </Menu.Item>
+                                <Link to={child.path} key={ind}>
+                                  <Menu.Item
+                                    key={ind}
+                                    className="tw-block tw-text-black"
+                                  >
+                                    <button className="">{child.title}</button>
+                                  </Menu.Item>
+                                </Link>
                               );
                             })}
                           </div>

@@ -23,7 +23,6 @@ const Brands = (props) => {
               loop={true}
               mode={"horizontal"}
               freeMode={true}
-              freemodefluid={true}
               longSwipesMs={0}
               resistance={false}
               autoplay={{
