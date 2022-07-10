@@ -8,7 +8,6 @@ import LogoBlue from "../assets/general/HarborLogoBlue.svg";
 import DropdownIcon from "../assets/general/arrow-down.svg";
 import GlobalIcon from "../assets/general/global.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";
-import LogoBlackText from "../assets/general/HarborLogoTextBlack.svg";
 import Hamburger from "../assets/general/hamburger.svg";
 import { Link } from "react-router-dom";
 
@@ -24,7 +23,6 @@ function NavBarNew(props) {
   const [fullBg, setFullBg] = useState(false);
   const detectHeight = () => {
     setScreenHeight(window.innerHeight);
-    console.log("Height ",screenHeight);
   }
   useEffect(() => {
     window.addEventListener("load", detectHeight);
@@ -32,12 +30,10 @@ function NavBarNew(props) {
   });
 
   const handleScroll = () => { 
-    if(window.pageYOffset > (screenHeight - 100)){
+    if (window.pageYOffset > screenHeight - (screenHeight/2)) {
       setFullBg(true);
-      console.log("Show full background")
     } else {
       setFullBg(false);
-       console.log("hald background");
     }
   }
   useEffect(() => {
@@ -92,23 +88,26 @@ function NavBarNew(props) {
       hasPrefix: true,
       prefixIcon: GlobalIcon,
       isButton: false,
-    }
+  }
 
   return (
     <nav
       className={clsx(
-        "tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-transition-all duration-1000 tw-linear tw-h-15 tw-px-10 tw-py-3.7",
+        "tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-transition-colors duration-1000 tw-linear tw-h-15 tw-px-10 tw-py-3.7",
         { "tw-bg-darker": fullBg, "tw-bg-transparent": !fullBg }
       )}
     >
-      <div className="tw-brand tw-flex tw-w-26 tw-justify-between">
-        <img src={LogoBlue} alt="Harbor Logo" />
+      <Link
+        to={"/"}
+        className="tw-brand tw-flex tw-w-26 tw-justify-between tw-items-center"
+      >
+        <img src={LogoBlue} alt="Harbor Logo" className="tw-h-9 tw-w-9" />
         <img
-          src={fullBg ? LogoText : LogoBlackText}
+          src={LogoText}
           alt="Harbor Text"
           className="h-3.5 my-auto tw-stroke-red-400"
         />
-      </div>
+      </Link>
 
       <div className="tw-hidden lg:tw-flex tw-flex-grow tw-h-7.5">
         {fullBg ? (
@@ -299,8 +298,19 @@ function NavBarNew(props) {
             </div>
           </div>
         ) : (
-          <div className="tw-bg-transparent tw-h-full tw-w-full tw-flex tw-justify-end">
-            <img src={Hamburger} alt="Hamburger" className="" />
+          <div className="tw-bg-transparent tw-h-full tw-w-full tw-flex tw-items-center tw-justify-end">
+            <div className="tw-flex tw-items-center tw-group tw-cursor-pointer">
+              <img
+                src={Hamburger}
+                alt="Hamburger"
+                className="tw-h-9 tw-w-9 tw-z-10 group-hover:tw-translate-x-6"
+              />
+              <div className="tw-bg-darker tw-mx-0 tw-px-0 tw-h-7.5 tw-flex tw-items-center tw-rounded-full tw-transition-all tw-transition-slowest tw-duration-700 tw-ease-in-out tw-z-0  tw-w-0 group-hover:tw-w-17">
+                <p className="tw-mb-0 tw-text-white tw-text-xs  tw-opacity-0 group-hover:tw-opacity-100 group-hover:tw-pl-7.5 tw-font-medium">
+                  Menu
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>

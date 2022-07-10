@@ -33,6 +33,10 @@ module.exports = {
         "float-4": "float 3s linear infinite",
         "float-5": "float 3s 1.5s linear infinite",
       },
+      transitionProperty: {
+        width: "width",
+        spacing: "margin, padding",
+      },
       colors: {
         "light-blue": "#00AAEB",
         "dark-blue": "#0081f7",
@@ -50,6 +54,7 @@ module.exports = {
         8.5: "2.1875rem",
         13: "3.125rem",
         15: "3.75rem",
+        17: "4.4375rem",
         22: "5.625rem",
         25: "6.25rem",
         26: "6.4475rem",
