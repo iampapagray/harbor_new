@@ -31,108 +31,64 @@ import Experience from "./Experience.js";
 
 const Home = () => {
 
-    const logoPulse = () => {
-        const elem = document.getElementById("home-overlay-icon-container");
+    // const logoPulse = () => {
+    //     const elem = document.getElementById("home-overlay-icon-container");
     
-        var id = null;
-        var opacity = 0.0;
-        elem.style.opacity = opacity;
-        var increase = true;
+    //     var id = null;
+    //     var opacity = 0.0;
+    //     elem.style.opacity = opacity;
+    //     var increase = true;
 
-        // clearInterval(id);
-        id = setInterval(frame, 10);
-        function frame() {
-            if (opacity > 1) {
-                opacity = 1;
-                increase = false;
-            } else if (opacity < 0) {
-                opacity = 0;
-                increase = true;
-            } else {
-                if (increase) {
-                    opacity = opacity + 0.01;
-                } else {
-                    opacity = opacity - 0.01;
-                }
-            }
-            elem.style.opacity = opacity;
-        }
-    }
+    //     // clearInterval(id);
+    //     id = setInterval(frame, 10);
+    //     function frame() {
+    //         if (opacity > 1) {
+    //             opacity = 1;
+    //             increase = false;
+    //         } else if (opacity < 0) {
+    //             opacity = 0;
+    //             increase = true;
+    //         } else {
+    //             if (increase) {
+    //                 opacity = opacity + 0.01;
+    //             } else {
+    //                 opacity = opacity - 0.01;
+    //             }
+    //         }
+    //         elem.style.opacity = opacity;
+    //     }
+    // }
 
-    useEffect(() => {
-        logoPulse();
+    // useEffect(() => {
+        // logoPulse();
        // // window.addEventListener('load', (event) => {
        // //     console.log("PAGE LOADED");
-            setTimeout(() => {
-                const elem = document.getElementById("home-overlay-id");
-                var id = null;
-                elem.style.opacity = 1;
-                console.log("initial opacity ", elem.style.opacity);
-                var opacity = parseFloat(elem.style.opacity);
+            // setTimeout(() => {
+            //     const elem = document.getElementById("home-overlay-id");
+            //     var id = null;
+            //     elem.style.opacity = 1;
+            //     console.log("initial opacity ", elem.style.opacity);
+            //     var opacity = parseFloat(elem.style.opacity);
 
-                // clearInterval(id);
-                id = setInterval(frame, 10);
-                function frame() {
-                    if (opacity <= 0) {
-                        opacity = 0;
-                        elem.style.display = "none";
-                        clearInterval(id);
-                    } else {
-                        opacity = opacity - 0.01;
-                    }
-                    elem.style.opacity = opacity;
-                }
-            }, 3000);
+            //     // clearInterval(id);
+            //     id = setInterval(frame, 10);
+            //     function frame() {
+            //         if (opacity <= 0) {
+            //             opacity = 0;
+            //             elem.style.display = "none";
+            //             clearInterval(id);
+            //         } else {
+            //             opacity = opacity - 0.01;
+            //         }
+            //         elem.style.opacity = opacity;
+            //     }
+            // }, 3000);
         // });
-    }, []);
-
-    var allExperienceDivs = [
-        {
-            id: "neemo",
-            url: Neemo,
-            title: "Neemo's Reef",
-            link: "https://nemos-reef.en.uptodown.com/android"
-        },
-        {
-            id: "toystory",
-            url: ToyStory,
-            title: "Toy Story: Smash It!",
-            link: "https://toy-story-smash-it-free.en.uptodown.com/android",
-        },
-        {
-            id: "starwars",
-            url: StarWars,
-            title: "Star Wars: Assault Team",
-            link: "https://star-wars-assault-team.en.uptodown.com/android",
-        },
-        {
-            id: "emporea",
-            url: Emporea,
-            title: "Emporea",
-            link: "https://play.google.com/store/apps/details?id=air.com.PixelFederation.EmporeaGame&hl=en_US&gl=US",
-        },
-        {
-            id: "trainstation",
-            url: TrainStation,
-            title: "Trainstation 2",
-            link: "https://play.google.com/store/apps/details?id=air.com.pixelfederation.TrainStationGame&hl=en_US&gl=US",
-        },
-
-    ]
-
-    const pastExperienceProperties = {
-        duration: 3000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: false,
-        indicators: true,
-        prevArrow: <img className="nav-left" src={ArrowLeft} alt="" />,
-        nextArrow: <img src={ArrowRight} alt="" />,
-    };
+    // }, []);
       
     return (
       <div className="home-container " id="home-container-id">
-        <div className="home-overlay" id="home-overlay-id">
+        {/* <div className="home-overlay" id="home-overlay-id">
           <div
             className="home-overlay-icon-container"
             id="home-overlay-icon-container"
@@ -148,7 +104,7 @@ const Home = () => {
               className="d-inline-block align-top harbor-logo-text-home"
             />{" "}
           </div>
-        </div>
+        </div> */}
         <MiniGame />
         <Blockchain />
         <Vision />
