@@ -22,13 +22,27 @@ const MiniGame = () => {
 
     useEffect(() => {
 
-        // Remove the navbar on initial screen, restored in HarborHandler.js
-
-		//TODO I dont even know what this is doing
-        // var navbar = document.getElementById("navbar-id");
-	    // navbar.style.display = "none";
+      // Remove the navbar on initial screen, restored in HarborHandler.js
+      var navBarNew = document.getElementById("nav-bar-new");
+	    navBarNew.style.display = "none";
 
 		// document.getElementById("unity-loading-bar").style.display="block";
+      
+      function onVisible(element, callback) {
+        new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+              callback(element);
+              observer.disconnect();
+            }
+          });
+        }).observe(element);
+      }
+
+      onVisible(document.querySelector("#explore_button"), () => {
+        var navBarNew = document.getElementById("nav-bar-new");
+        navBarNew.style.display = "flex";
+      });
 	
 
         loadScript("embed/Build/Harbor.loader.js");
@@ -72,7 +86,6 @@ const MiniGame = () => {
 		document.querySelector("#fullscreen_explore_button").style.display = "none";
 		document.querySelector("#return_home_button").style.display = "block";
 	};
-
 
 	const returnHome = ()=> {
 		window.send_leave();

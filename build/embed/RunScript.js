@@ -24,7 +24,7 @@ function animateProgressBar(fromValue, delay, duration) {
 			var progress01 =   fromValue + Math.abs((Date.now() - startTime) / duration) * (100 - fromValue);
 			progressBarFill.style.width = progress01+"%";
 		}, 10);
-		setTimeout(() => { clearInterval(timer);}, duration)
+		setTimeout(() => { clearInterval(timer); }, duration)
 	}, delay);
 }
 

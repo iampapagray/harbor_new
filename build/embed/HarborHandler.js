@@ -22,7 +22,10 @@ function onEnterClicked() {
 	// hide loading bar
 	loadingBar.style.display = "none";
 
-	// // Restore NavBar
+	// Restore NavBar
+	var navBarNew = document.getElementById("nav-bar-new");
+	navBarNew.style.display = "flex";
+
 	// var navbar = document.getElementById("navbar-id");
 	// navbar.style.opacity = "0";
 	// navbar.style.display = "flex";
@@ -61,9 +64,14 @@ function onHarborSceneLoaded() {
 	if (showAllCallbacksFromUnityAsAlerts) {
 		alert("onHarborSceneLoaded");
 	}
-		// Allow Home to scroll
+	
+	// Allow Home to scroll
 	var home = document.getElementById("home-container-id");
     home.style.overflowY = "visible";
+
+	// Restore NavBar
+	var navBarNew = document.getElementById("nav-bar-new");
+	navBarNew.style.display = "flex";
 
 	
 	// show explore button

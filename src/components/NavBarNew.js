@@ -89,9 +89,8 @@ function NavBarNew(props) {
       prefixIcon: GlobalIcon,
       isButton: false,
   }
-
+  
   function showNav() {
-    console.log("Changing Nav view")
     setFullBg(true);
   }
 
