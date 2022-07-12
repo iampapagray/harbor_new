@@ -143,14 +143,14 @@ function NavBarNew(props) {
                           <div className="tw-px-1 tw-py-1">
                             {nav.children.map((child, index) => {
                               return (
-                                <Link key={index} to={child.path}>
+                                // <Link key={index} to={child.path}>
                                   <Menu.Item
                                     className="tw-block"
                                     href={child.path}
                                   >
                                     <button className="">{child.title}</button>
                                   </Menu.Item>
-                                </Link>
+                                // </Link>
                               );
                             })}
                           </div>
