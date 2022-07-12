@@ -1,19 +1,7 @@
-import React, { useEffect } from "react";
+import React, { } from "react";
 
 import MiniGame from './MiniGame.js';
-import 'react-slideshow-image/dist/styles.css'
-import { Slide } from 'react-slideshow-image';
 import '../styles/Home.css';
-
-import ArrowLeft from '../assets/home/arrow-left.svg';
-import ArrowRight from '../assets/home/arrow-right.svg';
-
-import Emporea from '../assets/home/experience/experience-emporea.png';
-import Neemo from '../assets/home/experience/experience-neemo.png';
-import TrainStation from '../assets/home/experience/experience-train-station.png';
-import StarWars from '../assets/home/experience/experience-star-wars.png';
-import ToyStory from '../assets/home/experience/experience-toy-story.png';
-
 
 import LogoWhite from "../assets/general/HarborLogoWhite.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";

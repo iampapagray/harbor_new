@@ -18,6 +18,7 @@ function onEnterClicked() {
 	// 	alert("onEnterClicked");
 	// }
 
+
 	// hide loading bar
 	loadingBar.style.display = "none";
 

@@ -97,6 +97,7 @@ function NavBarNew(props) {
 
   return (
     <nav
+      id={'nav-bar-new'}
       className={clsx(
         "tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-transition-colors duration-1000 tw-linear tw-h-15 tw-px-10 tw-py-3.7",
         { "tw-bg-darker": fullBg, "tw-bg-transparent": !fullBg }

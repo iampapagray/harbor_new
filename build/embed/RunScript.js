@@ -3,7 +3,7 @@ var config = null;
 var showAllCallbacksFromUnityAsAlerts = false;
 
 var progressBarFill = document.querySelector("#unity-progress-bar-fill");
-var loadingBar = document.querySelector("#unity-loading-bar");
+var \ = document.querySelector("#unity-loading-bar");
 var enterButton = document.querySelector("#enter_button");
 var exploreButton = document.querySelector("#explore_button");
 var unityCanvas = document.querySelector("#unity-canvas");

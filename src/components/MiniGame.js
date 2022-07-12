@@ -28,7 +28,7 @@ const MiniGame = () => {
         // var navbar = document.getElementById("navbar-id");
 	    // navbar.style.display = "none";
 
-		document.getElementById("unity-loading-bar").style.display="block";
+		// document.getElementById("unity-loading-bar").style.display="block";
 	
 
         loadScript("embed/Build/Harbor.loader.js");
@@ -53,11 +53,15 @@ const MiniGame = () => {
 	};
 	
 	const explore = () => {
+    // hide Nav Bar
+    var navBarNew = document.getElementById('nav-bar-new');
+    navBarNew.style.display = "none";
+
 			// scroll to top
 		window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+      top: 0,
+      behavior: "smooth"
+    });
 		
 		// calls HarborSender.send_explore - to unity(
 		window.send_explore();
@@ -73,6 +77,10 @@ const MiniGame = () => {
 	const returnHome = ()=> {
 		window.send_leave();
 		document.querySelector("#return_home_button").style.display = "none";
+
+    // hide Nav Bar
+    var navBarNew = document.getElementById('nav-bar-new');
+    navBarNew.style.display = "flex";
 	};
 
     return (
