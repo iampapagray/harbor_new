@@ -24,7 +24,9 @@ const MiniGame = () => {
 
       // Remove the navbar on initial screen, restored in HarborHandler.js
       var navBarNew = document.getElementById("nav-bar-new");
+      var pirate = document.getElementById("vision-pirate");
 	    navBarNew.style.display = "none";
+	    pirate.style.display = "none";
 
 		// document.getElementById("unity-loading-bar").style.display="block";
       
@@ -41,7 +43,9 @@ const MiniGame = () => {
 
       onVisible(document.querySelector("#explore_button"), () => {
         var navBarNew = document.getElementById("nav-bar-new");
+        var pirate = document.getElementById("vision-pirate");
         navBarNew.style.display = "flex";
+        pirate.style.display = "flex";
       });
 	
 

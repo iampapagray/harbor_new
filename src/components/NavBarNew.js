@@ -310,13 +310,23 @@ function NavBarNew(props) {
               <img
                 src={Hamburger}
                 alt="Hamburger"
+                className="tw-h-9 tw-w-9 tw-z-10 tw-translate-x-6"
+              />
+              <div className="tw-bg-darker tw-mx-0 tw-px-0 tw-h-7.5 tw-overflow-x-hidden tw-flex tw-items-center tw-rounded-full  tw-z-0 tw-w-17">
+                <p className="tw-mb-0 tw-text-white tw-text-xs tw-opacity-100 tw-pl-7.5  tw-z-0 tw-font-medium">
+                  Menu
+                </p>
+              </div>
+              {/* <img
+                src={Hamburger}
+                alt="Hamburger"
                 className="tw-h-9 tw-w-9 tw-z-10 tw-translate-x-3 group-hover:tw-translate-x-6"
               />
               <div className="tw-bg-darker tw-mx-0 tw-px-0 tw-h-7.5 tw-overflow-x-hidden tw-flex tw-items-center tw-rounded-full tw-transition-all tw-duration-700 tw-ease-in-out tw-z-0 tw-w-0 group-hover:tw-w-17">
                 <p className="tw-mb-0 tw-text-white tw-text-xs tw-opacity-0 group-hover:tw-opacity-100 tw-delay-500 group-hover:tw-pl-7.5  tw-z-0 tw-font-medium">
                   Menu
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

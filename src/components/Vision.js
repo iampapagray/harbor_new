@@ -60,6 +60,7 @@ function Vision(props) {
         </div>
         <div className="tw-flex tw-items-end tw-w-38">
           <img
+            id="vision-pirate"
             src={Pirate}
             alt="LightHouse"
             className="tw-w-72 tw-absolute tw-transition-transform tw-animate-float-1"
