@@ -24,11 +24,11 @@ function CoreTeam(props) {
     ];
     
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-px-8 lg:tw-px-30 tw-py-12 lg:tw-py-22 tw-bg-gray-100">
+      <div className="tw-flex tw-flex-col tw-w-full tw-py-12 lg:tw-py-16 2xl:tw-py-22 tw-px-8 lg:tw-px-16 2xl:tw-px-30 tw-bg-gray-100">
         <h3 className="tw-mb-0 tw-font-inter tw-text-4xl lg:tw-text-heading tw-text-black tw-font-bold tw-tracking-tightest">
           Core Team
         </h3>
-        <p className="tw-mb-0 tw-font-inter tw-text-buttongrey tw-text-lg lg:tw-px-67 tw-font-normal tw-mt-2.5">
+        <p className="tw-mb-0 tw-font-inter tw-text-buttongrey tw-text-lg lg:tw-px-44 2xl:tw-px-67 tw-font-normal tw-mt-2.5">
           Harbor blends experience from the best of mobile gaming, Silicon
           Valley, and venture capital
         </p>

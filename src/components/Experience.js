@@ -37,7 +37,7 @@ const Experience = () => {
     }, []);
 
   return (
-    <div className="tw-flex tw-flex-col tw-w-full tw-px-8 lg:tw-px-30 tw-py-12 lg:tw-py-22 tw-bg-gray-100">
+    <div className="tw-flex tw-flex-col tw-w-full tw-py-12 lg:tw-py-16 2xl:tw-py-22 tw-px-8 lg:tw-px-16 2xl:tw-px-30 tw-bg-gray-100">
       <div className="tw-flex tw-w-full tw-justify-between tw-items-center tw-mg-4 lg:tw-mb-13">
         <h2 className="tw-font-inter tw-font-bold tw-text-3xl lg:tw-text-heading tw-text-black tw-tracking-tightest">
           Past Experience

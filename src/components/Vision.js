@@ -22,8 +22,8 @@ function Vision(props) {
     ];
 
     return (
-      <div className="vision-section tw-bg-white tw-py-12 lg:tw-py-22 tw-px-8 lg:tw-px-30 tw-flex tw-flex-col lg:tw-flex-row 2xl:tw-text-center">
-        <div className="tw-flex tw-flex-col tw-order-3 lg:tw-order-1 tw-text-left tw-w-full lg:tw-w-102 2xl:tw-w-125 tw-py-4 lg:tw-py-16">
+      <div className="vision-section tw-bg-white tw-py-12 lg:tw-py-16 2xl:tw-py-22 tw-px-8 lg:tw-px-16 2xl:tw-px-30 tw-flex tw-flex-col lg:tw-flex-row 2xl:tw-text-center">
+        <div className="tw-flex tw-flex-col tw-order-3 lg:tw-order-1 tw-text-left tw-w-full lg:tw-w-102 2xl:tw-w-125 tw-py-4 lg:tw-py-8 2xl:tw-py-16">
           <h3 className="tw-m-0 tw-font-inter tw-font-bold tw-text-4xl lg:tw-text-heading tw-tracking-tightest tw-mb-7.5">
             Arrr’ Vision
           </h3>

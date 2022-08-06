@@ -36,8 +36,8 @@ function Blockchain(props) {
     }, []);
 
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-bg-gray-100 tw-py-12 lg:tw-py-22 tw-px-8 lg:tw-px-30">
-        <h3 className="tw-font-inter tw-font-bold tw-text-2xl lg:tw-text-heading tw-mx-0 lg:tw-mx-40 2xl:tw-mx-80 tw-tracking-tightest">We are creating blockchain games for the masses</h3>
+      <div className="tw-flex tw-flex-col tw-w-full tw-bg-gray-100 tw-py-12 lg:tw-py-16 2xl:tw-py-22 tw-px-8 lg:tw-px-16 2xl:tw-px-30">
+        <h3 className="tw-font-inter tw-font-bold tw-text-2xl lg:tw-text-4xl l2xlg:tw-text-heading tw-mx-0 lg:tw-mx-40 2xl:tw-mx-80 tw-tracking-tightest">We are creating blockchain games for the masses</h3>
         <div
           className="tw-flex md:tw-hidden tw-px-0 2xl:tw-px-10 tw-justify-between tw-items-center tw-gap-4 2xl:tw-gap-8 tw-bg-white tw-w-full tw-h-61 2xl:tw-h-72 tw-mt-7.5 tw-rounded-3xl"
         >
@@ -74,7 +74,7 @@ function Blockchain(props) {
         </div>
 
         <div
-          className="tw-hidden md:tw-flex tw-px-0 2xl:tw-px-10 tw-justify-between tw-items-center tw-gap-4 2xl:tw-gap-8 tw-bg-white tw-w-full tw-h-61 2xl:tw-h-72 tw-mt-7.5 tw-rounded-3xl"
+          className="tw-hidden md:tw-flex tw-px-8 lg:tw-px-10 2xl:tw-px-10 tw-justify-between tw-items-center tw-gap-4 2xl:tw-gap-8 tw-bg-white tw-w-full tw-h-61 2xl:tw-h-72 tw-mt-7.5 tw-rounded-3xl"
         >
             {characters.map((character, index) => {
                 return (
@@ -83,7 +83,7 @@ function Blockchain(props) {
                     src={character.image}
                     alt={index}
                     className={clsx(
-                      "tw-h-48 2xl:tw-h-64 tw-transition-transform ",
+                      "tw-h-48 lg:tw-h-40 2xl:tw-h-64 tw-transition-transform ",
                       character.animate
                     )}
                   />

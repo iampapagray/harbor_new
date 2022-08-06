@@ -26,7 +26,7 @@ function UpcomingGames(props) {
     ];
 
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-px-8 lg:tw-px-30 tw-bg-white tw-py-12 lg:tw-py-22">
+      <div className="tw-flex tw-flex-col tw-w-full tw-py-12 lg:tw-py-16 2xl:tw-py-22 tw-px-8 lg:tw-px-16 2xl:tw-px-30 tw-bg-white">
         <div className="tw-flex tw-w-full tw-justify-between tw-items-center  tw-mb-13">
           <h2 className="tw-font-inter tw-font-bold tw-text-3xl lg:tw-text-heading tw-text-black tw-tracking-tightest">
             Upcoming Games
