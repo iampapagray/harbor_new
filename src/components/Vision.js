@@ -22,9 +22,9 @@ function Vision(props) {
     ];
 
     return (
-      <div className="vision-section tw-bg-white tw-py-22 tw-px-30 tw-flex ">
-        <div className="tw-flex tw-flex-col tw-text-left tw-w-102  tw-py-16">
-          <h3 className="tw-m-0 tw-font-inter tw-font-bold tw-text-heading tw-tracking-tightest tw-mb-7.5">
+      <div className="vision-section tw-bg-white tw-py-12 lg:tw-py-22 tw-px-8 lg:tw-px-30 tw-flex tw-flex-col lg:tw-flex-row 2xl:tw-text-center">
+        <div className="tw-flex tw-flex-col tw-order-3 lg:tw-order-1 tw-text-left tw-w-full lg:tw-w-102 2xl:tw-w-125 tw-py-4 lg:tw-py-16">
+          <h3 className="tw-m-0 tw-font-inter tw-font-bold tw-text-4xl lg:tw-text-heading tw-tracking-tightest tw-mb-7.5">
             Arrr’ Vision
           </h3>
           <div className="tw-flex">
@@ -58,16 +58,16 @@ function Vision(props) {
             </div>
           </div>
         </div>
-        <div className="tw-flex tw-items-end tw-w-38">
+        <div className="tw-flex tw-items-end order-2  tw-w-38 2xl:tw-w-72">
           <img
             id="vision-pirate"
             src={Pirate}
             alt="LightHouse"
-            className="tw-w-72 tw-absolute tw-transition-transform tw-animate-float-1"
+            className="tw-w-40 lg:tw-w-72 2xl:tw-w-100 tw-absolute tw-transition-transform tw-animate-float-1"
           />
         </div>
-        <div className="tw-flex tw-flex-grow tw-right-0">
-          <img src={LightHouse} alt="LightHouse" className="" />
+        <div className="tw-flex tw-flex-grow tw-order-1 lg:tw-order-3 tw-justify-items-end tw-justify-end">
+          <img src={LightHouse} alt="LightHouse" className="2xl:tw-h-130" />
         </div>
       </div>
     );

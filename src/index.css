@@ -12,7 +12,7 @@
   }
 
   .navButton {
-    @apply tw-flex tw-justify-center tw-items-center tw-h-10 tw-w-10 tw-rounded-full;
+    @apply tw-flex tw-justify-center tw-items-center tw-h-6 lg:tw-h-10 tw-w-6 lg:tw-w-10 tw-rounded-full;
   }
 }
 

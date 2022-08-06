@@ -13,7 +13,7 @@ function UpcomingGames(props) {
         name: "Leena's Place",
         image: leena,
         description:
-          "Leena returns home and becomes mayor of her small town with the vision of rebuilding it into a modern, lively abode for her friends and family",
+          "Leena returns home and becomes mayor of her small town with the vision of rebuilding it into a modern, lively abode for her friends and family.",
         path: "/leena",
       },
       {
@@ -26,28 +26,28 @@ function UpcomingGames(props) {
     ];
 
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-px-30 tw-bg-white tw-py-22">
+      <div className="tw-flex tw-flex-col tw-w-full tw-px-8 lg:tw-px-30 tw-bg-white tw-py-12 lg:tw-py-22">
         <div className="tw-flex tw-w-full tw-justify-between tw-items-center  tw-mb-13">
-          <h2 className="tw-font-inter tw-font-bold tw-text-heading tw-text-black tw-tracking-tightest">
+          <h2 className="tw-font-inter tw-font-bold tw-text-3xl lg:tw-text-heading tw-text-black tw-tracking-tightest">
             Upcoming Games
           </h2>
           <div className="tw-flex navIcons">
             <div className="navButton tw-bg-buttongrey hover:tw-bg-gradient-to-br hover:tw-from-dark-blue hover:tw-to-light-blue">
-              <img src={arrowLeft} alt="arrow left" className="tw--ml-1" />
+              <img src={arrowLeft} alt="arrow left" className="tw--ml-1 tw-h-3 lg:tw-h-6" />
             </div>
             <div className="navButton tw-ml-2.5 tw-bg-buttongrey hover:tw-bg-gradient-to-br hover:tw-from-dark-blue hover:tw-to-light-blue">
-              <img src={arrowRight} alt="arrow right" className="tw-ml-1" />
+              <img src={arrowRight} alt="arrow right" className="tw-ml-1 tw-h-3 lg:tw-h-6" />
             </div>
           </div>
         </div>
-        <div className="tw-flex">
-          <div className="tw-flex">
+        <div className="tw-flex tw-full">
+          <div className="tw-flex tw-flex-col lg:tw-flex-row">
             {upcomingGames.map((game, index) => {
               return (
                 <div
                   key={index}
-                  className={clsx("tw-flex tw-flex-col tw-w-full tw-mb-10", {
-                    "tw-ml-13": index === 1,
+                  className={clsx("tw-flex tw-w-full tw-flex-col tw-mb-10", {
+                    "lg:tw-ml-13": index === 1,
                   })}
                 >
                   <img
@@ -55,7 +55,7 @@ function UpcomingGames(props) {
                     alt={game.name}
                     className={clsx("tw-h-full")}
                   />
-                  <div className="tw-text-left tw-ml-8 tw-mt-11 tw-w-96 ">
+                  <div className="tw-text-left tw-ml-4 lg:tw-ml-8 tw-mt-6 lg:tw-mt-11 tw-w-full lg:tw-w-96 ">
                     <h3 className="tw-text-2xl tw-font-inter tw-font-bold">
                       {game.name}
                     </h3>

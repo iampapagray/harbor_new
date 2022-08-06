@@ -24,25 +24,25 @@ function CoreTeam(props) {
     ];
     
     return (
-      <div className="tw-flex tw-flex-col tw-w-full tw-px-30 tw-py-22 tw-bg-gray-100">
-        <h3 className="tw-mb-0 tw-font-inter tw-text-heading tw-text-black tw-font-bold tw-tracking-tightest">
+      <div className="tw-flex tw-flex-col tw-w-full tw-px-8 lg:tw-px-30 tw-py-12 lg:tw-py-22 tw-bg-gray-100">
+        <h3 className="tw-mb-0 tw-font-inter tw-text-4xl lg:tw-text-heading tw-text-black tw-font-bold tw-tracking-tightest">
           Core Team
         </h3>
-        <p className="tw-mb-0 tw-font-inter tw-text-buttongrey tw-text-lg tw-px-67 tw-font-normal tw-mt-2.5">
+        <p className="tw-mb-0 tw-font-inter tw-text-buttongrey tw-text-lg lg:tw-px-67 tw-font-normal tw-mt-2.5">
           Harbor blends experience from the best of mobile gaming, Silicon
           Valley, and venture capital
         </p>
-        <div className="tw-grid tw-grid-cols-3 tw-gap-x-20 tw-gap-y-7.5 tw-px-24 tw-mt-10">
+        <div className="tw-grid tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-x-4 lg:tw-gap-x-20 tw-gap-y-7.5  lg:tw-px-24 tw-mt-6 lg:tw-mt-10">
           {teamMembers.map((member, i) => {
             return (
               <div key={i} className="tw-flex tw-items-center">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="tw-h-15 tw-w-15"
+                  className="tw-h-8 lg:tw-h-15 tw-w-8 lg:tw-w-15"
                 />
                 <div className="tw-ml-2.5 tw-text-left tw-flex-col ">
-                  <h5 className='tw-mb-0 tw-font-bold tw-text-memberHead '>{member.name}</h5>
+                  <h5 className='tw-mb-0 tw-font-bold tw-text-xs lg:tw-text-memberHead '>{member.name}</h5>
                   <p className='tw-mb-0 tw-text-xs'>{member.role}</p>
                 </div>
               </div>

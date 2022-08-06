@@ -41,9 +41,9 @@ function FooterNew(props) {
     ]
     
     return (
-      <div className="tw-bg-darker tw-w-screen tw-h-100 tw-px-25 tw-pt-15">
-        <div className="tw-text-white tw-flex tw-flex-col md:tw-flex-row tw-justify-between">
-          <div className="tw-brand tw-flex tw-w-26 tw-justify-between">
+      <div className="tw-bg-darker tw-w-screen tw-h-100 tw-px-8 lg:tw-px-25 tw-pt-10 lg:tw-pt-15">
+        <div className="tw-text-white tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-justify-between">
+          <div className="tw-brand tw-flex tw-w-26 tw-justify-between tw-mb-4 lg:tw-mb-0">
             <img src={LogoBlue} alt="Harbor Logo" />
             <img src={LogoText} alt="Harbor Text" className="h-3.5 my-auto" />
           </div>

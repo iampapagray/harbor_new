@@ -5,11 +5,13 @@ import clsx from "clsx";
 import { Menu, Transition } from "@headlessui/react";
 
 import LogoBlue from "../assets/general/HarborLogoBlue.svg";
+import LogoWhite from "../assets/general/HarborLogoWhite.svg";
 import DropdownIcon from "../assets/general/arrow-down.svg";
 import GlobalIcon from "../assets/general/global.svg";
 import LogoText from "../assets/general/HarborLogoTextWhite.svg";
 import Hamburger from "../assets/general/hamburger.svg";
 import { Link } from "react-router-dom";
+import { IoGameControllerOutline, IoStorefrontOutline, IoMapOutline, IoEarthOutline, IoWalletOutline, IoInformationCircleOutline } from "react-icons/io5";
 
 
 // const renderComingSoonTooltip = (props) => (
@@ -21,6 +23,7 @@ import { Link } from "react-router-dom";
 function NavBarNew(props) {
   const [screenHeight, setScreenHeight] = useState(0);
   const [fullBg, setFullBg] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const detectHeight = () => {
     setScreenHeight(window.innerHeight);
   }
@@ -28,6 +31,14 @@ function NavBarNew(props) {
     window.addEventListener("load", detectHeight);
     return () => window.removeEventListener("load", detectHeight);
   });
+
+  const toggleMenu = () => {
+    if(isOpen) {
+      setIsOpen(false);
+    }else{
+      setIsOpen(true);
+    }
+  }
 
   const handleScroll = () => { 
     if (window.pageYOffset > screenHeight - (screenHeight/2)) {
@@ -43,16 +54,26 @@ function NavBarNew(props) {
   
   const navs = [
       {
-          title: "Games", path: "#", isDropDown: true, children: [
-              {title: "Loyalty", path: "/loyalty"},
-              {title: "Leena's Place", path: "/leena"},
-          ],
+        title: "Games", path: "#", isDropDown: true, children: [
+          {title: "Loyalty", path: "/loyalty"},
+          {title: "Leena's Place", path: "/leena"},
+        ],
       },
       { title: "Staking", path: "#", isDropDown: false, },
       { title: "Marketplace", path: "#", isDropDown: false, },
       { title: "Governance", path: "#", isDropDown: false, },
       { title: "Roadmap", path: "#", isDropDown: false, },
       { title: "FAQ", path: "#", isDropDown: false, },
+  ]
+
+  const mobileNavs = [
+    { title: "Loyalty", path: "/loyalty", icon: <IoGameControllerOutline />},
+    { title: "Leena's Place", path: "/leena", icon: <IoGameControllerOutline />},
+    { title: "Staking", path: "#", icon: <IoWalletOutline /> },
+    { title: "Marketplace", path: "#", icon: <IoStorefrontOutline /> },
+    { title: "Governance", path: "#", icon: <IoEarthOutline /> },
+    { title: "Roadmap", path: "#", icon: <IoMapOutline /> },
+    { title: "FAQ", path: "#", icon: <IoInformationCircleOutline /> },
   ]
 
   const buttons = [
@@ -98,7 +119,7 @@ function NavBarNew(props) {
     <nav
       id={'nav-bar-new'}
       className={clsx(
-        "tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-transition-colors duration-1000 tw-linear tw-h-15 tw-px-10 tw-py-3.7",
+        "tw-fixed tw-z-50 tw-flex tw-justify-between tw-w-screen tw-transition-colors duration-1000 tw-linear tw-h-15 tw-px-5 md:tw-px-10 tw-py-3.7",
         { "tw-bg-darker": fullBg, "tw-bg-transparent": !fullBg }
       )}
     >
@@ -106,11 +127,17 @@ function NavBarNew(props) {
         to={"/"}
         className="tw-brand tw-flex tw-w-26 tw-justify-between tw-items-center"
       >
-        <img src={LogoBlue} alt="Harbor Logo" className="tw-h-9 tw-w-9" />
+        <img src={LogoBlue} alt="Harbor Logo" className={clsx(
+          "tw-h-9 tw-w-9",
+          {"tw-hidden": isOpen, "tw-block": !isOpen},
+        )} />
         <img
           src={LogoText}
           alt="Harbor Text"
-          className="h-3.5 my-auto tw-stroke-red-400"
+          className={clsx(
+            "h-3.5 my-auto tw-stroke-red-400",
+            { "tw-hidden": isOpen, "tw-block": !isOpen },
+          )}
         />
       </Link>
 
@@ -331,6 +358,76 @@ function NavBarNew(props) {
           </div>
         )}
       </div>
+      <div className="lg:tw-hidden">
+        <button
+          class="focus:tw-outline-none"
+          onClick={toggleMenu}
+        >
+          <img src={Hamburger} alt="Hamburger" class="tw-text-white tw-stroke-white" />
+        </button>
+      </div>
+
+
+      <aside
+        className={clsx(
+          "tw-transform tw-top-0 tw-right-0 tw-w-4/5 tw-rounded-tl-2xl tw-py-5 tw-bg-darker  tw-fixed tw-h-full tw-overflow-auto tw-ease-in-out tw-transition-all tw-duration-300 tw-z-30 lg:tw-hidden",
+          {"-tw-translate-x-0": isOpen, "tw-translate-x-full": !isOpen}
+        )} 
+      >
+        <div className="tw-px-5">
+          <div 
+            className="tw-flex tw-flex-col tw-justify-between tw-h-36 tw-w-full tw-rounded-2xl tw-p-4 tw-bg-gradient-to-br tw-from-dark-blue tw-to-light-blue "
+          >
+            <div className="tw-h-10 tw-flex tw-w-full tw-justify-between">
+              <Link
+                to={"/"}
+                className="tw-brand tw-h-10 tw-flex tw-w-26 tw-justify-between tw-items-center"
+              >
+                <img src={LogoWhite} alt="Harbor Logo" className="tw-h-9 tw-w-9" />
+                <img
+                  src={LogoText}
+                  alt="Harbor Text"
+                  className={clsx(
+                    "h-3.5 my-auto tw-stroke-red-400",
+                  )}
+                />
+              </Link>
+
+              <img
+                class="tw-h-9"
+                src={Hamburger}
+                alt="Close Menu"
+                onClick={toggleMenu}
+              />
+            </div>
+
+            <div className="tw-text-left ">
+              <p className="tw-mb-0 tw-text-xs tw-text-white">
+                Some really cool info about the project. Some really cool info about the project. Some really cool info about the project.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <Menu as="div" className="tw-my-6 tw-mx-5">
+          {mobileNavs.map((nav, index) => {
+            return (
+              <a
+                key={index}
+                href={nav.path}
+                className="tw-flex tw-h-10 tw-px-4 tw-rounded-lg tw-border tw-border-slate-600 tw-no-underline  tw-items-center tw-text-white focus:tw-text-white tw-font-inter tw-mb-2 hover:tw-bg-gradient-to-br hover:tw-from-dark-blue hover:tw-to-light-blue"
+              >
+                {nav.icon } 
+                <h6 className="tw-ml-4 tw-mb-0">{nav.title}</h6>
+              </a>
+            );
+          })}
+        </Menu>
+
+        <hr className="tw-text-white tw-mb-6" />
+
+        <div className="tw-px-5"> </div>
+      </aside>
     </nav>
   );
 }
