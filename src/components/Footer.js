@@ -4,7 +4,7 @@ import '../styles/Footer.css';
 function Footer() {
     return (
         <div className="footer-container">
-            <NavBar style="dark"/>
+            {/* <NavBar style="dark"/> */}
             <p className="footer-cc">©2015 Charged Monkey All Rights Reserved</p>
             <p className="footer-trademarks">All trademarks referenced herein are the properties of their respective owners</p>
             <div className="footer-extended-options-container">

@@ -22,11 +22,31 @@ const MiniGame = () => {
 
     useEffect(() => {
 
-        // Remove the navbar on initial screen, restored in HarborHandler.js
-        var navbar = document.getElementById("navbar-id");
-	    navbar.style.display = "none";
+      // Remove the navbar on initial screen, restored in HarborHandler.js
+      var navBarNew = document.getElementById("nav-bar-new");
+      var pirate = document.getElementById("vision-pirate");
+	    navBarNew.style.display = "none";
+	    pirate.style.display = "none";
 
-		document.getElementById("unity-loading-bar").style.display="block";
+		// document.getElementById("unity-loading-bar").style.display="block";
+      
+      function onVisible(element, callback) {
+        new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+              callback(element);
+              observer.disconnect();
+            }
+          });
+        }).observe(element);
+      }
+
+      onVisible(document.querySelector("#explore_button"), () => {
+        var navBarNew = document.getElementById("nav-bar-new");
+        var pirate = document.getElementById("vision-pirate");
+        navBarNew.style.display = "flex";
+        pirate.style.display = "flex";
+      });
 	
 
         loadScript("embed/Build/Harbor.loader.js");
@@ -51,11 +71,15 @@ const MiniGame = () => {
 	};
 	
 	const explore = () => {
+    // hide Nav Bar
+    var navBarNew = document.getElementById('nav-bar-new');
+    navBarNew.style.display = "none";
+
 			// scroll to top
 		window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+      top: 0,
+      behavior: "smooth"
+    });
 		
 		// calls HarborSender.send_explore - to unity(
 		window.send_explore();
@@ -67,34 +91,56 @@ const MiniGame = () => {
 		document.querySelector("#return_home_button").style.display = "block";
 	};
 
-
 	const returnHome = ()=> {
 		window.send_leave();
 		document.querySelector("#return_home_button").style.display = "none";
+
+    // hide Nav Bar
+    var navBarNew = document.getElementById('nav-bar-new');
+    navBarNew.style.display = "flex";
 	};
 
     return (
-		// <Unity className="game-embed" unityContext={unityContext} />
-        // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>	
-		<div className="minigame-container">
-            <div id="unity-loading-bar">
-                <div id="unity-progress-bar-bg">
-                    <div id="unity-progress-bar-fill">
-						<div id="unity-progress-bar-circle"></div>
-						</div>
-					<div id="unity-loading-text">Loading...</div>
-				</div>
-	        </div>
-			<div className="button_container">
-				<img id="fullscreen_explore_button" onClick={explore}/>			
-				<img id="explore_button" className="button" onClick={explore} src={ExploreButton}/>
-				<img id="return_home_button" className="button" onClick={returnHome} src={ReturnHomeButton}/>		
-			</div>
-			
-            <div className="unity-canvas-container">
-                <canvas id="unity-canvas" style={{width: "100%", height: "100%", backgroundImage: `url(${SplashScreen})` }}></canvas>
+      // <Unity className="game-embed" unityContext={unityContext} />
+      // <iframe className="game-embed" src="https://cmgeneral.blob.core.windows.net/$web/index.html"></iframe>
+      <div className="minigame-container">
+        <div id="unity-loading-bar">
+          <div id="unity-progress-bar-bg">
+            <div id="unity-progress-bar-fill">
+              <div id="unity-progress-bar-circle"></div>
             </div>
-		</div>
+            <div id="unity-loading-text">Loading...</div>
+          </div>
+        </div>
+        <div className="button_container">
+          <img id="fullscreen_explore_button" onClick={explore} alt="" />
+          <img
+            id="explore_button"
+            className="button"
+            onClick={explore}
+            src={ExploreButton}
+            alt=""
+          />
+          <img
+            id="return_home_button"
+            className="button"
+            onClick={returnHome}
+            src={ReturnHomeButton}
+            alt=""
+          />
+        </div>
+
+        <div className="unity-canvas-container tw-pt-0">
+          <canvas
+            id="unity-canvas"
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundImage: `url(${SplashScreen})`,
+            }}
+          ></canvas>
+        </div>
+      </div>
     );
 }
     

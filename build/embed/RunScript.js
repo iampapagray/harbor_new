@@ -3,7 +3,7 @@ var config = null;
 var showAllCallbacksFromUnityAsAlerts = false;
 
 var progressBarFill = document.querySelector("#unity-progress-bar-fill");
-var loadingBar = document.querySelector("#unity-loading-bar");
+var \ = document.querySelector("#unity-loading-bar");
 var enterButton = document.querySelector("#enter_button");
 var exploreButton = document.querySelector("#explore_button");
 var unityCanvas = document.querySelector("#unity-canvas");
@@ -24,7 +24,7 @@ function animateProgressBar(fromValue, delay, duration) {
 			var progress01 =   fromValue + Math.abs((Date.now() - startTime) / duration) * (100 - fromValue);
 			progressBarFill.style.width = progress01+"%";
 		}, 10);
-		setTimeout(() => { clearInterval(timer);}, duration)
+		setTimeout(() => { clearInterval(timer); }, duration)
 	}, delay);
 }
 

@@ -19,58 +19,58 @@ function NavBar(props) {
     useEffect(() => {
         var navbar = document.getElementById("navbar-id");
         navbar.style.display = "flex";
-        navbar.style.opacity = "0";
-		navbar.style.pointerEvents = "none";
+        navbar.style.opacity = "1";//"0";
+        navbar.style.pointerEvents = "auto";// "none";
         var opacity = 0.0;
 
         var midScroll = false;
 
-        window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
-            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-            var id = null;
-            if (st > lastScrollTop){
-               // downscroll code
-               console.log("downscroll");
-                clearInterval(id);
-                if (!midScroll) {
-                    id = setInterval(frame, 10);
-                }
-                function frame() {
-                	if (opacity >= 1) {
-                        midScroll = false;
-                		clearInterval(id);
-                        opacity = 1;
-						// enable clicks if shown
-						navbar.style.pointerEvents = "auto";
-					} else {
-                        midScroll = true;
-                		opacity = opacity + 0.02;
-                	}
-                	navbar.style.opacity = opacity;
-	            }
-            } else {
-               // upscroll code
-               console.log("upscroll");
-               clearInterval(id);
-                if (!midScroll) {
-                    id = setInterval(frame, 10);
-                }
-                function frame() {
-                	if (opacity <= 0) {
-                		clearInterval(id);
-                        opacity = 0;
-                        midScroll = false;
-                		// disable clicks if hidden
-						navbar.style.pointerEvents = "none";
-					} else {
-                        midScroll = true;
-                		opacity -= 0.02;
-                	}
-                	navbar.style.opacity = opacity;
-		        }
-            }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-         }, false);
+        // window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+        //     var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+        //     var id = null;
+        //     if (st > lastScrollTop){
+        //        // downscroll code
+        //        console.log("downscroll");
+        //         clearInterval(id);
+        //         if (!midScroll) {
+        //             id = setInterval(frame, 10);
+        //         }
+        //         function frame() {
+        //         	if (opacity >= 1) {
+        //                 midScroll = false;
+        //         		clearInterval(id);
+        //                 opacity = 1;
+		// 				// enable clicks if shown
+		// 				navbar.style.pointerEvents = "auto";
+		// 			} else {
+        //                 midScroll = true;
+        //         		opacity = opacity + 0.02;
+        //         	}
+        //         	navbar.style.opacity = opacity;
+	    //         }
+        //     } else {
+        //        // upscroll code
+        //        console.log("upscroll");
+        //        clearInterval(id);
+        //         if (!midScroll) {
+        //             id = setInterval(frame, 10);
+        //         }
+        //         function frame() {
+        //         	if (opacity <= 0) {
+        //         		clearInterval(id);
+        //                 opacity = 0;
+        //                 midScroll = false;
+        //         		// disable clicks if hidden
+		// 				navbar.style.pointerEvents = "none";
+		// 			} else {
+        //                 midScroll = true;
+        //         		opacity -= 0.02;
+        //         	}
+        //         	navbar.style.opacity = opacity;
+		//         }
+        //     }
+        //     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        //  }, false);
     
         return () => {
             window.removeEventListener("scroll");
