@@ -83,7 +83,7 @@ function Blockchain(props) {
                     src={character.image}
                     alt={index}
                     className={clsx(
-                      "tw-h-48 lg:tw-h-40 2xl:tw-h-64 tw-transition-transform ",
+                      "tw-h-48 lg:tw-h-40 2xl:tw-h-64 tw-transition-transform test-c",
                       character.animate
                     )}
                   />

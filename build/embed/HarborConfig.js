@@ -12,7 +12,7 @@ function configureUnity() {
 
     var loyaltyConfig = {
         Name: "Loyalty",
-        Description: "",
+        Description: "Kick up your own gang and run your family's crime activities. Choose which mobsters and gangsters should be devoted to your Cosa Nostra and lead them against the fierce competition of the Mafia Town. Here and there, everyone has to accept help. Fight alongside your Mafia Family allies and prosper together!",
         URL: "/loyalty",
         ButtonLabel: "About",
         IsButtonActive : true,
@@ -24,12 +24,13 @@ function configureUnity() {
         Description: "",
         URL: "/",
         ButtonLabel: "Coming Soon",
-        IsButtonActive: false
+        IsButtonActive: false,
+		Disabled: true
     };
 
     var leenasplaceConfig = {
         Name: "Leena's Place",
-        Description: "",
+        Description: "Leena returns home and becomes mayor of her small town with the vision of rebuilding it into a modern, lively abode for her friends and family. Help her to transform the sleepy countryside village into flourishing modern family town!",
         URL: "/leena",
         ButtonLabel: "About",
         IsButtonActive: true,
@@ -45,9 +46,9 @@ function configureUnity() {
         IsButtonActive: true
     };
 
-    var stakingConfig = {
-        Name: "Staking",
-        Description: "Stake your NFTs and HARBOR token to earn rewards, tokens, rare items, and level up your characters.",
+    var investorConfig = {
+        Name: "Investors",
+        Description: "Harbor is opening its port to investors soon! Until then, please get in touch.",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
@@ -61,9 +62,9 @@ function configureUnity() {
         IsButtonActive: false
     };
 
-    var marketplaceConfig = {
-        Name: "Marketplace",
-        Description: "The Harbor Marketplace is a decentralized marketplace to buy, sell, and trade your items with other players. Power up your progress and share your treasures with the community!",
+    var marketConfig = {
+        Name: "Market",
+        Description: "The Harbor Market is a decentralized marketplace to buy, sell, and trade your items with other players. Power up your progress and share your treasures with the community!",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
@@ -71,7 +72,7 @@ function configureUnity() {
 
     var aboutConfig = {
         Name: "About",
-        Description: "Check out our commonly asked questions! If you have any more, please contact us.",
+        Description: "Harbor Games is a passionate team of mobile gaming veterans focused on creating the next generation of GameFi that scales to millions of players. Over the last 15 years our games have reached over 200M players and generated over $150M+ of revenue. Explore the Harbor to learn more about our team, platform, and upcoming titles!",
         URL: "/",
         ButtonLabel: "Coming Soon",
         IsButtonActive: false
@@ -83,13 +84,13 @@ function configureUnity() {
             wth: wthConfig,
             leenasplace: leenasplaceConfig,
             deck: deckConfig,
-            staking: stakingConfig,
+            staking: investorConfig,
             governance: governanceConfig,
-            marketplace: marketplaceConfig,
+            marketplace: marketConfig,
             faq: aboutConfig
         },
 		use_web_buttons : true,
-		intro_delay : 3
+		intro_delay : 2
     };
 
     myGameInstance.SendMessage('ConfigurationManager', 'Set', JSON.stringify(config));

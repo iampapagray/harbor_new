@@ -18,14 +18,10 @@ function onEnterClicked() {
 	// 	alert("onEnterClicked");
 	// }
 
-
 	// hide loading bar
 	loadingBar.style.display = "none";
 
-	// Restore NavBar
-	var navBarNew = document.getElementById("nav-bar-new");
-	navBarNew.style.display = "flex";
-
+	// // Restore NavBar
 	// var navbar = document.getElementById("navbar-id");
 	// navbar.style.opacity = "0";
 	// navbar.style.display = "flex";
@@ -54,9 +50,18 @@ function onExitClicked() {
 	}
 	// show explore
 	exploreButton.style.display = "block";
+	fullScreenExploreButton.style.display = "block";
 
 	// disable touches = enable scrolling
 	unityCanvas.style.pointerEvents = "none";
+}
+
+// called when unity screen is white and harbor scene starts loading 
+function onHarborSceneStartLoading() {
+  //Allow Home to scroll
+  //This is the best place to enable scroll bar, screen is white and screen jump is not visible
+  var home = document.getElementById("home-container-id");  
+  home.style.overflowY = "visible";
 }
 
 // called when harbor scene is loaded
@@ -65,17 +70,9 @@ function onHarborSceneLoaded() {
 		alert("onHarborSceneLoaded");
 	}
 	
-	// Allow Home to scroll
-	var home = document.getElementById("home-container-id");
-    home.style.overflowY = "visible";
-
-	// Restore NavBar
-	var navBarNew = document.getElementById("nav-bar-new");
-	navBarNew.style.display = "flex";
-
-	
 	// show explore button
 	exploreButton.style.display = "block";
+	fullScreenExploreButton.style.display = "block";
 }
 
 // called when icon above building was clicked
