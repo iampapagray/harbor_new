@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.424d6af0.css",
-    "main.js": "/static/js/main.e6aa4f55.js",
+    "main.js": "/static/js/main.17518e28.js",
     "static/js/787.8b884998.chunk.js": "/static/js/787.8b884998.chunk.js",
     "static/media/TaylorsTown_teaser.mp4": "/static/media/TaylorsTown_teaser.ff7c62940a65751e4103.mp4",
     "static/media/TurfWars_gameplay_01.gif": "/static/media/TurfWars_gameplay_01.db48cdd82f3bc409287d.gif",
@@ -92,11 +92,11 @@
     "static/media/arrow_left.svg": "/static/media/arrow_left.14227d701c47cd6378f6f855faa06734.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.ef27f4771f5387dd898d782b8c8d5119.svg",
     "main.424d6af0.css.map": "/static/css/main.424d6af0.css.map",
-    "main.e6aa4f55.js.map": "/static/js/main.e6aa4f55.js.map",
+    "main.17518e28.js.map": "/static/js/main.17518e28.js.map",
     "787.8b884998.chunk.js.map": "/static/js/787.8b884998.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.424d6af0.css",
-    "static/js/main.e6aa4f55.js"
+    "static/js/main.17518e28.js"
   ]
 }

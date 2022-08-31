@@ -131,7 +131,7 @@ function Roadmap(props) {
                 key={index}
                 className=""
               >
-                <div className={clsx("tw-w-full tw-h-full tw-group")} key={index}>
+                <div className={clsx("tw-w-full tw-h-full tt tw-group")} key={index}>
                   <div
                     className={clsx(
                       "tw-h-68 tw-w-full tw-transition-colors tw-ease-in-out tw-duration-500 tw-rounded-xl tw-text-left tw-pl-2 lg:tw-pl-5 tw-pt-8.4 tw-text-white group-hover:tw-bg-bleugry",
